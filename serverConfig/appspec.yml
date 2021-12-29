@@ -1,0 +1,32 @@
+version: 0.0
+os: linux
+files:
+  - source: /dev.socal.nginx.config
+    destination: /etc/nginx/sites-enabled/
+  - source: /api
+    destination: /var/www/socal/api
+  - source: /clientDist
+    destination: /var/www/socal/webapp
+  # - source: /adminDist
+  #   destination: /var/www/socal/admin
+  - source: /.npmrc
+    destination: /var/www/socal/api
+hooks:
+  BeforeInstall:
+  # - location: scripts/install_dependencies.sh
+    - location: scripts/cleanup.sh
+      timeout: 300
+      runas: root
+  # AfterInstall:
+  #   - location: scripts/install_dependencies.sh
+  #     timeout: 300
+  #     runas: root
+  ApplicationStart:
+    - location: scripts/restart_server.sh
+      timeout: 300
+      runas: root
+    # - locatio
+  # ApplicationStop:
+  #   - location: scripts/stop_server.sh
+  #     timeout: 300
+  #     runas: root
