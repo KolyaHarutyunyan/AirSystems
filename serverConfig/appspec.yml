@@ -5,8 +5,8 @@ files:
     destination: /etc/nginx/sites-enabled/
   - source: /api
     destination: /var/www/socal/api
-  - source: /clientDist
-    destination: /var/www/socal/webapp
+  # - source: /clientDist
+  #   destination: /var/www/socal/webapp
   # - source: /adminDist
   #   destination: /var/www/socal/admin
   - source: /.npmrc

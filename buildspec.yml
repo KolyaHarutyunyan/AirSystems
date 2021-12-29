@@ -27,13 +27,13 @@ phases:
       - rm -R -f api
       - mv dist api
       # building Client Panel
-      - echo attempting to build the Panel
-      - cd client
-      - npm install --legacy-peer-deps
-      - npm run build
-      - mv build clientDist
-      - mv clientDist ..
-      - cd ..
+      # - echo attempting to build the Panel
+      # - cd client
+      # - npm install --legacy-peer-deps
+      # - npm run build
+      # - mv build clientDist
+      # - mv clientDist ..
+      # - cd ..
     
   post_build:
     commands:
@@ -52,7 +52,7 @@ artifacts:
   files:
     # - '**/*' #copy  all build files to S3 location
     - api/**/*
-    - clientDist/**/*
+    # - clientDist/**/*
     # - adminDist/**/*
     - scripts/**/*
     - dev.socal.nginx.config
