@@ -14,3 +14,31 @@ export const DOMAIN_NAME = {
   development: 'https://socal.eachbase.com',
   production: 'https://socal.com',
 }[mode];
+
+
+
+export enum ServiceType {
+  HEATING = 'Heating',
+  VENTILATION = 'Ventilation',
+  AIR_CONDITIONING = 'Air Conditioning',
+  REFRIDGERATION = 'Refridgeration',
+}
+
+export enum BuildingType {
+  HOUSE = 'House',
+  APARTMEN = 'Apartment',
+  COMMERCIAL = 'Commercial',
+  INDUSTRIAL = 'Industrial',
+}
+
+export enum DayPeriod {
+  AS_SOON_AS_POSSIBLE = 'As soon as possible',
+  MORNING = 'Morning',
+  AFTERNOON = 'Afternoon',
+  EVENING = 'Evening',
+}
+
+export enum ContactMethod {
+  PHONE = 'Phone',
+  EMAIL = 'Email',
+}

@@ -1,5 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsEmail, IsEnum, IsString } from 'class-validator';
+import { BuildingType, ContactMethod, DayPeriod, ServiceType } from '../../constants';
 
 export class EstimateDTO {
   @ApiProperty()
@@ -38,28 +39,3 @@ export class EstimateDTO {
   contactMethod: ContactMethod;
 }
 
-declare enum ServiceType {
-  HEATING = 'Heating',
-  VENTILATION = 'Ventilation',
-  AIR_CONDITIONING = 'Air Conditioning',
-  REFRIDGERATION = 'Refridgeration',
-}
-
-declare enum BuildingType {
-  HOUSE = 'House',
-  APARTMEN = 'Apartment',
-  COMMERCIAL = 'Commercial',
-  INDUSTRIAL = 'Industrial',
-}
-
-declare enum DayPeriod {
-  AS_SOON_AS_POSSIBLE = 'As soon as possible',
-  MORNING = 'Morning',
-  AFTERNOON = 'Afternoon',
-  EVENING = 'Evening',
-}
-
-declare enum ContactMethod {
-  PHONE = 'Phone',
-  EMAIL = 'Email',
-}
