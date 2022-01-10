@@ -1,6 +1,3 @@
-import {makeStyles} from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
 
-
-export const homeFragments = makeStyles(() => ({
-
-}))
+export const homeFragments = makeStyles(() => ({}));

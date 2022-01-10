@@ -13,7 +13,7 @@ export const HomeFragment = ({}) => {
     return (
         <>
             <Header />
-            <main></main>
+            <main style={{ height: "100vh", width: "100%", 'background-color': "lightblue" }}></main>
             <Footer />
         </>
     );

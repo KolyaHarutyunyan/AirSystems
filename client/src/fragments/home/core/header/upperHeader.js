@@ -1,8 +1,9 @@
 import { Colors, TextFonts } from "@eachbase/utils";
 import styled from "styled-components";
 import { Images } from "../../../../assets";
-import { Routes } from "@eachbase/utils/routes"
+import { Routes } from "@eachbase/utils/routes";
 import { RouteLink } from "@eachbase/components/anchors/routeLink";
+import { NavBar } from "@eachbase/components/navbar";
 
 const UpperHeaderStyled = styled.section`
     display: flex;
@@ -23,21 +24,13 @@ const CompanyNameWrapperStyled = styled.div`
     font-weight: ${fontWeight};
 `;
 
-const NavbarStyled = styled.div`
-    background-color: ${Colors.BackgroundWhite};
-`;
-
 export const UpperHeader = ({}) => {
     return (
         <UpperHeaderStyled>
             <CompanyNameWrapperStyled>
                 SoCal Air Systems
             </CompanyNameWrapperStyled>
-            <NavbarStyled>
-                {Object.values(Routes).map(({title, path}) => (
-                    <RouteLink where={path}>{title}</RouteLink>
-                ))}
-            </NavbarStyled>
+            <NavBar />
         </UpperHeaderStyled>
     );
 };

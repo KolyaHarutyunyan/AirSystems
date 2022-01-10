@@ -1,11 +1,8 @@
-import {makeStyles} from "@material-ui/core";
-import {Colors} from "@eachbase/utils";
+import { makeStyles } from "@mui/styles";
+import { Colors } from "@eachbase/utils";
 
 export const homeStyles = makeStyles(() => ({
-    textStyle:{
-        color: Colors.ThemeRed
-    }
-
-
-
-}))
+    textStyle: {
+        color: Colors.ThemeRed,
+    },
+}));

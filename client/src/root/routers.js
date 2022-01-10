@@ -6,7 +6,7 @@ import { Services } from "@eachbase/pages/services";
 export const Routers = ({}) => {
     return (
         <Switch>
-            <Route path="/home" exact component={Home} />
+            <Route path="/" exact component={Home} />
             {/*<Redirect to={"/"} />*/}
         </Switch>
     );
