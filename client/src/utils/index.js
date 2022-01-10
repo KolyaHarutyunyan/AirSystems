@@ -1,1 +1,1 @@
-export { Colors, Shadow, Backgrounds } from './globalUi'
+export { Colors, Shadow, Backgrounds, TextFonts } from './globalUi'

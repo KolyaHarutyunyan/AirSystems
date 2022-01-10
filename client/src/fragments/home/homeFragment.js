@@ -1,11 +1,20 @@
-import {homeFragments} from "./core";
-import {Images} from "../../assets";
+import styled from "styled-components";
+import { homeFragments } from "./core";
+import { Images } from "../../assets";
+import { Header } from "./core/header";
+import { Footer } from "./core/footer";
 
-export const HomeFragment =({}) =>{
-    const classes = homeFragments()
-    return(
-        <div>
-            <img src={Images.someImage} alt={'img'}/>
-        </div>
-    )
-}
+const TittleH1Styled = styled.h1``;
+
+const FooterStyled = styled.footer``;
+
+export const HomeFragment = ({}) => {
+    const classes = homeFragments();
+    return (
+        <>
+            <Header />
+            <main></main>
+            <Footer />
+        </>
+    );
+};
