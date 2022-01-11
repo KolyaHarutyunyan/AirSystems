@@ -1,3 +1,4 @@
-export { homeFragments } from './styles'
-export { Header } from './header/header'
-export { Footer } from '../../layout/core/footer'
+export * as styles from './header/styles'
+
+// export * from './styles'
+export * from './header'

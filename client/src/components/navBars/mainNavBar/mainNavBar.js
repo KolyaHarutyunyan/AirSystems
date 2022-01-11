@@ -5,7 +5,7 @@ import { Routes } from "@eachbase/utils/routes";
 import { RouteLink } from "@eachbase/components/anchors/routeLink";
 
 const MainNavbarStyled = styled.div`
-    background-color: ${Colors.BackgroundWhite};
+    background-color: ${Colors.BackgroundPrimary};
     position: fixed;
     top: 24px;
     right: 0;

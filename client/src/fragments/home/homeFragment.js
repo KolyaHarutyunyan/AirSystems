@@ -1,15 +1,14 @@
 import styled from "styled-components";
-import { homeFragments } from "./core";
+import { styles } from "./core";
 import { Images } from "../../assets";
 import { Header } from "./core/header/header";
-import { Footer } from "../layout/core/footer";
 
 const TittleH1Styled = styled.h1``;
 
 const FooterStyled = styled.footer``;
 
 export const HomeFragment = ({}) => {
-    const classes = homeFragments();
+    const classes = styles.homeFragments();
     return (
         <>
             <Header />

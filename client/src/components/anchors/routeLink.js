@@ -19,7 +19,7 @@ const NavLinkStyled = styled(NavLink)`
     font-weight: ${props => props.isMatch ? fontWeight : 'inherit'};
     line-height: 20px;
     color: #374957;
-    border-bottom: ${props => props.isMatch && `2px solid ${Colors.ThemeYellowGreen}`};
+    border-bottom: ${props => props.isMatch && `2px solid ${Colors.ThemeGreen}`};
 `;
 
 export const RouteLink = ({ where, title }) => {

@@ -1,1 +1,2 @@
-export { Colors, Shadow, Backgrounds, TextFonts } from './globalUi'
+export { Routes } from './routes'
+export * from './globalUi'

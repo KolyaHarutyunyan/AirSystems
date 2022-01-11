@@ -1,24 +1,15 @@
-import { Colors, TextFonts } from "@eachbase/utils";
-import styled from "styled-components";
+// import { CompanyNameWrapperStyled, UpperHeaderStyled } from "../styles";
 
-const UpperHeaderStyled = styled.section`
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-`;
+/* Which way of importing is better? and if we have to use jsDoc? */
 
-const CompanyNameWrapperStyled = styled.h6`
-    color: ${Colors.BackgroundWhite};
-    position: absolute;
-    top: 43px;
-`;
+import { styles } from "..";
 
 export const UpperHeader = ({}) => {
     return (
-        <UpperHeaderStyled>
-            <CompanyNameWrapperStyled>
+        <styles.UpperHeaderStyled>
+            <styles.CompanyNameWrapperStyled>
                 SoCal Air Systems
-            </CompanyNameWrapperStyled>
-        </UpperHeaderStyled>
+            </styles.CompanyNameWrapperStyled>
+        </styles.UpperHeaderStyled>
     );
 };

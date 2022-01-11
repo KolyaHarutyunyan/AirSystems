@@ -1,4 +1,6 @@
 export { Header } from './header'
-export { UpperHeader } from './header'
-export { LowerHeader } from './lower'
+export { UpperHeader } from './upperHeader'
 export { MainTitle } from './mainTitle'
+export { LowerHeader } from './lowerHeader'
+export { HeroOverlay } from './heroOverlay'
+export * from './styles'

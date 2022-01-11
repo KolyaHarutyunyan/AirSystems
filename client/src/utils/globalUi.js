@@ -2,25 +2,25 @@ export const Colors = {
 
     // Backgrounds colors
 
-    BackgroundWhite: "#ffffff",
-    BackgroundWhiteSmoke: "#f7f7f7",
+    BackgroundPrimary: "#ffffff",
+    BackgroundSecondary: "#f7f7f7",
 
     // Text colors
 
-    TextMidnightBlue: "#0c2239",
-    TextDarkSlateGray: "#384957",
-    TextSlateGray: "#6e8297",
+    TextPrimary: "#0c2239",
+    TextSecondary: "#384957",
+    TextTertiary: "#6e8297",
 
 
     // Theme colors
     
-    ThemeYellowGreen: "#76ca3c",
-    ThemeMidnightDark: "#0d2a47",
+    ThemeGreen: "#76ca3c",
+    ThemeIndigo: "#0d2a47",
     ThemeOrange: "#fca121",
-    ThemeCornFlowerBlue: "#5899eb",
-    ThemeMediumPurple: "#9f74fb",
-    ThemeDeepSkyBlue: "#01baef",
-    ThemeTomato: "#ff395c",
+    ThemeBlue: "#5899eb",
+    ThemePurple: "#9f74fb",
+    ThemeLightBlue: "#01baef",
+    ThemeRed: "#ff395c",
 }
 
 export const Shadow = {
