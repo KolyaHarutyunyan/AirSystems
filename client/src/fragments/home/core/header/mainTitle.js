@@ -1,11 +1,7 @@
 import styled from "styled-components";
-import { Images } from "../../../../assets";
 
 const MainTitleStyled = styled.section`
-    background-color: green;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
+    flex: 1.34;
 `;
 
 export const MainTitle = ({}) => {

@@ -1,10 +1,13 @@
-import {Routers} from "./root/routers";
-
+import { MainNavBar } from "@eachbase/components";
+import { Routers } from "./root/routers";
 
 function App() {
-  return (
-      <Routers/>
-  );
+    return (
+        <>
+            <MainNavBar />
+            <Routers />
+        </>
+    );
 }
 
 export default App;
