@@ -1,8 +1,6 @@
-import { makeStyles } from "@mui/styles";
-import { Colors } from "@eachbase/utils";
+import styled from "styled-components";
 
-export const homeStyles = makeStyles(() => ({
-    textStyle: {
-        color: Colors.ThemeRed,
-    },
-}));
+export const HomeStyled = styled.div`
+    width: 100%;
+    min-height: 100vh;
+`;

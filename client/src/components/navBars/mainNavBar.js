@@ -1,19 +1,10 @@
 import React from "react";
-import styled from "styled-components";
-import { Colors } from "@eachbase/utils";
 import { Routes } from "@eachbase/utils/routes";
 import { RouteLink } from "@eachbase/components/anchors/routeLink";
+import { MainNavbarStyled } from "./styles";
+import { Button } from "../buttons";
+import { Colors } from "@eachbase/utils";
 
-const MainNavbarStyled = styled.div`
-    background-color: ${Colors.BackgroundPrimary};
-    position: fixed;
-    top: 24px;
-    right: 0;
-    padding-left: 4px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-`;
 
 export const MainNavBar = () => {
 
@@ -24,7 +15,7 @@ export const MainNavBar = () => {
             {Object.values(Routes).map(({ title, path }, index) => (
                 <RouteLink key={path} title={title} where={path}></RouteLink>
             ))}
-            <button>Request An Appointment</button>
+            <Button bgColor={Colors.ThemeGreen} color={Colors.BackgroundPrimary}>Request An Appointment</Button>
         </MainNavbarStyled>
     );
 };

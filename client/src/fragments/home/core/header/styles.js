@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import { makeStyles } from "@mui/styles";
 import { Images } from "@eachbase/assets";
-import { Colors, TextFonts } from "@eachbase/utils";
+import { Colors } from "@eachbase/utils";
 
-export const homeFragments = makeStyles(() => ({}));
 
 export const HeaderStyled = styled.header`
     background-image: url(${Images.homepageHeroWeb});

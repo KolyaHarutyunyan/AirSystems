@@ -1,4 +1,4 @@
-import { MainNavBar } from "@eachbase/components";
+import { MainNavBar } from "@eachbase/components/navBars/mainNavBar";
 import { Routers } from "./root/routers";
 
 function App() {

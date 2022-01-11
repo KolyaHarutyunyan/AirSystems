@@ -1,1 +1,2 @@
-export { MainNavBar } from './navBars/mainNavBar/mainNavBar'
+export * from "./navBars";
+export * from "./buttons";
