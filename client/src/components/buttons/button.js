@@ -5,10 +5,13 @@ const ButtonStyled = styled.span`
     user-select: none;
     margin: 0 20px;
     height: 40px;
-    padding: 11px 16px 9px;
+    padding: 10px 20px;
     border-radius: 4px;
     background-color: ${({ bgColor }) => bgColor};
     color: ${({ color }) => color};
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const Button = (props) => {

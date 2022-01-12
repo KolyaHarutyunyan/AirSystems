@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Divider } from "@mui/material";
 import { Colors, TextFonts } from "@eachbase/utils";
+import { UpperFooter } from "./upperFooter";
 
 let { fontSize, fontWeight } = TextFonts.p2;
 
@@ -40,7 +41,7 @@ const FooterStyled = styled.footer`
 export const Footer = () => {
     return (
         <FooterStyled>
-            <div className="upper-footer"></div>
+            <UpperFooter />
             {/* <div className="footer-divider"></div> */}
             <Divider
                 style={{
