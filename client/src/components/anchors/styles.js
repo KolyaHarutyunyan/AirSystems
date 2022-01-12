@@ -10,14 +10,14 @@ export const RouteLinkStyled = styled.span`
     align-items: center;
 `;
 
-let { fontSize, fontWeight } = TextFonts["p1.1"];
+let { fontSize, fontWeight } = TextFonts["p1.3"];
 
 export const NavLinkStyled = styled(NavLink)`
     text-decoration: none;
     font-size: ${fontSize};
-    font-weight: ${(props) => (props.isMatch ? fontWeight : "inherit")};
     line-height: 20px;
-    color: ${Colors.TextSecondary};
+    font-weight: ${(props) => (props.isMatch ? "bold" : fontWeight)};
+    color: ${(props) => (props.isMatch ? Colors.TextPrimary : Colors.TextSecondary)};
     border-bottom: ${(props) =>
         props.isMatch && `2px solid ${Colors.ThemeGreen}`};
 `;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Header } from ".";
+import { Header } from "./header";
+import { Main } from "./main";
 
 const TittleH1Styled = styled.h1``;
 
@@ -9,7 +10,7 @@ export const HomeFragment = ({}) => {
     return (
         <>
             <Header />
-            {/* <main style={{ height: "100vh", width: "100%", 'background-color': "lightblue" }}></main> */}
+            <Main />
         </>
     );
 };

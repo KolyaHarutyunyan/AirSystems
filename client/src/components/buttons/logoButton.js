@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonStyled = styled.span`
+const LogoButtonStyled = styled.span`
     cursor: pointer;
     user-select: none;
     margin: 0 20px;
@@ -11,7 +11,11 @@ const ButtonStyled = styled.span`
     color: ${({ color }) => color};
 `;
 
-export const Button = (props) => {
-    const { onClick, disabled, color, bgColor, icon } = props;
-    return <ButtonStyled {...props} />;
+export const LogoButton = (props) => {
+    const { logo, onClick, disabled, color, bgColor, icon } = props;
+    return (
+        <>
+            <LogoButtonStyled {...props} />
+        </>
+    );
 };

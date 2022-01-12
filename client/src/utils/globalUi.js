@@ -11,7 +11,7 @@ export const Colors = {
     TextSecondary: "#384957",
     TextTertiary: "#6e8297",
 
-
+    
     // Theme colors
     
     ThemeGreen: "#76ca3c",
@@ -21,6 +21,11 @@ export const Colors = {
     ThemePurple: "#9f74fb",
     ThemeLightBlue: "#01baef",
     ThemeRed: "#ff395c",
+
+
+    // Dividers
+
+    Divider : '#6D82974D',
 }
 
 export const Shadow = {
