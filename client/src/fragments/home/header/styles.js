@@ -45,8 +45,6 @@ export const HeaderStyled = styled.header`
         color: ${Colors.TextTertiary};
     }
     .single-info__Tell {
-        font-weight: ${fontWeight};
-        color: ${Colors.TextTertiary};
         padding-left: 0;
     }
 

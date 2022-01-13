@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Affordable_Pricing" data-name="Affordable Pricing" transform="translate(-689 -1130)">
+    <g id="Base" transform="translate(689 1130)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="40" height="40" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="39" fill="none"/>
+    </g>
+    <g id="money" transform="translate(694 1135)">
+      <path id="Path_7" data-name="Path 7" d="M191.668,182a9.668,9.668,0,1,0,9.668,9.668A9.679,9.679,0,0,0,191.668,182Zm0,8.789a2.63,2.63,0,0,1,.879,5.112v1.92h-1.758V195.9a2.633,2.633,0,0,1-1.758-2.475h1.758a.879.879,0,1,0,.879-.879,2.63,2.63,0,0,1-.879-5.112v-1.92h1.758v1.92a2.633,2.633,0,0,1,1.758,2.475h-1.758a.879.879,0,1,0-.879.879Z" transform="translate(-171.336 -171.336)" fill="#fff"/>
+      <path id="Path_8" data-name="Path 8" d="M9.785,10.664c5.421,0,9.668-2.317,9.668-5.273S15.206,0,9.785,0,0,2.434,0,5.391,4.364,10.664,9.785,10.664Z" fill="#fff"/>
+      <path id="Path_9" data-name="Path 9" d="M0,337.559v1.432c0,2.957,4.364,5.273,9.785,5.273.308,0,.605-.028.908-.043a11.351,11.351,0,0,1-1.473-3.494C5.3,340.62,1.9,339.415,0,337.559Z" transform="translate(0 -317.78)" fill="#fff"/>
+      <path id="Path_10" data-name="Path 10" d="M8.948,254.22c-.02-.276-.042-.553-.042-.834a11.376,11.376,0,0,1,.325-2.657C5.306,250.622,1.9,249.417,0,247.559v1.432C0,251.791,3.941,253.992,8.948,254.22Z" transform="translate(0 -233.054)" fill="#fff"/>
+      <path id="Path_11" data-name="Path 11" d="M9.785,164.265h0a11.465,11.465,0,0,1,2.469-3.681,19.616,19.616,0,0,1-2.471.165c-4.173,0-7.8-1.244-9.785-3.19v1.432C0,161.948,4.364,164.265,9.785,164.265Z" transform="translate(0 -148.327)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

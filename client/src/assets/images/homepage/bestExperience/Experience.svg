@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Experience" transform="translate(-647 -1108)">
+    <g id="Base" transform="translate(647 1108)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="40" height="40" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="39" fill="none"/>
+    </g>
+    <g id="portfolio" transform="translate(652 1114.667)">
+      <path id="Path_1" data-name="Path 1" d="M211,240h5.273v1.758H211Zm0,0" transform="translate(-198.637 -225.938)" fill="#fff"/>
+      <path id="Path_2" data-name="Path 2" d="M24.339,88.695H19.395v.879a.879.879,0,0,1-.879.879H11.484a.879.879,0,0,1-.879-.879v-.879H5.661a2.634,2.634,0,0,1-2.5-1.8L0,77.41V96.605a2.64,2.64,0,0,0,2.637,2.637H27.363A2.64,2.64,0,0,0,30,96.605V77.411l-3.16,9.481a2.633,2.633,0,0,1-2.5,1.8Zm0,0" transform="translate(0 -72.875)" fill="#fff"/>
+      <path id="Path_3" data-name="Path 3" d="M42.812,0H35.781a2.64,2.64,0,0,0-2.637,2.637v.879H25.809l3.315,9.946a.879.879,0,0,0,.834.6H34.9v-.879a.879.879,0,0,1,.879-.879h7.031a.879.879,0,0,1,.879.879v.879h4.944a.879.879,0,0,0,.834-.6l3.315-9.946H45.449V2.637A2.64,2.64,0,0,0,42.812,0ZM34.9,3.516V2.637a.879.879,0,0,1,.879-.879h7.031a.879.879,0,0,1,.879.879v.879Zm0,0" transform="translate(-24.297)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,2 +1,1 @@
-export * from './routeLink'
-export * from './styles'
+export { RouteLink } from './routeLink'

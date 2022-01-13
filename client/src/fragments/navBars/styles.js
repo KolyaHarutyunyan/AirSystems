@@ -11,4 +11,5 @@ export const MainNavbarStyled = styled.div`
     background-color: ${Colors.BackgroundPrimary};
     height: 60px;
     padding: 0 60px 0 4px;
+    box-shadow: 0px 2px 4px #00000014;
 `;
