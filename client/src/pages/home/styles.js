@@ -1,11 +1,5 @@
-import {makeStyles} from "@material-ui/core";
-import {Colors} from "@eachbase/utils";
+import styled from "styled-components";
 
-export const homeStyles = makeStyles(() => ({
-    textStyle:{
-        color: Colors.ThemeRed
-    }
-
-
-
-}))
+export const HomeStyled = styled.div`
+    width: 100%;
+`;

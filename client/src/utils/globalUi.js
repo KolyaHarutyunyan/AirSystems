@@ -2,24 +2,30 @@ export const Colors = {
 
     // Backgrounds colors
 
-    BackgroundBlue: '#347AF0',
-    BackgroundLight: '#F7F9FC',
+    BackgroundPrimary: "#ffffff",
+    BackgroundSecondary: "#f7f7f7",
 
     // Text colors
 
-    TextPrimary: '#51566D',
+    TextPrimary: "#0c2239",
+    TextSecondary: "#384957",
+    TextTertiary: "#6e8297",
 
+    
     // Theme colors
+    
+    ThemeGreen: "#76ca3c",
+    ThemeIndigo: "#0d2a47",
+    ThemeOrange: "#fca121",
+    ThemeBlue: "#5899eb",
+    ThemePurple: "#9f74fb",
+    ThemeLightBlue: "#01baef",
+    ThemeRed: "#ff395c",
 
-    ThemeBlue: '#438AFE',
-    ThemeYellow: '#ECC711',
-    ThemeGreen: '#00C851',
-    ThemeRed: '#FE7070',
-    ThemePurple: '#7B61EA',
-    ThemeOrange: '#FFA330',
-    ThemeGray: '#E6ECF380',
-    ThemeBorder: '#51566DB3',
-    ThemeMangoOrange: '#FE7B43'
+
+    // Dividers
+
+    Divider : '#6D82974D',
 }
 
 export const Shadow = {
@@ -32,3 +38,21 @@ export const Backgrounds = {
     green: '#00C851 0% 0% no-repeat padding-box',
 }
 
+export const TextFonts = {
+    'p1.1': {
+        fontSize: '16px',
+        fontWeight: 'bold',
+    } ,
+    'p1.2': {
+        fontSize: '16px',
+        fontWeight: 600,
+    } ,
+    'p1.3': {
+        fontSize: '16px',
+        fontWeight: 'medium',
+    } ,
+    p2: {
+        fontSize: '12px',
+        fontWeight: 'medium',
+    }
+}

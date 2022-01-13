@@ -1,1 +1,0 @@
-export { homeFragments } from './styles'
