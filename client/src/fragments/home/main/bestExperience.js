@@ -1,26 +1,6 @@
-import styled from "styled-components";
-import { Colors } from "@eachbase/utils";
 import { Benefits } from "@eachbase/utils";
-import { BenefitCard } from "../../../components/cards/benefitCard";
-
-const BestExperienceStyled = styled.section`
-    width: 66%;
-    min-width: 954px;
-    margin-top: 128px;
-    .theme-indigo {
-        color: ${Colors.ThemeIndigo};
-    }
-    & .best-exp-title {
-        width: 361px;
-        line-height: 50px;
-        margin-bottom: 32px;
-    }
-    .benefits-contaner {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-`;
+import { BenefitCard } from "@eachbase/components";
+import { BestExperienceStyled } from "./styles";
 
 export const BestExperience = () => {
     return (
@@ -30,7 +10,7 @@ export const BestExperience = () => {
             </h2>
             <div className="benefits-contaner">
                 {Benefits.map((ben) => (
-                    <BenefitCard ben={ben} />
+                    <BenefitCard key={ben.title} ben={ben} />
                 ))}
             </div>
         </BestExperienceStyled>
