@@ -7,12 +7,9 @@ import { Colors } from "@eachbase/utils";
 
 
 export const MainNavBar = () => {
-
     return (
-        <MainNavbarStyled
-            aria-label="icon tabs example"
-        >
-            {Object.values(Routes).map(({ title, path }, index) => (
+        <MainNavbarStyled>
+            {Object.values(Routes).map(({ title, path }) => (
                 <RouteLink key={path} title={title} where={path}></RouteLink>
             ))}
             <Button bgColor={Colors.ThemeGreen} color={Colors.BackgroundPrimary}>Request An Appointment</Button>

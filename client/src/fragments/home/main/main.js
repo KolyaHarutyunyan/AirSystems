@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { BestExperience } from "./bestExperience";
+import { FreeQuotes } from "./freeQuotes";
+import { ProvidingServices } from "./providingServices";
+import { WisetackFinancing } from "./wisetackFinancing";
 
 const MainStyled = styled.main`
     width: 100%;
-    height: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,11 +14,11 @@ const MainStyled = styled.main`
 export const Main = () => {
     return (
         <MainStyled>
-            {/* <section className="best-experience"></section> */}
             <BestExperience />
-            <section className="free-quotes"></section>
-            <section className="providing-services"></section>
-            <section className="wisetack-financing"></section>
+            <FreeQuotes />
+            <ProvidingServices/>
+            {/* <section className="wisetack-financing"></section> */}
+            <WisetackFinancing />
             <section className="customers-opinion"></section>
             <section className="partners"></section>
         </MainStyled>

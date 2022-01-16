@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Checkmark" transform="translate(-922 -3000)">
+    <g id="Base" transform="translate(922 3000)" fill="#01baef" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="24" height="24" stroke="none"/>
+      <rect x="0.5" y="0.5" width="23" height="23" fill="none"/>
+    </g>
+    <g id="check_1_" data-name="check (1)" transform="translate(834.423 2998.622)">
+      <path id="Path_15" data-name="Path 15" d="M97.025,22.379a1.965,1.965,0,0,1-1.491-.686l-4.712-5.5A1.964,1.964,0,0,1,93.8,13.64l3.081,3.594,9.737-11.741c1.507-2.111,3.084-.942,1.571,1.178L98.622,21.556a1.964,1.964,0,0,1-1.511.82Z" fill="#01baef"/>
+    </g>
+  </g>
+</svg>
