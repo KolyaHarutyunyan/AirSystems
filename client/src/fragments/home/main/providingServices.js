@@ -33,12 +33,12 @@ const ProvidingServicesStyled = styled.section`
     }
     .providing-services-title{
         margin-right: 16px;
+        margin-bottom: 16px;
     }
     .providing-services-descr {
         line-height: 24px;
         font-weight: ${TextFonts["p1.2"].fontWeight};
         max-width: 465px;
-        margin-top: 16px;
     }
     .providing-services-cards-cont {
         position: absolute;

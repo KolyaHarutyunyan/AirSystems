@@ -22,10 +22,6 @@ const ProvidingServiceCardStyled = styled.div`
     }
     .service-card-list {
         list-style-position: inside;
-        list-style-type: disc;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        margin-inline-end: 0;
         padding-inline-start: 1px;
     }
     .service-card-list-item {

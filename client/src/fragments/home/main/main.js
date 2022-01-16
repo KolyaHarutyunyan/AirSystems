@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { BestExperience } from "./bestExperience";
 import { FreeQuotes } from "./freeQuotes";
 import { ProvidingServices } from "./providingServices";
+import { WisetackFinancing } from "./wisetackFinancing";
 
 const MainStyled = styled.main`
     width: 100%;
@@ -15,9 +16,9 @@ export const Main = () => {
         <MainStyled>
             <BestExperience />
             <FreeQuotes />
-            {/* <section className="providing-services"></section> */}
             <ProvidingServices/>
-            <section className="wisetack-financing"></section>
+            {/* <section className="wisetack-financing"></section> */}
+            <WisetackFinancing />
             <section className="customers-opinion"></section>
             <section className="partners"></section>
         </MainStyled>

@@ -19,7 +19,7 @@ export const Header = ({}) => {
                 <p className="lower-header">
                     <div className="contact-info">
                         <div className="info-logo-container">
-                            <img src={Images.infoLogo} alt="info"></img>
+                            <img src={Images.Icons.Info} alt="info"></img>
                         </div>
                         {Object.entries(Info).slice(0,3).map(([key, value]) => (
                             <div
