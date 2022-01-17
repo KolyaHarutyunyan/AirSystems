@@ -1,15 +1,5 @@
-import styled from "styled-components";
-import { BestExperience } from "./bestExperience";
-import { FreeQuotes } from "./freeQuotes";
-import { ProvidingServices } from "./providingServices";
-import { WisetackFinancing } from "./wisetackFinancing";
-
-const MainStyled = styled.main`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`;
+import { BestExperience, CustomersOpinion, FreeQuotes, ProvidingServices, WisetackFinancing } from "./core";
+import { MainStyled } from "./styles"
 
 export const Main = () => {
     return (
@@ -17,9 +7,8 @@ export const Main = () => {
             <BestExperience />
             <FreeQuotes />
             <ProvidingServices/>
-            {/* <section className="wisetack-financing"></section> */}
             <WisetackFinancing />
-            <section className="customers-opinion"></section>
+            <CustomersOpinion/>
             <section className="partners"></section>
         </MainStyled>
     );
