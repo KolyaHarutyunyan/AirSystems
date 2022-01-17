@@ -1,7 +1,12 @@
-import { BestExperience, CustomersOpinion, FreeQuotes, ProvidingServices, WisetackFinancing } from "./core";
+import { useState } from "react"
+import { BestExperience, FreeQuotes, CustomersOpinion, ProvidingServices, WisetackFinancing, Partners } from "./core";
 import { MainStyled } from "./styles"
 
 export const Main = () => {
+    const [width, setWidth] = useState (window?.innerWidth);
+
+    const onResize = () => { setWidth(window.innerWidth) }
+
     return (
         <MainStyled>
             <BestExperience />
@@ -9,7 +14,7 @@ export const Main = () => {
             <ProvidingServices/>
             <WisetackFinancing />
             <CustomersOpinion/>
-            <section className="partners"></section>
+            <Partners />
         </MainStyled>
     );
 };
