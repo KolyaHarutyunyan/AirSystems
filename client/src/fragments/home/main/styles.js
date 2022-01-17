@@ -51,11 +51,11 @@ export const FreeQuotesStyled = styled.section`
         height: 100%;
     }
     .free-quotes__title-cont {
+        line-height: 42px;
     }
     & .free-quotes__title {
         margin-top: 16%;
         max-width: 465px;
-        line-height: 42px;
     }
 
     .free-quotes__absolute-cont {

@@ -8,6 +8,7 @@ const ProvidingServicesStyled = styled.section`
     width: 100%;
     height: 751px;
     padding: 0;
+    margin-top: 128px;
 
     .theme-green {
         color: ${Colors.ThemeGreen};
@@ -30,10 +31,10 @@ const ProvidingServicesStyled = styled.section`
         line-height: 49px;
         display: flex;
         align-items: center;
-    }
-    .providing-services-title{
-        margin-right: 16px;
         margin-bottom: 16px;
+    }
+    .providing-services-title {
+        padding-right: 16px;
     }
     .providing-services-descr {
         line-height: 24px;
@@ -72,7 +73,7 @@ export const ProvidingServices = () => {
                     <ProvidingServiceCard
                         service={service}
                         key={service.title}
-                    ></ProvidingServiceCard>
+                    />
                 ))}
             </div>
         </ProvidingServicesStyled>

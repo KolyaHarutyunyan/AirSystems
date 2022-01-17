@@ -5,7 +5,7 @@ import { Images } from "@eachbase/assets";
 
 const WisetackFinancingStyled = styled.section`
     width: 100%;
-    height: 900px;
+    height: 530px;
     padding: 0 80px;
     margin-top: 128px;
     .theme-green {

@@ -1,5 +1,5 @@
-import { Colors, TextFonts } from "@eachbase/utils";
 import styled from "styled-components";
+import { Colors, TextFonts } from "@eachbase/utils";
 
 const ProvidingServiceCardStyled = styled.div`
     top: 300px;

@@ -4,4 +4,5 @@ export { Titles } from "./titles";
 export { Benefits } from "./benefits";
 export { Services } from "./services";
 export { WisetackFeatures } from "./wisetackFeatures";
+export * from "./listings";
 export * from "./globalUi";
