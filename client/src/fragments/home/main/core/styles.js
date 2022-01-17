@@ -218,7 +218,9 @@ export const CustomersOpinionStyled = styled.section`
         color: ${Colors.ThemeGreen};
     }
 
-    
+    .text-secondary{
+        color: ${Colors.TextSecondary}
+    }
 
     .customers-opinion-title-cont {
         line-height: 49px;
@@ -235,8 +237,9 @@ export const CustomersOpinionStyled = styled.section`
         max-width: 465px;
     }
 
-    /* .customers-opinion-carousel-cont {
-        height: 200px;
+    .customers-opinion-carousel-cont {
+        height: 220px !important;
+        margin-top: 30px;
         & button {
             width: 8px !important;
             height: 8px !important;
@@ -244,7 +247,7 @@ export const CustomersOpinionStyled = styled.section`
             margin: 0 4px;
             color: ${Colors.ThemeGreen} !important;
         }
-    } */
+    }
 `;
 
 export const ProvidingServiceCardStyled = styled.div`
@@ -303,8 +306,11 @@ export const ListingsCardItemStyled = styled.div`
     .text-tertiary {
         color: ${Colors.TextTertiary};
     }
+
     .comment-cont {
+        line-height: 24px;
         ${TextFonts["p1.3"]}
+        padding: 16px 0 14px;
     }
     .author-cont {
         line-height: 20px;

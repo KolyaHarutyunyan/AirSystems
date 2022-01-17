@@ -2,6 +2,7 @@ import { TitleDivider } from "./titleDivider";
 import { MainCarousel } from "./mainCarousel";
 import { CustomersOpinionStyled } from "./styles";
 
+
 export const CustomersOpinion = () => {
     return (
         <CustomersOpinionStyled>
