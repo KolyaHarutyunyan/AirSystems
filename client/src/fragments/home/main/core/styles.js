@@ -250,6 +250,45 @@ export const CustomersOpinionStyled = styled.section`
     }
 `;
 
+export const PartnersStyled = styled.section`
+    width: 100%;
+    padding: 0 80px;
+    margin: 128px 0;
+
+    .theme-green {
+        color: ${Colors.ThemeGreen};
+    }
+
+    .theme-indigo {
+        color: ${Colors.ThemeIndigo};
+    }
+
+    .partners__title-cont {
+        line-height: 49px;
+        display: flex;
+        align-items: center;
+    }
+    .partners__title {
+        margin-right: 16px;
+    }
+    .partners__descr {
+        line-height: 24px;
+        font-weight: ${TextFonts["p1.3"].fontWeight};
+        max-width: 465px;
+        margin-top: 16px;
+        margin-bottom: 30px;
+    }
+
+    .partners__logo-cont {
+    }
+    .partner-logo-wrapper {
+    }
+    .partner-logo {
+        width: 162px;
+        height: 144px;
+    }
+`;
+
 export const ProvidingServiceCardStyled = styled.div`
     top: 300px;
     background-color: ${Colors.BackgroundPrimary};
