@@ -179,7 +179,7 @@ export const WisetackFinancingStyled = styled.section`
         padding-inline-start: 24px;
     }
 
-    .wisetack-financing-features-list-item{
+    .wisetack-financing-features-list-item {
         line-height: 20px;
         ${TextFonts["p1.2"]}
     }
@@ -190,7 +190,7 @@ export const WisetackFinancingStyled = styled.section`
     .wisetack-financing-features-list-item ::marker {
         /* display: flex; */
         /* align-items: center; */
-        
+
         /* unicode-bidi: isolate;
         font-variant-numeric: tabular-nums;
         text-transform: none;
@@ -218,8 +218,8 @@ export const CustomersOpinionStyled = styled.section`
         color: ${Colors.ThemeGreen};
     }
 
-    .text-secondary{
-        color: ${Colors.TextSecondary}
+    .text-secondary {
+        color: ${Colors.TextSecondary};
     }
 
     .customers-opinion-title-cont {
@@ -258,8 +258,8 @@ export const ProvidingServiceCardStyled = styled.div`
     display: flex;
     flex-direction: column;
 
-    .text-tertiary{
-        color:${Colors.TextTertiary}
+    .text-tertiary {
+        color: ${Colors.TextTertiary};
     }
 
     .service-card-img {
@@ -292,7 +292,6 @@ export const ProvidingServiceCardStyled = styled.div`
         margin-top: 8px;
     }
 `;
-
 
 export const ListingsCardItemStyled = styled.div`
     background-color: ${Colors.BackgroundSecondary};
