@@ -15,20 +15,30 @@ import { Logos } from "./images/homepage/logos";
 import { BestExperience } from "./images/homepage/bestExperience";
 import { Icons } from "./images/homepage/icons";
 
+// ** contuct us images **
+import dropdownArrowBlack from "@eachbase/images/contactUs/icons/dropdownArrowBlack.svg";
+import dropdownArrow from "@eachbase/images/contactUs/icons/dropdownArrow.svg";
+// ** end **
+
 export const Images = {
-    homepageHeroWeb: homepageHeroWeb,
-    homepageFreequotesWeb: homepageFreequotesWeb,
+  homepageHeroWeb: homepageHeroWeb,
+  homepageFreequotesWeb: homepageFreequotesWeb,
 
-    homepageHeatingWeb: homepageHeatingWeb,
-    homepageVentilationWeb: homepageVentilationWeb,
-    homepageAirConditWeb: homepageAirConditWeb,
-    homepageRefrigerationWeb: homepageRefrigerationWeb,
+  homepageHeatingWeb: homepageHeatingWeb,
+  homepageVentilationWeb: homepageVentilationWeb,
+  homepageAirConditWeb: homepageAirConditWeb,
+  homepageRefrigerationWeb: homepageRefrigerationWeb,
 
-    homepageFinanceWeb: homepageFinanceWeb,
+  homepageFinanceWeb: homepageFinanceWeb,
 
-    // Info: Info,
+  // Info: Info,
 
-    Logos: Logos,
-    Icons: Icons,
-    BestExperience: BestExperience,
+  Logos: Logos,
+  Icons: Icons,
+  BestExperience: BestExperience,
+
+  // ** contuct us images **
+  dropdownArrowBlack,
+  dropdownArrow,
+  // ** end **
 };
