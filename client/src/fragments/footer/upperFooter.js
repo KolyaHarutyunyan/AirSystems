@@ -18,7 +18,7 @@ export const UpperFooter = () => {
                 <h6 className="follow-container indigo-heading">
                     Follow us:
                     <div className="logos-container">
-                        {Object.entries(Images.Logos).map(([title, svg]) => (
+                        {Object.entries(Images.Logos).slice(0,4).map(([title, svg]) => (
                             <img
                                 key={title}
                                 className={title}

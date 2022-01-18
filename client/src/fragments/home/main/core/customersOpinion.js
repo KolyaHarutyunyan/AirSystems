@@ -4,7 +4,7 @@ import { MainCarousel } from "./mainCarousel";
 import { ListingsCardItem } from "./listingsCardItem";
 import { CustomersOpinionListings } from "@eachbase/utils";
 
-export const CustomersOpinion = ({ width, onResize }) => {
+export const CustomersOpinion = ({ width }) => {
     const listingsSize =
         width >= 768 && width < 1209
             ? 2
@@ -14,6 +14,7 @@ export const CustomersOpinion = ({ width, onResize }) => {
             ? 4
             : 1;
 
+            
     return (
         <CustomersOpinionStyled>
             <h2 className="customers-opinion-title-cont theme-indigo">
@@ -30,7 +31,7 @@ export const CustomersOpinion = ({ width, onResize }) => {
                 quality work.
             </p>
             <div className="customers-opinion-carousel-cont">
-                <MainCarousel listingsSize={listingsSize} onResize={onResize}>
+                <MainCarousel listingsSize={listingsSize} >
                     {CustomersOpinionListings.map((listing) => (
                         <ListingsCardItem
                             key={listing.id}

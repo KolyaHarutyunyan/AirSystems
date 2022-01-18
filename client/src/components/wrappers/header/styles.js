@@ -1,15 +1,19 @@
 import styled from "styled-components";
-import { Images } from "@eachbase/assets";
 import { Colors, TextFonts } from "@eachbase/utils";
 
 let { fontWeight } = TextFonts["p1.2"];
 
 export const HeaderStyled = styled.header`
-    background-image: url(${Images.homepageHeroWeb});
+    background-image: url(${({ img }) => img});
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: calc(100vw / 2.4);
+    height: ${({ height }) => height};
+
+    .background-primary {
+        color: ${Colors.BackgroundPrimary};
+    }
+
     .main-title {
         width: 628px;
         line-height: 84px;
@@ -24,7 +28,7 @@ export const HeaderStyled = styled.header`
     .lower-header {
         margin-bottom: 56px;
     }
-    & .contact-info {
+    .contact-info {
         width: 558px;
         height: 60px;
         background-color: ${Colors.BackgroundPrimary};
@@ -48,8 +52,12 @@ export const HeaderStyled = styled.header`
         padding-left: 0;
     }
 
-    .info-logo-container{
+    .info-logo-container {
         padding: 24px;
+    }
+
+    .upper-header {
+        margin-top: 43px;
     }
 `;
 
@@ -61,12 +69,4 @@ export const HeroOverlayStyled = styled.section`
     height: 100%;
     background: transparent linear-gradient(90deg, #000000b3 0%, #00000033 100%)
         0% 0% no-repeat padding-box;
-`;
-
-export const UpperHeaderStyled = styled.section`
-    margin-top: 43px;
-`;
-
-export const CompanyNameWrapperStyled = styled.h6`
-    color: ${Colors.BackgroundPrimary};
 `;

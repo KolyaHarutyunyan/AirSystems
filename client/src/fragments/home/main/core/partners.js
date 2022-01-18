@@ -3,14 +3,17 @@ import { MainCarousel } from "./mainCarousel";
 import { TitleDivider } from "./titleDivider";
 import { PartnersStyled } from "./styles";
 
-export const Partners = ({ width, onResize }) => {
+
+export const Partners = ({ width }) => {
     const listingsSize =
         width >= 768 && width < 1209
             ? 2
-            : width >= 1209 && width < 1430
-            ? 3
-            : width >= 1430
-            ? 4
+            : width >= 900 && width < 1280
+            ? 5
+            : width >= 1280 && width < 1440
+            ? 6
+            : width >= 1440
+            ? 7
             : 1;
     return (
         <PartnersStyled>
@@ -26,10 +29,10 @@ export const Partners = ({ width, onResize }) => {
                 the highest quality products with the latest technologies
             </p>
             <div className="partners__logo-cont">
-                <MainCarousel listingsSize={listingsSize} onResize={onResize}>
+                <MainCarousel listingsSize={listingsSize} >
                     {Object.entries(Images.Logos.PartnersLogos).map(
                         ([title, src]) => (
-                            <div className="partner-logo-wrapper">
+                            <div key={title} className="partner-logo-wrapper">
                                 <img
                                     className="partner-logo"
                                     src={src}
