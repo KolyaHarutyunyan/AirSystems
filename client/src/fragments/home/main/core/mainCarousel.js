@@ -1,12 +1,7 @@
-import { useEffect } from "react";
 import { MainCarouselStyled } from "./styles";
 
-export const MainCarousel = ({ children, listingsSize, onResize }) => {
+export const MainCarousel = ({ children, listingsSize }) => {
 
-    useEffect(() => {
-        window.addEventListener("resize", onResize);
-        return () => { window.removeEventListener("resize", onResize) }
-    }, []);
     return (
         <MainCarouselStyled
             slidesToShow={listingsSize}

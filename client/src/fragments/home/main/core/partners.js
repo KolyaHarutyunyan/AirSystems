@@ -4,7 +4,7 @@ import { TitleDivider } from "./titleDivider";
 import { PartnersStyled } from "./styles";
 
 
-export const Partners = ({ width, onResize }) => {
+export const Partners = ({ width }) => {
     const listingsSize =
         width >= 768 && width < 1209
             ? 2
@@ -29,7 +29,7 @@ export const Partners = ({ width, onResize }) => {
                 the highest quality products with the latest technologies
             </p>
             <div className="partners__logo-cont">
-                <MainCarousel listingsSize={listingsSize} onResize={onResize}>
+                <MainCarousel listingsSize={listingsSize} >
                     {Object.entries(Images.Logos.PartnersLogos).map(
                         ([title, src]) => (
                             <div key={title} className="partner-logo-wrapper">

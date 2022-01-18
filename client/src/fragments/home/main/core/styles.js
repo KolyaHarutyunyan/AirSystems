@@ -101,6 +101,8 @@ export const FreeQuotesStyled = styled.section`
         width: 465px;
         @media ${Devices.tablet} {
             width: 70%;
+            font-size: 24px;
+            line-height: 29px;
         }
         @media ${Devices.mobile} {
             width: 100%;
@@ -127,7 +129,7 @@ export const FreeQuotesStyled = styled.section`
             padding: 24px 24px 22px;
         }
         @media ${Devices.mobile} {
-            top: calc(100% - 142px);
+            top: calc(100% - 213px);
             left: calc(100% - 287px);
             width: 287px;
             padding: 16px 16px 14px;
@@ -198,11 +200,6 @@ export const ProvidingServicesStyled = styled.section`
         padding-right: 16px;
         @media ${Devices.tablet} {
             padding: 0;
-        }
-    }
-    .title-divider {
-        @media ${Devices.tablet} {
-            display: none;
         }
     }
     .providing-services-descr {
@@ -474,5 +471,5 @@ export const ListingsCardItemStyled = styled.div`
 `;
 
 export const MainCarouselStyled = styled(Carousel)`
-    height: 220px !important;
+    height: ${({ height }) => height || "220px"}!important;
 `;
