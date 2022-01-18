@@ -1,21 +1,31 @@
 h1 {
-    font-size: 60px;
     font-weight: 800;
+    font-size: 60px;
 }
 
 h2 {
-    font-size: 40px;
     font-weight: 800;
+    font-size: 40px;
+    line-height: 49px;
+    @media (max-width : 767px) {
+        font-size: 20px;
+        line-height: 29px;
+    }
 }
 
 h3 {
-    font-size: 32px;
     font-weight: 800;
+    font-size: 32px;
 }
 
 h4 {
-    font-size: 28px;
     font-weight: 800;
+    font-size: 28px;
+    line-height: 42px;
+    @media (max-width : 767px) {
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 
 h5 {

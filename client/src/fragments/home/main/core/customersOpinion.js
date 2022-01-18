@@ -1,8 +1,20 @@
+import { CustomersOpinionStyled } from "./styles";
 import { TitleDivider } from "./titleDivider";
 import { MainCarousel } from "./mainCarousel";
-import { CustomersOpinionStyled } from "./styles";
+import { ListingsCardItem } from "./listingsCardItem";
+import { CustomersOpinionListings } from "@eachbase/utils";
 
-export const CustomersOpinion = () => {
+export const CustomersOpinion = ({ width }) => {
+    const listingsSize =
+        width >= 768 && width < 1209
+            ? 2
+            : width >= 1209 && width < 1430
+            ? 3
+            : width >= 1430
+            ? 4
+            : 1;
+
+            
     return (
         <CustomersOpinionStyled>
             <h2 className="customers-opinion-title-cont theme-indigo">
@@ -19,9 +31,17 @@ export const CustomersOpinion = () => {
                 quality work.
             </p>
             <div className="customers-opinion-carousel-cont">
-                <MainCarousel />
+                <MainCarousel listingsSize={listingsSize} >
+                    {CustomersOpinionListings.map((listing) => (
+                        <ListingsCardItem
+                            key={listing.id}
+                            rate={listing.rate}
+                            comment={listing.comment}
+                            author={listing.author}
+                        />
+                    ))}
+                </MainCarousel>
             </div>
-            
         </CustomersOpinionStyled>
     );
 };

@@ -1,3 +1,5 @@
+export { AppSizes } from "./appSizes";
+export { Devices } from "./devices";
 export { Info } from "./contactInfo";
 export { Routes } from "./routes";
 export { Titles } from "./titles";

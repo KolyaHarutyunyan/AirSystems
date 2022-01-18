@@ -1,5 +1,4 @@
 import { HeaderStyled } from "./styles";
-// import { LowerHeader } from "./core/lowerHeader";
 import { UpperHeader } from "./upperHeader";
 import { HeroOverlayStyled } from "./styles";
 import { Info } from "@eachbase/utils";
@@ -9,7 +8,7 @@ export const Header = ({}) => {
     return (
         <HeaderStyled>
             <HeroOverlayStyled>
-                <UpperHeader></UpperHeader>
+                <UpperHeader/>
                 <h1 className="main-title">
                     <span className="theme-green">HVAC Experts</span>{" "}
                     <span className="bg-primary">

@@ -1,12 +1,24 @@
 import styled from "styled-components";
 import Carousel from "nuka-carousel";
-import { Colors, TextFonts } from "@eachbase/utils";
+import { Colors, Devices, TextFonts } from "@eachbase/utils";
 import { Images } from "@eachbase/assets";
 
 export const BestExperienceStyled = styled.section`
-    width: 66%;
-    min-width: 954px;
+    width: 954px;
     margin-top: 128px;
+
+    @media ${Devices.tablet} {
+        width: 100%;
+        padding: 0 32px;
+        margin-top: 96px;
+    }
+
+    @media ${Devices.mobile} {
+        width: 100%;
+        padding: 0 16px;
+        margin-top: 72px;
+    }
+
     .theme-indigo {
         color: ${Colors.ThemeIndigo};
     }
@@ -14,11 +26,19 @@ export const BestExperienceStyled = styled.section`
         width: 361px;
         line-height: 50px;
         margin-bottom: 32px;
+
+        @media ${Devices.mobile} {
+            width: 100%;
+        }
     }
     .benefits-contaner {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        @media ${Devices.tablet} {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 `;
 
@@ -30,6 +50,19 @@ export const FreeQuotesStyled = styled.section`
     margin-top: 128px;
     display: flex;
     justify-content: space-between;
+    @media ${Devices.tablet} {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 654px;
+        margin-top: 96px;
+        padding: 0 32px;
+    }
+    @media ${Devices.mobile} {
+        justify-content: flex-start;
+        height: 523px;
+        margin-top: 72px;
+        padding: 0 16px;
+    }
 
     .background-primary {
         background-color: ${Colors.BackgroundPrimary};
@@ -44,19 +77,42 @@ export const FreeQuotesStyled = styled.section`
         color: ${Colors.TextTertiary};
     }
 
-    .free-quotes__img-cont {
+    .free-quotes__background-img {
         background-image: url(${Images.homepageFreequotesWeb});
         background-repeat: no-repeat;
         background-size: cover;
-        min-width: 49%;
+        width: 49%;
         height: 100%;
+        @media ${Devices.tablet} {
+            background-image: url(${Images.homepageFreequotesTablet});
+            width: 70%;
+            height: 100%;
+            margin-top: 32px;
+        }
+        @media ${Devices.mobile} {
+            background-image: url(${Images.homepageFreequotesMobile});
+            width: 100%;
+            height: 300px;
+            margin-top: 22px;
+        }
     }
     .free-quotes__title-cont {
         line-height: 42px;
+        width: 465px;
+        @media ${Devices.tablet} {
+            width: 70%;
+            font-size: 24px;
+            line-height: 29px;
+        }
+        @media ${Devices.mobile} {
+            width: 100%;
+        }
     }
-    & .free-quotes__title {
+    .free-quotes__title {
         margin-top: 16%;
-        max-width: 465px;
+        @media ${Devices.tablet} {
+            margin-top: 0;
+        }
     }
 
     .free-quotes__absolute-cont {
@@ -66,6 +122,18 @@ export const FreeQuotesStyled = styled.section`
         left: 30%;
         width: 465px;
         padding: 32px 32px 30px;
+        @media ${Devices.tablet} {
+            top: 70%;
+            left: 35%;
+            width: 426px;
+            padding: 24px 24px 22px;
+        }
+        @media ${Devices.mobile} {
+            top: calc(100% - 213px);
+            left: calc(100% - 287px);
+            width: 287px;
+            padding: 16px 16px 14px;
+        }
     }
     .free-quotes__absolute-cont__title {
         font-weight: bold;
@@ -77,11 +145,17 @@ export const FreeQuotesStyled = styled.section`
 `;
 
 export const ProvidingServicesStyled = styled.section`
-    position: relative;
     width: 100%;
     height: 751px;
     padding: 0;
     margin-top: 128px;
+    @media ${Devices.tablet} {
+        margin-top: 96px;
+        height: fit-content;
+    }
+    @media ${Devices.mobile} {
+        margin-top: 72px;
+    }
 
     .theme-green {
         color: ${Colors.ThemeGreen};
@@ -99,28 +173,59 @@ export const ProvidingServicesStyled = styled.section`
         width: 100%;
         height: 460px;
         padding: 80px;
+        @media ${Devices.tablet} {
+            height: 100%;
+            padding: 80px 32px 20px;
+        }
+        @media ${Devices.mobile} {
+            padding: 24px 16px 10px;
+        }
     }
     .providing-services-title-cont {
         line-height: 49px;
         display: flex;
         align-items: center;
         margin-bottom: 16px;
+        @media ${Devices.tablet} {
+        }
+        @media ${Devices.mobile} {
+            justify-content: center;
+            line-height: 29px;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
     }
     .providing-services-title {
         padding-right: 16px;
+        @media ${Devices.tablet} {
+            padding: 0;
+        }
     }
     .providing-services-descr {
         line-height: 24px;
         font-weight: ${TextFonts["p1.2"].fontWeight};
         max-width: 465px;
+        @media ${Devices.mobile} {
+            max-width: 80%;
+            margin: 0 auto;
+        }
     }
     .providing-services-cards-cont {
         position: absolute;
-        top: 255px;
+        top: 235px;
+        left: 0;
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
-        padding: 0 40px;
+        justify-content: center;
+        @media ${Devices.tablet} {
+            position: static;
+            flex-wrap: wrap;
+            margin-top: 18px;
+        }
+        @media ${Devices.mobile} {
+            margin-top: 10px;
+        }
     }
 `;
 
@@ -152,7 +257,7 @@ export const WisetackFinancingStyled = styled.section`
     .wisetack-financing-descr {
         line-height: 24px;
         font-weight: ${TextFonts["p1.3"].fontWeight};
-        max-width: 465px;
+        width: 465px;
         margin-top: 16px;
     }
     .wisetack-financing-img-cont {
@@ -179,7 +284,7 @@ export const WisetackFinancingStyled = styled.section`
         padding-inline-start: 24px;
     }
 
-    .wisetack-financing-features-list-item{
+    .wisetack-financing-features-list-item {
         line-height: 20px;
         ${TextFonts["p1.2"]}
     }
@@ -190,7 +295,7 @@ export const WisetackFinancingStyled = styled.section`
     .wisetack-financing-features-list-item ::marker {
         /* display: flex; */
         /* align-items: center; */
-        
+
         /* unicode-bidi: isolate;
         font-variant-numeric: tabular-nums;
         text-transform: none;
@@ -218,7 +323,9 @@ export const CustomersOpinionStyled = styled.section`
         color: ${Colors.ThemeGreen};
     }
 
-    
+    .text-secondary {
+        color: ${Colors.TextSecondary};
+    }
 
     .customers-opinion-title-cont {
         line-height: 49px;
@@ -235,8 +342,9 @@ export const CustomersOpinionStyled = styled.section`
         max-width: 465px;
     }
 
-    /* .customers-opinion-carousel-cont {
-        height: 200px;
+    .customers-opinion-carousel-cont {
+        height: 220px !important;
+        margin-top: 30px;
         & button {
             width: 8px !important;
             height: 8px !important;
@@ -244,19 +352,67 @@ export const CustomersOpinionStyled = styled.section`
             margin: 0 4px;
             color: ${Colors.ThemeGreen} !important;
         }
-    } */
+    }
+`;
+
+export const PartnersStyled = styled.section`
+    width: 100%;
+    padding: 0 80px;
+    margin: 128px 0;
+
+    .theme-green {
+        color: ${Colors.ThemeGreen};
+    }
+
+    .theme-indigo {
+        color: ${Colors.ThemeIndigo};
+    }
+
+    .partners__title-cont {
+        line-height: 49px;
+        display: flex;
+        align-items: center;
+    }
+    .partners__title {
+        margin-right: 16px;
+    }
+    .partners__descr {
+        line-height: 24px;
+        font-weight: ${TextFonts["p1.3"].fontWeight};
+        max-width: 465px;
+        margin-top: 16px;
+        margin-bottom: 30px;
+    }
+
+    .partners__logo-cont {
+    }
+    .partner-logo-wrapper {
+    }
+    .partner-logo {
+        width: 162px;
+        height: 144px;
+    }
 `;
 
 export const ProvidingServiceCardStyled = styled.div`
-    top: 300px;
     background-color: ${Colors.BackgroundPrimary};
     width: 302px;
     padding: 24px 24px 22px;
     display: flex;
     flex-direction: column;
+    margin: 12px;
+    @media ${Devices.tablet} {
+        width: 340px;
+        height: 528px;
+    }
+    @media ${Devices.mobile} {
+        width: 343px;
+        height: fit-content;
+        margin: 12px 14px;
+    }
 
-    .text-tertiary{
-        color:${Colors.TextTertiary}
+    .text-tertiary {
+        color: ${Colors.TextTertiary};
     }
 
     .service-card-img {
@@ -290,7 +446,6 @@ export const ProvidingServiceCardStyled = styled.div`
     }
 `;
 
-
 export const ListingsCardItemStyled = styled.div`
     background-color: ${Colors.BackgroundSecondary};
     width: 302px;
@@ -303,8 +458,11 @@ export const ListingsCardItemStyled = styled.div`
     .text-tertiary {
         color: ${Colors.TextTertiary};
     }
+
     .comment-cont {
+        line-height: 24px;
         ${TextFonts["p1.3"]}
+        padding: 16px 0 14px;
     }
     .author-cont {
         line-height: 20px;
@@ -313,5 +471,5 @@ export const ListingsCardItemStyled = styled.div`
 `;
 
 export const MainCarouselStyled = styled(Carousel)`
-    height: 220px !important;
+    height: ${({ height }) => height || "220px"}!important;
 `;

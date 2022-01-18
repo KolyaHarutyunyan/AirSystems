@@ -12,7 +12,7 @@ export const FreeQuotes = () => {
                     on commercial, residential and industrial projects
                 </h4>
             </div>
-            <div className="free-quotes__img-cont" />
+            <div className="free-quotes__background-img" />
             <div className="free-quotes__absolute-cont background-primary">
                 <h6 className="free-quotes__absolute-cont__title text-primary">
                     NPAA Certified Technicians

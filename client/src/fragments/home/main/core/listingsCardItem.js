@@ -5,7 +5,7 @@ export const ListingsCardItem = ({ rate, comment, author }) => {
     return (
         <ListingsCardItemStyled>
             <StarsContainer rate={rate}/>
-            <p className="comment-cont">{comment}</p>
+            <p className="comment-cont text-tertiary">{comment}</p>
             <p className="author-cont text-primary">{author}</p>
         </ListingsCardItemStyled>
     );
