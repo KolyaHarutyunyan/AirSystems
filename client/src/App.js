@@ -6,9 +6,11 @@ import { AppStyled } from "./styles";
 function App() {
     return (
         <AppStyled>
-            <MainNavBar />
-            <Routers />
-            <Footer/>
+            <div className="layout">
+                <MainNavBar />
+                <Routers />
+                <Footer />
+            </div>
         </AppStyled>
     );
 }

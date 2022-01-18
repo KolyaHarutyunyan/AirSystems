@@ -14,6 +14,7 @@ export const CustomersOpinion = ({ width, onResize }) => {
             ? 4
             : 1;
 
+            
     return (
         <CustomersOpinionStyled>
             <h2 className="customers-opinion-title-cont theme-indigo">

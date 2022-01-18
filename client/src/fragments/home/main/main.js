@@ -5,7 +5,7 @@ import { MainStyled } from "./styles"
 export const Main = () => {
     const [width, setWidth] = useState (window?.innerWidth);
 
-    const onResize = () => { setWidth(window.innerWidth) }
+    const onResize = () => { setWidth(window?.innerWidth) }
 
     return (
         <MainStyled>
@@ -13,8 +13,8 @@ export const Main = () => {
             <FreeQuotes />
             <ProvidingServices/>
             <WisetackFinancing />
-            <CustomersOpinion/>
-            <Partners />
+            <CustomersOpinion width={width} onResize={onResize}/>
+            <Partners width={width} onResize={onResize}/>
         </MainStyled>
     );
 };
