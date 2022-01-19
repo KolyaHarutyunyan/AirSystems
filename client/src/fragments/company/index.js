@@ -1,0 +1,1 @@
+export { CompanyFragment } from "./company";

@@ -1,0 +1,1 @@
+export { AboutCompanyItem } from "./aboutCompanyItem";

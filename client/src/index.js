@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import './assets/styles/allStyles.scss'
-import {BrowserRouter} from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "./assets/styles/allStyles.scss";
+import { BrowserRouter } from "react-router-dom";
+import { initAxiosInterceptors } from "@eachbase/utils";
 
+initAxiosInterceptors();
 ReactDOM.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <App/>
-        </BrowserRouter>
-    </React.StrictMode>,
-    document.getElementById('root')
+   <React.StrictMode>
+      <BrowserRouter>
+         <App />
+      </BrowserRouter>
+   </React.StrictMode>,
+   document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

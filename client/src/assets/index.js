@@ -29,50 +29,67 @@ import { Icons } from "./images/homepage/icons";
 // ** contuct us images **
 import dropdownArrowBlack from "@eachbase/images/contactUs/icons/dropdownArrowBlack.svg";
 import dropdownArrow from "@eachbase/images/contactUs/icons/dropdownArrow.svg";
+import contactusHeroWeb from "@eachbase/images/contactUs/contactusHeroWeb.jpg";
+// ** end **
+
+// ** company images **
+import companyHeroWeb from "@eachbase/images/company/companyHeroWeb.jpg";
+import companyFounderWeb from "@eachbase/images/company/companyFounderWeb.jpg";
+import visionIcon from "@eachbase/images/company/icons/visionIcon.svg";
+import valueIcon from "@eachbase/images/company/icons/valueIcon.png";
+import missionIcon from "@eachbase/images/company/icons/missionIcon.svg";
 // ** end **
 
 export const Images = {
+   homepageHeroWeb: homepageHeroWeb,
+   homepageFreequotesWeb: homepageFreequotesWeb,
 
-  homepageHeroWeb: homepageHeroWeb,
-  homepageFreequotesWeb: homepageFreequotesWeb,
+   homepageHeatingWeb: homepageHeatingWeb,
+   homepageVentilationWeb: homepageVentilationWeb,
+   homepageAirConditWeb: homepageAirConditWeb,
+   homepageRefrigerationWeb: homepageRefrigerationWeb,
 
-  homepageHeatingWeb: homepageHeatingWeb,
-  homepageVentilationWeb: homepageVentilationWeb,
-  homepageAirConditWeb: homepageAirConditWeb,
-  homepageRefrigerationWeb: homepageRefrigerationWeb,
+   homepageFinanceWeb: homepageFinanceWeb,
 
-  homepageFinanceWeb: homepageFinanceWeb,
+   homepageHeroWeb: homepageHeroWeb,
 
-    homepageHeroWeb: homepageHeroWeb,
+   homepageFreequotesWeb: homepageFreequotesWeb,
+   homepageFreequotesTablet: homepageFreequotesTablet,
+   homepageFreequotesMobile: homepageFreequotesMobile,
 
-    homepageFreequotesWeb: homepageFreequotesWeb,
-    homepageFreequotesTablet: homepageFreequotesTablet,
-    homepageFreequotesMobile: homepageFreequotesMobile,
+   homepageHeatingWeb: homepageHeatingWeb,
+   homepageHeatingTablet: homepageHeatingTablet,
+   homepageHeatingMobile: homepageHeatingMobile,
 
-    homepageHeatingWeb: homepageHeatingWeb,
-    homepageHeatingTablet: homepageHeatingTablet,
-    homepageHeatingMobile: homepageHeatingMobile,
+   homepageVentilationWeb: homepageVentilationWeb,
+   homepageVentilationTablet: homepageVentilationTablet,
+   homepageVentilationMobile: homepageVentilationMobile,
 
-    homepageVentilationWeb: homepageVentilationWeb,
-    homepageVentilationTablet: homepageVentilationTablet,
-    homepageVentilationMobile: homepageVentilationMobile,
-    
-    homepageAirConditWeb: homepageAirConditWeb,
-    homepageAirConditTablet: homepageAirConditTablet,
-    homepageAirConditMobile: homepageAirConditMobile,
-    
-    homepageRefrigerationWeb: homepageRefrigerationWeb,
-    homepageRefrigerationTablet: homepageRefrigerationTablet,
-    homepageRefrigerationMobile: homepageRefrigerationMobile,
+   homepageAirConditWeb: homepageAirConditWeb,
+   homepageAirConditTablet: homepageAirConditTablet,
+   homepageAirConditMobile: homepageAirConditMobile,
 
-  // Info: Info,
+   homepageRefrigerationWeb: homepageRefrigerationWeb,
+   homepageRefrigerationTablet: homepageRefrigerationTablet,
+   homepageRefrigerationMobile: homepageRefrigerationMobile,
 
-  Logos: Logos,
-  Icons: Icons,
-  BestExperience: BestExperience,
+   // Info: Info,
 
-  // ** contuct us images **
-  dropdownArrowBlack,
-  dropdownArrow,
-  // ** end **
+   Logos: Logos,
+   Icons: Icons,
+   BestExperience: BestExperience,
+
+   // ** contuct us images **
+   dropdownArrowBlack,
+   dropdownArrow,
+   contactusHeroWeb,
+   // ** end **
+
+   // ** company images **
+   companyHeroWeb,
+   companyFounderWeb,
+   visionIcon,
+   valueIcon,
+   missionIcon,
+   // ** end **
 };
