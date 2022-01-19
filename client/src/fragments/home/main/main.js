@@ -28,7 +28,7 @@ export const Main = () => {
             <BestExperience />
             <FreeQuotes />
             <ProvidingServices />
-            <WisetackFinancing />
+            <WisetackFinancing width={width}/>
             <CustomersOpinion width={width} />
             <Partners width={width} />
         </MainStyled>

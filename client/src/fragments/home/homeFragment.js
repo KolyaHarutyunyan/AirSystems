@@ -6,7 +6,7 @@ import { Info } from "@eachbase/utils";
 export const HomeFragment = ({}) => {
     return (
         <>
-            <Header
+            {/* <Header
                 img={Images.homepageHeroWeb}
                 titleCont={
                     <h1 className="main-title">
@@ -41,7 +41,7 @@ export const HomeFragment = ({}) => {
                             ))}
                     </div>
                 }
-            />
+            /> */}
             <Main />
         </>
     );
