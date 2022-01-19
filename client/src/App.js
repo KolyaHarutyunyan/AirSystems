@@ -7,9 +7,9 @@ function App() {
     return (
         <AppStyled>
             <div className="layout">
-                {/* <MainNavBar /> */}
+                <MainNavBar />
                 <Routers />
-                {/* <Footer /> */}
+                <Footer />
             </div>
         </AppStyled>
     );
