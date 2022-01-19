@@ -101,11 +101,11 @@ export const FreeQuotesStyled = styled.section`
         width: 465px;
         @media ${Devices.tablet} {
             width: 70%;
-            font-size: 24px;
-            line-height: 29px;
         }
         @media ${Devices.mobile} {
             width: 100%;
+            font-size: 24px;
+            line-height: 29px;
         }
     }
     .free-quotes__title {
@@ -234,6 +234,18 @@ export const WisetackFinancingStyled = styled.section`
     height: 530px;
     padding: 0 80px;
     margin-top: 128px;
+
+    @media ${Devices.tablet} {
+        width: 100%;
+        padding: 0 32px;
+        margin-top: 96px;
+    }
+    @media ${Devices.mobile} {
+        width: 100%;
+        padding: 0 16px;
+        margin-top: 72px;
+    }
+
     .theme-green {
         color: ${Colors.ThemeGreen};
     }
@@ -268,6 +280,9 @@ export const WisetackFinancingStyled = styled.section`
         justify-content: space-between;
         align-items: center;
         margin: 30px 0 32px;
+        @media ${Devices.mobile} {
+            margin: 22px 0 24px;
+        }
     }
     .wisetack-financing-img {
         background-image: url(${Images.homepageFinanceWeb});
@@ -306,6 +321,14 @@ export const WisetackFinancingStyled = styled.section`
 
     .wisetack-financing-end {
         line-height: 34px;
+        @media ${Devices.tablet} {
+            line-height: 42px;
+            width: 150px;
+        }
+        @media ${Devices.mobile} {
+            font-size: 18px;
+            line-height: 30px;
+        }
     }
 `;
 
@@ -404,6 +427,7 @@ export const ProvidingServiceCardStyled = styled.div`
     @media ${Devices.tablet} {
         width: 340px;
         height: 528px;
+        margin: 12px 6px
     }
     @media ${Devices.mobile} {
         width: 343px;
