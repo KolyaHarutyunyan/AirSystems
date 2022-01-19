@@ -4,15 +4,13 @@ import { Routers } from "./root/routers";
 import { AppStyled } from "./styles";
 
 function App() {
-    return (
-        <AppStyled>
-            <div className="layout">
-                <MainNavBar />
-                <Routers />
-                <Footer />
-            </div>
-        </AppStyled>
-    );
+   return (
+      <AppStyled>
+         <MainNavBar />
+         <Routers />
+         {/* <Footer /> */}
+      </AppStyled>
+   );
 }
 
 export default App;

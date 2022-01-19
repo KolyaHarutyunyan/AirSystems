@@ -1,8 +1,8 @@
-import { AppSizes, WisetackFeatures } from "@eachbase/utils";
-import { TitleDivider } from "./titleDivider";
+import { TitleDivider } from "@eachbase/components";
+import { useWidth, AppSizes, WisetackFeatures } from "@eachbase/utils";
 import { WisetackFinancingStyled } from "./styles";
 
-const mobile = parseInt(AppSizes.mobile)
+const mobile = parseInt(AppSizes.mobile);
 
 const WisetackFinancingEnd = () => (
    <h4 className="wisetack-financing-end">
@@ -11,8 +11,8 @@ const WisetackFinancingEnd = () => (
    </h4>
 );
 
-export const WisetackFinancing = ({ width }) => {
-    console.log(width + " < > " + AppSizes.mobile)
+export const WisetackFinancing = () => {
+   const width = useWidth();
    return (
       <WisetackFinancingStyled>
          <h2 className="wisetack-financing-title-cont">

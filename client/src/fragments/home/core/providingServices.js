@@ -1,6 +1,6 @@
 import { Services } from "@eachbase/utils";
+import { TitleDivider } from "@eachbase/components";
 import { ProvidingServiceCard } from "./providingServiceCard";
-import { TitleDivider } from "./titleDivider";
 import { ProvidingServicesStyled } from "./styles";
 
 export const ProvidingServices = () => {

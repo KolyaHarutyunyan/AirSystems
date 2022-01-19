@@ -1,10 +1,11 @@
-import { CustomersOpinionStyled } from "./styles";
-import { TitleDivider } from "./titleDivider";
+import { useWidth, CustomersOpinionListings } from "@eachbase/utils";
+import { TitleDivider } from "@eachbase/components";
 import { MainCarousel } from "./mainCarousel";
 import { ListingsCardItem } from "./listingsCardItem";
-import { CustomersOpinionListings } from "@eachbase/utils";
+import { CustomersOpinionStyled } from "./styles";
 
-export const CustomersOpinion = ({ width }) => {
+export const CustomersOpinion = () => {
+   const width = useWidth();
    const listingsSize =
       width >= 768 && width < 1209 ? 2 : width >= 1209 && width < 1430 ? 3 : width >= 1430 ? 4 : 1;
 

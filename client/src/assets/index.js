@@ -33,46 +33,47 @@ import dropdownArrow from "@eachbase/images/contactUs/icons/dropdownArrow.svg";
 
 export const Images = {
 
-  homepageHeroWeb: homepageHeroWeb,
-  homepageFreequotesWeb: homepageFreequotesWeb,
+   homepageHeroWeb: homepageHeroWeb,
+   homepageFreequotesWeb: homepageFreequotesWeb,
 
-  homepageHeatingWeb: homepageHeatingWeb,
-  homepageVentilationWeb: homepageVentilationWeb,
-  homepageAirConditWeb: homepageAirConditWeb,
-  homepageRefrigerationWeb: homepageRefrigerationWeb,
+   homepageHeatingWeb: homepageHeatingWeb,
+   homepageVentilationWeb: homepageVentilationWeb,
+   homepageAirConditWeb: homepageAirConditWeb,
+   homepageRefrigerationWeb: homepageRefrigerationWeb,
 
-  homepageFinanceWeb: homepageFinanceWeb,
+   homepageFinanceWeb: homepageFinanceWeb,
 
-    homepageHeroWeb: homepageHeroWeb,
+   homepageHeroWeb: homepageHeroWeb,
 
-    homepageFreequotesWeb: homepageFreequotesWeb,
-    homepageFreequotesTablet: homepageFreequotesTablet,
-    homepageFreequotesMobile: homepageFreequotesMobile,
+   homepageFreequotesWeb: homepageFreequotesWeb,
+   homepageFreequotesTablet: homepageFreequotesTablet,
+   homepageFreequotesMobile: homepageFreequotesMobile,
 
-    homepageHeatingWeb: homepageHeatingWeb,
-    homepageHeatingTablet: homepageHeatingTablet,
-    homepageHeatingMobile: homepageHeatingMobile,
+   homepageHeatingWeb: homepageHeatingWeb,
+   homepageHeatingTablet: homepageHeatingTablet,
+   homepageHeatingMobile: homepageHeatingMobile,
 
-    homepageVentilationWeb: homepageVentilationWeb,
-    homepageVentilationTablet: homepageVentilationTablet,
-    homepageVentilationMobile: homepageVentilationMobile,
-    
-    homepageAirConditWeb: homepageAirConditWeb,
-    homepageAirConditTablet: homepageAirConditTablet,
-    homepageAirConditMobile: homepageAirConditMobile,
-    
-    homepageRefrigerationWeb: homepageRefrigerationWeb,
-    homepageRefrigerationTablet: homepageRefrigerationTablet,
-    homepageRefrigerationMobile: homepageRefrigerationMobile,
+   homepageVentilationWeb: homepageVentilationWeb,
+   homepageVentilationTablet: homepageVentilationTablet,
+   homepageVentilationMobile: homepageVentilationMobile,
 
-  // Info: Info,
+   homepageAirConditWeb: homepageAirConditWeb,
+   homepageAirConditTablet: homepageAirConditTablet,
+   homepageAirConditMobile: homepageAirConditMobile,
 
-  Logos: Logos,
-  Icons: Icons,
-  BestExperience: BestExperience,
+   homepageRefrigerationWeb: homepageRefrigerationWeb,
+   homepageRefrigerationTablet: homepageRefrigerationTablet,
+   homepageRefrigerationMobile: homepageRefrigerationMobile,
 
-  // ** contuct us images **
-  dropdownArrowBlack,
-  dropdownArrow,
-  // ** end **
+
+   // Service
+
+   Logos: Logos,
+   Icons: Icons,
+   BestExperience: BestExperience,
+
+   // ** contuct us images **
+   dropdownArrowBlack,
+   dropdownArrow,
+   // ** end **
 };
