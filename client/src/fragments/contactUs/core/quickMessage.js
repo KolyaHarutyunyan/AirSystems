@@ -2,109 +2,131 @@ import React, { useState } from "react";
 import { SendButton, UserInput } from "@eachbase/components";
 import { QuickMessageStyled } from "./styles";
 import { EmailValidator } from "@eachbase/utils";
+import { TitleDivider } from "../../home/main/core/titleDivider";
+import axios from "axios";
 
 export const QuickMessage = () => {
-  const [inputs, setInputs] = useState({});
-  const [error, setError] = useState("");
+   const [inputs, setInputs] = useState({});
+   const [error, setError] = useState("");
+   const [isLoading, setIsLoading] = useState(false);
+   const [backError, setBackError] = useState("");
 
-  const errorMsg = "This field must be not empty!";
-  const emailErrorMsg = !EmailValidator.test(inputs.email)
-    ? "Email must be an email!"
-    : "";
+   const errorMsg = "This field must be not empty!";
+   const emailErrorMsg = !EmailValidator.test(inputs.email) ? "Email must be an email!" : "";
 
-  const emailErrorText =
-    error === "email" ? errorMsg : error === emailErrorMsg ? emailErrorMsg : "";
+   const emailErrorText =
+      error === "email" ? errorMsg : error === emailErrorMsg ? emailErrorMsg : "";
 
-  const handleChange = (evt) => {
-    setInputs((prevState) => ({
-      ...prevState,
-      [evt.target.name]: evt.target.value,
-    }));
-    if (error === evt.target.name || error === emailErrorMsg) {
-      setError("");
-    }
-  };
+   const handleChange = (evt) => {
+      setInputs((prevState) => ({
+         ...prevState,
+         [evt.target.name]: evt.target.value,
+      }));
+      if (error === evt.target.name || error === emailErrorMsg) {
+         setError("");
+      }
+   };
 
-  const handleUserMessageDataSend = () => {
-    const userMessageData = {
-      name: inputs.name,
-      email: inputs.email,
-      message: inputs.message,
-    };
+   const handleUserMessageDataSend = () => {
+      const userMessageData = {
+         name: inputs.name,
+         email: inputs.email,
+         message: inputs.message,
+      };
 
-    const emailIsValid = !!inputs.email && EmailValidator.test(inputs.email);
-    const userMessageDataIsValid =
-      !!inputs.name && emailIsValid && !!inputs.message;
+      const emailIsValid = !!inputs.email && EmailValidator.test(inputs.email);
+      const userMessageDataIsValid = !!inputs.name && emailIsValid && !!inputs.message;
 
-    const errorText = !inputs.name
-      ? "name"
-      : !inputs.email
-      ? "email"
-      : !emailIsValid
-      ? emailErrorMsg
-      : !inputs.message
-      ? "message"
-      : "Input is not field";
+      const errorText = !inputs.name
+         ? "name"
+         : !inputs.email
+         ? "email"
+         : !emailIsValid
+         ? emailErrorMsg
+         : !inputs.message
+         ? "message"
+         : "Input is not field";
 
-    if (userMessageDataIsValid) {
-      console.log("userMessageData  ", userMessageData);
-    } else {
-      setError(errorText);
-    }
-  };
+      if (userMessageDataIsValid) {
+         setIsLoading(true);
+         setBackError("");
+         axios
+            .post("/mailer/contactForm", userMessageData)
+            .then((res) => {
+               setIsLoading(false);
+               setBackError("");
+               console.log(res, "response");
+            })
+            .catch((err) => {
+               setIsLoading(false);
+               setBackError("Whoops! Something went wrong!");
+               console.log(err);
+            });
+         console.log("userMessageData  ", userMessageData);
+      } else {
+         setError(errorText);
+      }
+   };
 
-  return (
-    <QuickMessageStyled>
-      <div className="quick-message-container">
-        <div className="quick-message-box">
-          <h2 className="quick-message-title">
-            Send us a quick <em>message</em>
-          </h2>
-          <p className="quick-message-description">
-            Please allow up to 24 hours for responses.
-          </p>
-        </div>
-        <div className="quick-message-inputs-box">
-          <div className="name-email-box">
-            <UserInput
-              required={true}
-              inputLabel={"Name"}
-              inputType={"text"}
-              inputName={"name"}
-              inputValue={inputs.inputName}
-              onInputChange={handleChange}
-              inputError={error === "name" && errorMsg}
-            />
-            <UserInput
-              required={true}
-              inputLabel={"Email Address"}
-              inputType={"text"}
-              inputName={"email"}
-              inputValue={inputs.inputName}
-              onInputChange={handleChange}
-              inputError={emailErrorText}
-            />
-          </div>
-          <div className="message-box">
-            <UserInput
-              required={true}
-              inputLabel={"Message"}
-              inputName={"message"}
-              inputValue={inputs.inputName}
-              onInputChange={handleChange}
-              inputPlaceholder={"Your message here ..."}
-              inputError={error === "message" && errorMsg}
-              isTextArea={true}
-            />
-          </div>
-        </div>
-        <SendButton
-          butnType={"button"}
-          butnSendingText={"Submit"}
-          onClickButn={handleUserMessageDataSend}
-          // loader={}
-        />
-      </div>
-    </QuickMessageStyled>
-  );
+   return (
+      <QuickMessageStyled>
+         <div className="quick-message-container">
+            <div className="quick-message-box">
+               <div className="quick-message-title-box">
+                  <h2 className="quick-message-title">
+                     Send us a quick <em>message</em>
+                  </h2>
+                  <TitleDivider />
+               </div>
+               <p className="quick-message-description">
+                  Please allow up to 24 hours for responses.
+               </p>
+            </div>
+            <div className="quick-message-inputs-box">
+               <div className="name-email-box">
+                  <UserInput
+                     required={true}
+                     inputLabel={"Name"}
+                     inputType={"text"}
+                     inputName={"name"}
+                     inputValue={inputs.inputName}
+                     onInputChange={handleChange}
+                     inputError={error === "name" && errorMsg}
+                  />
+                  <UserInput
+                     required={true}
+                     inputLabel={"Email Address"}
+                     inputType={"text"}
+                     inputName={"email"}
+                     inputValue={inputs.inputName}
+                     onInputChange={handleChange}
+                     inputError={emailErrorText}
+                  />
+               </div>
+               <div className="message-box">
+                  <UserInput
+                     required={true}
+                     inputLabel={"Message"}
+                     inputName={"message"}
+                     inputValue={inputs.inputName}
+                     onInputChange={handleChange}
+                     inputPlaceholder={"Your message here ..."}
+                     inputError={error === "message" && errorMsg}
+                     isTextArea={true}
+                  />
+               </div>
+            </div>
+            <h6 style={{ textAlign: "center", minHeight: "20px" }}>{!!backError && backError}</h6>
+            <div className="user-action-box">
+               <SendButton
+                  butnClassName={`${isLoading && "btn-load-time"}`}
+                  butnType={"button"}
+                  butnSendingText={"Submit"}
+                  onClickButn={handleUserMessageDataSend}
+                  loader={isLoading}
+               />
+            </div>
+         </div>
+      </QuickMessageStyled>
+   );
 };

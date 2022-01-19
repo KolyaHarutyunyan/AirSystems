@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="Mission_Icon" data-name="Mission Icon" transform="translate(-576 -2131)">
+    <rect id="Base" width="50" height="50" transform="translate(576 2131)" fill="none" opacity="0.002"/>
+    <g id="target_2_" data-name="target (2)" transform="translate(582 2138)">
+      <path id="Path_3624" data-name="Path 3624" d="M37.567,4.928a.594.594,0,0,0-.42-.42L34.6,3.825l.569-.569a.594.594,0,0,0-.84-.84l-.568.568L33.082.44a.594.594,0,0,0-.993-.266l-4.9,4.9a.594.594,0,0,0-.154.574l.86,3.206L15.431,21.317a.594.594,0,0,0,.84.84L28.731,9.7l3.207.86a.594.594,0,0,0,.574-.154l4.9-4.9a.594.594,0,0,0,.154-.573Z" transform="translate(0.412 0)" fill="#76ca3c"/>
+      <path id="Path_3625" data-name="Path 3625" d="M25.775,14.6a11.824,11.824,0,1,1-2.519-2.519l3.18-3.18a16.259,16.259,0,1,0,2.519,2.519Z" transform="translate(0 0.144)" fill="#76ca3c"/>
+      <path id="Path_3626" data-name="Path 3626" d="M16.029,18.455a2.915,2.915,0,0,1,.361.023l3.425-3.425a7.363,7.363,0,1,0,2.519,2.519L18.909,21a2.9,2.9,0,1,1-2.88-2.542Z" transform="translate(0.234 0.378)" fill="#76ca3c"/>
+    </g>
+  </g>
+</svg>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { ContactUs, Home, Services } from "@eachbase/pages";
+import { Company, ContactUs, Home, Services } from "@eachbase/pages";
 
 export const Routers = () => {
    return (
@@ -8,6 +8,7 @@ export const Routers = () => {
          <Route path="/" exact component={Home} />
          <Route path="/services" exact component={Services} />
          <Route path="/contact-us" exact component={ContactUs} />
+         <Route path="/about" exact component={Company} />
          {/*<Redirect to={"/"} />*/}
       </Switch>
    );

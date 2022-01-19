@@ -29,10 +29,18 @@ import { Icons } from "./images/homepage/icons";
 // ** contuct us images **
 import dropdownArrowBlack from "@eachbase/images/contactUs/icons/dropdownArrowBlack.svg";
 import dropdownArrow from "@eachbase/images/contactUs/icons/dropdownArrow.svg";
+import contactusHeroWeb from "@eachbase/images/contactUs/contactusHeroWeb.jpg";
+// ** end **
+
+// ** company images **
+import companyHeroWeb from "@eachbase/images/company/companyHeroWeb.jpg";
+import companyFounderWeb from "@eachbase/images/company/companyFounderWeb.jpg";
+import visionIcon from "@eachbase/images/company/icons/visionIcon.svg";
+import valueIcon from "@eachbase/images/company/icons/valueIcon.png";
+import missionIcon from "@eachbase/images/company/icons/missionIcon.svg";
 // ** end **
 
 export const Images = {
-
    homepageHeroWeb: homepageHeroWeb,
    homepageFreequotesWeb: homepageFreequotesWeb,
 
@@ -44,6 +52,18 @@ export const Images = {
    homepageFinanceWeb: homepageFinanceWeb,
 
    homepageHeroWeb: homepageHeroWeb,
+
+   homepageFreequotesWeb: homepageFreequotesWeb,
+
+   homepageHeatingWeb: homepageHeatingWeb,
+   homepageVentilationWeb: homepageVentilationWeb,
+   homepageAirConditWeb: homepageAirConditWeb,
+   homepageRefrigerationWeb: homepageRefrigerationWeb,
+
+   homepageFinanceWeb: homepageFinanceWeb,
+
+   homepageHeroWeb: homepageHeroWeb,
+
 
    homepageFreequotesWeb: homepageFreequotesWeb,
    homepageFreequotesTablet: homepageFreequotesTablet,
@@ -65,8 +85,8 @@ export const Images = {
    homepageRefrigerationTablet: homepageRefrigerationTablet,
    homepageRefrigerationMobile: homepageRefrigerationMobile,
 
-
    // Service
+
 
    Logos: Logos,
    Icons: Icons,
@@ -75,5 +95,15 @@ export const Images = {
    // ** contuct us images **
    dropdownArrowBlack,
    dropdownArrow,
+
+   contactusHeroWeb,
+   // ** end **
+
+   // ** company images **
+   companyHeroWeb,
+   companyFounderWeb,
+   visionIcon,
+   valueIcon,
+   missionIcon,
    // ** end **
 };
