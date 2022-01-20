@@ -1,5 +1,5 @@
 import { Header, Main } from "@eachbase/components";
-import { TopSection } from "./core";
+import { BigCardsContainer, TopSection } from "./core";
 
 export const ServicesFragment = () => {
    return (
@@ -9,7 +9,8 @@ export const ServicesFragment = () => {
             content={
                <>
                   <TopSection />
-                  <section className="cards-container"></section>
+                  {/* <section className="cards-container"></section> */}
+                  <BigCardsContainer />
                </>
             }
          />

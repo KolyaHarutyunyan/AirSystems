@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const TopSectionStyled = styled.section`
    width: 100%;
+   max-width: 1440px;
    padding: 0 80px;
    margin: 128px 0;
    @media ${Devices.tablet} {
@@ -33,8 +34,8 @@ export const TopSectionStyled = styled.section`
    }
    & .descr {
       ${TextFonts["p1.3"]}
-      line-height: 24px;
-      width: 465px;
+      line-height: 20px;
+      width: 668px;
       margin-top: 32px;
       @media ${Devices.tablet} {
          width: 100%;

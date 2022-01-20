@@ -9,13 +9,14 @@ export const ProvidingServices = () => {
          <div className="providing-services-layer">
             <h2 className="providing-services-title-cont">
                <div className="providing-services-title">
-                  <span className="theme-green">Services</span> <span className="theme-indigo">we provide</span>
+                  <span className="theme-green">Services</span>{" "}
+                  <span className="theme-indigo">we provide</span>
                </div>
-               <TitleDivider className="title-divider" />
+               <TitleDivider />
             </h2>
             <p className="providing-services-descr text-secondary">
-               Explore the range of services we have to offer. If there are services not mentioned below please give us
-               a call for a custom quote.
+               Explore the range of services we have to offer. If there are services not mentioned
+               below please give us a call for a custom quote.
             </p>
             <div className="providing-services-cards-cont">
                {Services.map((service) => (
