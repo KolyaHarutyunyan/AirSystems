@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Colors } from "@eachbase/utils";
 
 export const ContactUsFragmentStyled = styled.section`
+   flex-grow: 1;
    width: 100%;
    display: flex;
    justify-content: center;

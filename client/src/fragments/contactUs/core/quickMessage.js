@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SendButton, TitleDivider, UserInput } from "@eachbase/components";
 import { QuickMessageStyled } from "./styles";
-import { EmailValidator } from "@eachbase/utils";
+import { Colors, EmailValidator } from "@eachbase/utils";
 import axios from "axios";
 
 export const QuickMessage = () => {
@@ -9,6 +9,7 @@ export const QuickMessage = () => {
    const [error, setError] = useState("");
    const [isLoading, setIsLoading] = useState(false);
    const [backError, setBackError] = useState("");
+   const [success, setSuccess] = useState("");
 
    const errorMsg = "This field must be not empty!";
    const emailErrorMsg = !EmailValidator.test(inputs.email) ? "Email must be an email!" : "";
@@ -49,19 +50,19 @@ export const QuickMessage = () => {
       if (userMessageDataIsValid) {
          setIsLoading(true);
          setBackError("");
+         setSuccess("");
          axios
             .post("/mailer/contactForm", userMessageData)
             .then((res) => {
                setIsLoading(false);
                setBackError("");
-               console.log(res, "response");
+               setSuccess("Your request has been sent successfully!");
             })
             .catch((err) => {
                setIsLoading(false);
-               setBackError("Whoops! Something went wrong!");
-               console.log(err);
+               setBackError("Whoops! Something went wrong! Please, try again!");
+               setSuccess("");
             });
-         console.log("userMessageData  ", userMessageData);
       } else {
          setError(errorText);
       }
@@ -115,7 +116,12 @@ export const QuickMessage = () => {
                   />
                </div>
             </div>
-            <h6 style={{ textAlign: "center", minHeight: "20px" }}>{!!backError && backError}</h6>
+            <h6 style={{ textAlign: "center", color: Colors.ThemeRed, minHeight: "20px" }}>
+               {!!backError && backError}
+            </h6>
+            <h6 style={{ textAlign: "center", color: Colors.ThemeGreen, minHeight: "20px" }}>
+               {!!success && success}
+            </h6>
             <div className="user-action-box">
                <SendButton
                   butnClassName={`${isLoading && "btn-load-time"}`}

@@ -4,12 +4,21 @@ import { Colors, TextFonts } from "@eachbase/utils";
 let { fontWeight } = TextFonts["p1.2"];
 
 export const HeaderStyled = styled.header`
+   width: 100%;
    background-image: url(${({ img }) => img});
    background-repeat: no-repeat;
    background-size: cover;
-   width: 100%;
    height: ${({ height }) => height};
-
+   .header-backdrop {
+      position: relative;
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      background: transparent linear-gradient(90deg, #000000b3 0%, #00000033 100%) 0% 0% no-repeat
+         padding-box;
+   }
    .background-primary {
       color: ${Colors.BackgroundPrimary};
    }
@@ -24,9 +33,6 @@ export const HeaderStyled = styled.header`
    }
    & .bg-primary {
       color: ${Colors.BackgroundPrimary};
-   }
-   .lower-header {
-      margin-bottom: 56px;
    }
    .contact-info {
       width: 558px;
@@ -51,13 +57,8 @@ export const HeaderStyled = styled.header`
    .single-info__Tell {
       padding-left: 0;
    }
-
    .info-logo-container {
       padding: 24px;
-   }
-
-   .upper-header {
-      margin-top: 43px;
    }
    .title-cont {
       display: flex;
@@ -69,12 +70,18 @@ export const HeaderStyled = styled.header`
    }
 `;
 
-export const HeroOverlayStyled = styled.section`
-   padding-left: 80px;
+export const HeaderContentStyled = styled.section`
+   max-width: 1440px;
+   width: 100%;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    height: 100%;
-   background: transparent linear-gradient(90deg, #000000b3 0%, #00000033 100%) 0% 0% no-repeat
-      padding-box;
+   padding: 43px 80px 56px;
+   @media (max-width: 1280px) {
+      padding: 38px 32px;
+   }
+   @media (max-width: 768px) {
+      padding: 72px 16px;
+   }
 `;

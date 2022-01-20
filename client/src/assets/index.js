@@ -63,6 +63,9 @@ import serviceVentilationMobile from "./images/services/serviceVentilationMobile
 import dropdownArrowBlack from "@eachbase/images/contactUs/icons/dropdownArrowBlack.svg";
 import dropdownArrow from "@eachbase/images/contactUs/icons/dropdownArrow.svg";
 import contactusHeroWeb from "@eachbase/images/contactUs/contactusHeroWeb.jpg";
+import locationIcon from "@eachbase/images/contactUs/icons/locationIcon.svg";
+import zoomIn from "@eachbase/images/contactUs/icons/zoomIn.svg";
+import zoomOut from "@eachbase/images/contactUs/icons/zoomOut.svg";
 // ** end **
 
 // ** company images **
@@ -78,7 +81,16 @@ export const Images = {
    //Home page images
    /**header */
    homepageHeroWeb: homepageHeroWeb,
-   /** */
+
+   homepageFreequotesWeb: homepageFreequotesWeb,
+
+   homepageHeatingWeb: homepageHeatingWeb,
+   homepageVentilationWeb: homepageVentilationWeb,
+   homepageAirConditWeb: homepageAirConditWeb,
+   homepageRefrigerationWeb: homepageRefrigerationWeb,
+
+   homepageHeroWeb: homepageHeroWeb,
+
    BestExperience: BestExperience,
    
    homepageFreequotesWeb: homepageFreequotesWeb,
@@ -100,6 +112,13 @@ export const Images = {
    homepageRefrigerationWeb: homepageRefrigerationWeb,
    homepageRefrigerationTablet: homepageRefrigerationTablet,
    homepageRefrigerationMobile: homepageRefrigerationMobile,
+
+   // Service
+
+   Logos: Logos,
+   Icons: Icons,
+   BestExperience: BestExperience,
+
    
    homepageFinanceWeb: homepageFinanceWeb,
    homepageFinanceTablet: homepageFinanceTablet,
@@ -135,8 +154,10 @@ export const Images = {
    // ** contuct us images **
    dropdownArrowBlack,
    dropdownArrow,
-
    contactusHeroWeb,
+   locationIcon,
+   zoomIn,
+   zoomOut,
    // ** end **
 
    // ** company images **

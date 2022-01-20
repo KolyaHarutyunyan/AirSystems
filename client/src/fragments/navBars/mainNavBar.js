@@ -5,14 +5,15 @@ import { MainNavbarStyled } from "./styles";
 import { Button } from "@eachbase/components/buttons";
 import { Colors } from "@eachbase/utils";
 
-
-export const MainNavBar = () => {
-    return (
-        <MainNavbarStyled>
-            {Object.values(Routes).map(({ title, path }) => (
-                <RouteLink key={path} title={title} where={path}></RouteLink>
-            ))}
-            <Button bgColor={Colors.ThemeGreen} color={Colors.BackgroundPrimary}>Request An Appointment</Button>
-        </MainNavbarStyled>
-    );
+export const MainNavBar = ({ className }) => {
+   return (
+      <MainNavbarStyled className={className}>
+         {Object.values(Routes).map(({ title, path }) => (
+            <RouteLink key={path} title={title} where={path}></RouteLink>
+         ))}
+         <Button bgColor={Colors.ThemeGreen} color={Colors.BackgroundPrimary}>
+            Request An Appointment
+         </Button>
+      </MainNavbarStyled>
+   );
 };

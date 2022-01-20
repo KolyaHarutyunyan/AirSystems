@@ -401,25 +401,14 @@ export const CustomersOpinionStyled = styled.section`
       font-weight: ${TextFonts["p1.3"].fontWeight};
       width: 465px;
       margin: 16px 0 30px;
-      @media ${Devices.tablet}{
+      @media ${Devices.tablet} {
          width: 522px;
          margin: 12px 0 30px;
       }
-      @media ${Devices.mobile}{
+      @media ${Devices.mobile} {
          width: 100%;
          max-width: 343px;
          margin: 14px 0 22px;
-      }
-   }
-
-   .customers-opinion-carousel-cont {
-      height: 220px !important;
-      & button {
-         width: 8px !important;
-         height: 8px !important;
-         border-radius: 50%;
-         margin: 0 4px;
-         color: ${Colors.ThemeGreen} !important;
       }
    }
 `;
@@ -446,7 +435,7 @@ export const PartnersStyled = styled.section`
       color: ${Colors.ThemeIndigo};
    }
    .text-secondary {
-      color: ${Colors.TextSecondary}
+      color: ${Colors.TextSecondary};
    }
 
    .partners__title-cont {
@@ -462,10 +451,10 @@ export const PartnersStyled = styled.section`
       max-width: 465px;
       margin-top: 16px;
       margin-bottom: 30px;
-      @media ${Devices.tablet}{
+      @media ${Devices.tablet} {
          width: 522px;
       }
-      @media ${Devices.mobile}{
+      @media ${Devices.mobile} {
          width: 100%;
          max-width: 343px;
          margin: 14px 0 22px;
@@ -479,10 +468,10 @@ export const PartnersStyled = styled.section`
    .partner-logo {
       width: 162px;
       height: 144px;
-      @media ${Devices.tablet}{
+      @media ${Devices.tablet} {
          width: 158px;
       }
-      @media ${Devices.mobile}{
+      @media ${Devices.mobile} {
          width: 166px;
       }
    }
@@ -566,4 +555,18 @@ export const ListingsCardItemStyled = styled.div`
 
 export const MainCarouselStyled = styled(Carousel)`
    height: ${({ height }) => height || "220px"}!important;
+   & .slider-control-bottomcenter ul li button svg {
+      width: 8px !important;
+      height: 8px !important;
+      border-radius: 50% !important;
+      background-color: ${Colors.ThemeGreen} !important;
+      border: none !important;
+      & circle {
+         display: none;
+      }
+   }
+   & .slider-control-bottomcenter ul li.active button svg {
+      width: 24px !important;
+      border-radius: 4px !important;
+   }
 `;
