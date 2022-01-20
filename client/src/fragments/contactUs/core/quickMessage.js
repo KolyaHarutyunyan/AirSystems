@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { SendButton, UserInput } from "@eachbase/components";
+import { SendButton, TitleDivider, UserInput } from "@eachbase/components";
 import { QuickMessageStyled } from "./styles";
 import { EmailValidator } from "@eachbase/utils";
-import { TitleDivider } from "../../home/main/core/titleDivider";
 import axios from "axios";
 
 export const QuickMessage = () => {

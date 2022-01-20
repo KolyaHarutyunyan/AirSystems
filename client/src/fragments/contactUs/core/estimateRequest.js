@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { SendButton, UserInput, UserInputsDropdown } from "@eachbase/components";
+import { SendButton, UserInput, UserInputsDropdown, TitleDivider } from "@eachbase/components";
 import { EstimateRequestStyled } from "./styles";
 import { EmailValidator, enumValues, getPhoneErrorText, makeCapitalize } from "@eachbase/utils";
-import { TitleDivider } from "../../home/main/core/titleDivider";
 import axios from "axios";
 
 export const EstimateRequest = () => {

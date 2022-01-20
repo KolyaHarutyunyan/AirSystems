@@ -7,6 +7,5 @@ export const AppStyled = styled.div`
    align-items: center;
 
    width: 100%;
-   max-width: 1440px;
    height: 100%;
 `;

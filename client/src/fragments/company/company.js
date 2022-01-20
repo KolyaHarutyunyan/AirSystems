@@ -1,6 +1,6 @@
 import React from "react";
+import { TitleDivider } from "@eachbase/components";
 import { MeetOurFounder, AboutCompany } from "./core";
-import { TitleDivider } from "../home/main/core/titleDivider";
 import { CompanyFragmentStyled } from "./styles";
 
 export const CompanyFragment = () => {
