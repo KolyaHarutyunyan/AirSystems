@@ -54,6 +54,18 @@ export const Images = {
    homepageHeroWeb: homepageHeroWeb,
 
    homepageFreequotesWeb: homepageFreequotesWeb,
+
+   homepageHeatingWeb: homepageHeatingWeb,
+   homepageVentilationWeb: homepageVentilationWeb,
+   homepageAirConditWeb: homepageAirConditWeb,
+   homepageRefrigerationWeb: homepageRefrigerationWeb,
+
+   homepageFinanceWeb: homepageFinanceWeb,
+
+   homepageHeroWeb: homepageHeroWeb,
+
+
+   homepageFreequotesWeb: homepageFreequotesWeb,
    homepageFreequotesTablet: homepageFreequotesTablet,
    homepageFreequotesMobile: homepageFreequotesMobile,
 
@@ -73,7 +85,8 @@ export const Images = {
    homepageRefrigerationTablet: homepageRefrigerationTablet,
    homepageRefrigerationMobile: homepageRefrigerationMobile,
 
-   // Info: Info,
+   // Service
+
 
    Logos: Logos,
    Icons: Icons,
@@ -82,6 +95,7 @@ export const Images = {
    // ** contuct us images **
    dropdownArrowBlack,
    dropdownArrow,
+
    contactusHeroWeb,
    // ** end **
 

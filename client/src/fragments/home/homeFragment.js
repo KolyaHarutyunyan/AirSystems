@@ -1,5 +1,12 @@
-import { Header } from "@eachbase/components";
-import { Main } from "./main";
+import { Header, Main } from "@eachbase/components";
+import {
+   BestExperience,
+   FreeQuotes,
+   CustomersOpinion,
+   ProvidingServices,
+   WisetackFinancing,
+   Partners,
+} from "./core";
 import { Images } from "@eachbase/assets";
 import { Info } from "@eachbase/utils";
 
@@ -31,7 +38,19 @@ export const HomeFragment = ({}) => {
                </div>
             }
          />
-         <Main />
+
+         <Main
+            content={
+               <>
+                  <BestExperience />
+                  <FreeQuotes />
+                  <ProvidingServices />
+                  <WisetackFinancing />
+                  <CustomersOpinion />
+                  <Partners />
+               </>
+            }
+         />
       </>
    );
 };

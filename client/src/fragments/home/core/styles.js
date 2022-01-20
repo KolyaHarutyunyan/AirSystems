@@ -439,9 +439,11 @@ export const PartnersStyled = styled.section`
    .theme-indigo {
       color: ${Colors.ThemeIndigo};
    }
+   .text-secondary {
+      color: ${Colors.TextSecondary}
+   }
 
    .partners__title-cont {
-      line-height: 49px;
       display: flex;
       align-items: center;
    }
@@ -471,6 +473,12 @@ export const PartnersStyled = styled.section`
    .partner-logo {
       width: 162px;
       height: 144px;
+      @media ${Devices.tablet}{
+         width: 158px;
+      }
+      @media ${Devices.mobile}{
+         width: 166px;
+      }
    }
 `;
 
