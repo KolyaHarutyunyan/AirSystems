@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const MainStyled = styled.main`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex-grow: 1;
 `;

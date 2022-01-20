@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SendButton, UserInput, UserInputsDropdown, TitleDivider } from "@eachbase/components";
 import { EstimateRequestStyled } from "./styles";
-import { EmailValidator, enumValues, getPhoneErrorText, makeCapitalize } from "@eachbase/utils";
+import { Colors, EmailValidator, enumValues, getPhoneErrorText } from "@eachbase/utils";
 import axios from "axios";
 
 export const EstimateRequest = () => {
@@ -9,6 +9,7 @@ export const EstimateRequest = () => {
    const [error, setError] = useState("");
    const [isLoading, setIsLoading] = useState(false);
    const [backError, setBackError] = useState("");
+   const [success, setSuccess] = useState("");
 
    const [selectedService, setSelectedService] = useState("");
    const [selectedBuildingType, setSelectedBuildingType] = useState("");
@@ -42,10 +43,10 @@ export const EstimateRequest = () => {
          phoneNumber: inputs.phone,
          email: inputs.email,
          address: inputs.address,
-         serviceType: makeCapitalize(selectedService),
-         buildingType: makeCapitalize(selectedBuildingType),
-         contactMethod: makeCapitalize(selectedContactMethod),
-         apptTime: makeCapitalize(selectedAppointmentTime),
+         serviceType: selectedService,
+         buildingType: selectedBuildingType,
+         contactMethod: selectedContactMethod,
+         apptTime: selectedAppointmentTime,
       };
 
       const phoneIsValid =
@@ -89,19 +90,19 @@ export const EstimateRequest = () => {
       if (userRequestDataIsValid) {
          setIsLoading(true);
          setBackError("");
+         setSuccess("");
          axios
             .post("/mailer/estimate", userRequestData)
             .then((res) => {
                setIsLoading(false);
                setBackError("");
-               console.log(res, "response");
+               setSuccess("Your request has been sent successfully!");
             })
             .catch((err) => {
                setIsLoading(false);
-               setBackError("Whoops! Something went wrong!");
-               console.log(err);
+               setBackError("Whoops! Something went wrong! Please, try again!");
+               setSuccess("");
             });
-         console.log("userRequestData  ", userRequestData);
       } else {
          setError(errorText);
       }
@@ -237,7 +238,12 @@ export const EstimateRequest = () => {
                   </div>
                </div>
             </div>
-            <h6 style={{ textAlign: "center", minHeight: "20px" }}>{!!backError && backError}</h6>
+            <h6 style={{ textAlign: "center", color: Colors.ThemeRed, minHeight: "20px" }}>
+               {!!backError && backError}
+            </h6>
+            <h6 style={{ textAlign: "center", color: Colors.ThemeGreen, minHeight: "20px" }}>
+               {!!success && success}
+            </h6>
             <div className="user-action-box">
                <SendButton
                   butnClassName={`${isLoading && "btn-load-time"}`}

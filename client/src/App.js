@@ -1,4 +1,4 @@
-import { MainNavBar } from "@eachbase/fragments";
+import React from "react";
 import { Footer } from "@eachbase/fragments";
 import { Routers } from "./root/routers";
 import { AppStyled } from "./styles";
@@ -6,9 +6,8 @@ import { AppStyled } from "./styles";
 function App() {
    return (
       <AppStyled>
-         <MainNavBar />
          <Routers />
-         {/* <Footer /> */}
+         <Footer />
       </AppStyled>
    );
 }

@@ -30,6 +30,9 @@ import { Icons } from "./images/homepage/icons";
 import dropdownArrowBlack from "@eachbase/images/contactUs/icons/dropdownArrowBlack.svg";
 import dropdownArrow from "@eachbase/images/contactUs/icons/dropdownArrow.svg";
 import contactusHeroWeb from "@eachbase/images/contactUs/contactusHeroWeb.jpg";
+import locationIcon from "@eachbase/images/contactUs/icons/locationIcon.svg";
+import zoomIn from "@eachbase/images/contactUs/icons/zoomIn.svg";
+import zoomOut from "@eachbase/images/contactUs/icons/zoomOut.svg";
 // ** end **
 
 // ** company images **
@@ -64,7 +67,6 @@ export const Images = {
 
    homepageHeroWeb: homepageHeroWeb,
 
-
    homepageFreequotesWeb: homepageFreequotesWeb,
    homepageFreequotesTablet: homepageFreequotesTablet,
    homepageFreequotesMobile: homepageFreequotesMobile,
@@ -87,7 +89,6 @@ export const Images = {
 
    // Service
 
-
    Logos: Logos,
    Icons: Icons,
    BestExperience: BestExperience,
@@ -95,8 +96,10 @@ export const Images = {
    // ** contuct us images **
    dropdownArrowBlack,
    dropdownArrow,
-
    contactusHeroWeb,
+   locationIcon,
+   zoomIn,
+   zoomOut,
    // ** end **
 
    // ** company images **

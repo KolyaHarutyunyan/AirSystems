@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Colors } from "@eachbase/utils";
 
 export const CompanyFragmentStyled = styled.section`
+   flex-grow: 1;
    width: 100%;
    display: flex;
    justify-content: center;
@@ -18,6 +19,12 @@ export const CompanyFragmentStyled = styled.section`
       .who-we-are-box {
          width: 100%;
          margin-bottom: 128px;
+         @media (max-width: 1280px) {
+            margin-bottom: 96px;
+         }
+         @media (max-width: 768px) {
+            margin-bottom: 72px;
+         }
          .who-we-are-title-box {
             width: 100%;
             display: flex;
@@ -34,6 +41,9 @@ export const CompanyFragmentStyled = styled.section`
          .who-we-are-info-box {
             max-width: 738px;
             width: 100%;
+            @media (max-width: 1280px) {
+               max-width: 100%;
+            }
             .who-we-are-subtitle {
                color: ${Colors.TextSecondary};
             }

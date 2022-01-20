@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Images } from "@eachbase/assets";
 import { MeetOurFounderStyled } from "./styles";
 import { ViewMoreButton } from "@eachbase/components";
 
 export const MeetOurFounder = () => {
+   const [moreDesc, setMoreDesc] = useState(false);
+
    return (
       <MeetOurFounderStyled>
+         <h2 className="founder-info-title__mobile-view">
+            Meet <em>our founder</em> Sebo
+         </h2>
          <div className="meet-our-founder-container">
             <div className="founder-info-box">
-               <h2 className="founder-info-title">
+               <h2 className="founder-info-title__web-view">
                   Meet <em>our founder</em> Sebo
                </h2>
-               <p className="founder-info-description">
+               <p className="founder-info-description first-desc">
                   Sebo has been in the HVAC industry for over 35 years. His love for designing and
                   assembling systems led him on a career path that would grow into the company which
                   it is today.
@@ -28,14 +33,28 @@ export const MeetOurFounder = () => {
                   completed hundreds of projects and is a leading HVAC service provider for
                   residential and commercial solutions in the Los Angeles area.
                </p>
+               {moreDesc && (
+                  <p className="founder-info-description">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque dolor fugit
+                     deleniti doloremque voluptate. Modi explicabo, eligendi doloremque eius
+                     delectus excepturi, vero repellat saepe qui expedita est architecto
+                     reprehenderit harum ad itaque! Vero, laborum magni quia assumenda dolorum
+                     fugiat maxime ratione voluptatem dicta velit ut quod possimus sunt pariatur.
+                     Eum aliquid id soluta, mollitia expedita minima neque. Impedit aperiam tempora
+                     magni accusamus obcaecati neque aut, sint quae libero rem ducimus error itaque
+                     consequuntur perspiciatis! Dolorum, impedit. Illo aut temporibus fuga!
+                  </p>
+               )}
                <div className="read-more-box">
-                  <ViewMoreButton onView={() => {}} butnViewingText={"Read More"} />
+                  <ViewMoreButton
+                     onView={() => setMoreDesc((prevState) => !prevState)}
+                     butnViewingText={`${moreDesc ? "Hide" : "Read More"}`}
+                  />
                </div>
             </div>
             <div className="founder-image-box">
-               <div className="founder-image-backdrop">
-                  <img src={Images.companyFounderWeb} alt="" />
-               </div>
+               <div className="founder-image-backdrop" />
+               <img src={Images.companyFounderWeb} alt="" />
             </div>
          </div>
       </MeetOurFounderStyled>
