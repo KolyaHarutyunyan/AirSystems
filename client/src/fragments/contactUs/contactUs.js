@@ -1,5 +1,5 @@
 import React from "react";
-import { TitleDivider } from "../home/main/core/titleDivider";
+import { TitleDivider } from "@eachbase/components";
 import { EstimateRequest, QuickMessage } from "./core";
 import { ContactUsFragmentStyled } from "./styles";
 
