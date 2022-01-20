@@ -1,16 +1,17 @@
-import { AppSizes, Devices } from "@eachbase/utils";
+import { useWidth, AppSizes, Devices } from "@eachbase/utils";
 import { ProvidingServiceCardStyled } from "./styles";
 
 export const ProvidingServiceCard = ({ service }) => {
+    const width = useWidth();
     const { imageWeb, imageTablet, imageMobile, title, list } = service;
     return (
         <ProvidingServiceCardStyled>
             <img
                 className="service-card-img"
                 src={
-                    window.innerWidth <= AppSizes.mobile
+                    width <= AppSizes.mobile
                         ? imageMobile
-                        : window.innerWidth <= Devices.tablet
+                        : width <= Devices.tablet
                         ? imageTablet
                         : imageWeb
                 }

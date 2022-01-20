@@ -299,6 +299,12 @@ export const WisetackFinancingStyled = styled.section`
       background-size: cover;
       width: 100%;
       height: 300px;
+      @media ${Devices.tablet} {
+         background-image: url(${Images.homepageFinanceTablet});
+      }
+      @media ${Devices.mobile} {
+         background-image: url(${Images.homepageFinanceMobile});
+      }
    }
    .wisetack-financing-features-list {
       font-weight: ${TextFonts["p1.2"].fontWeight};
@@ -512,7 +518,6 @@ export const ProvidingServiceCardStyled = styled.div`
       margin: 24px 0 16px;
    }
    .service-card-list {
-      list-style-position: inside;
       padding-inline-start: 1px;
    }
    .service-card-list-item {

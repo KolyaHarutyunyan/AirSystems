@@ -1,4 +1,13 @@
+// Logos & Icons
+import { Logos } from "./images/homepage/logos";
+import { Icons } from "./images/homepage/icons";
+import { ServicesIcons } from "./images/services/icons";
+
+// homepage
+/** heeader */
 import homepageHeroWeb from "./images/homepage/homepageHeroWeb.jpg";
+/** */
+import { BestExperience } from "./images/homepage/bestExperience";
 
 import homepageFreequotesWeb from "./images/homepage/homepageFreequotesWeb.jpg";
 import homepageFreequotesTablet from "./images/homepage/homepageFreequotesTablet.jpg";
@@ -21,10 +30,34 @@ import homepageRefrigerationTablet from "./images/homepage/homepageRefrigeration
 import homepageRefrigerationMobile from "./images/homepage/homepageRefrigerationMobile.jpg";
 
 import homepageFinanceWeb from "./images/homepage/homepageFinanceWeb.jpg";
+import homepageFinanceTablet from "./images/homepage/homepageFinanceTablet.jpg";
+import homepageFinanceMobile from "./images/homepage/homepageFinanceMobile.jpg";
 
-import { Logos } from "./images/homepage/logos";
-import { BestExperience } from "./images/homepage/bestExperience";
-import { Icons } from "./images/homepage/icons";
+// services
+/** heeader */
+import serviceHeroWeb from "./images/services/serviceHeroWeb.jpg"
+import serviceHeroTablet from "./images/services/serviceHeroTablet.jpg"
+import serviceHeroMobile from "./images/services/serviceHeroMobile.jpg"
+/** */
+import serviceAirConditWeb from "./images/services/serviceAirConditWeb.jpg"
+import serviceAirConditTablet from "./images/services/serviceAirConditTablet.jpg"
+import serviceAirConditMobile from "./images/services/serviceAirConditMobile.jpg"
+
+import serviceHeatingWeb from "./images/services/serviceHeatingWeb.jpg"
+import serviceHeatingTablet from "./images/services/serviceHeatingTablet.jpg"
+import serviceHeatingMobile from "./images/services/serviceHeatingMobile.jpg"
+
+import serviceRefrigerationWeb from "./images/services/serviceRefrigerationWeb.jpg"
+import serviceRefrigerationTablet from "./images/services/serviceRefrigerationTablet.jpg"
+import serviceRefrigerationMobile from "./images/services/serviceRefrigerationMobile.jpg"
+
+import serviceVentilationWeb from "./images/services/serviceVentilationWeb.jpg"
+import serviceVentilationTablet from "./images/services/serviceVentilationTablet.jpg"
+import serviceVentilationMobile from "./images/services/serviceVentilationMobile.jpg"
+
+/** Icons */
+
+/** */
 
 // ** contuct us images **
 import dropdownArrowBlack from "@eachbase/images/contactUs/icons/dropdownArrowBlack.svg";
@@ -41,57 +74,64 @@ import missionIcon from "@eachbase/images/company/icons/missionIcon.svg";
 // ** end **
 
 export const Images = {
+
+   //Home page images
+   /**header */
    homepageHeroWeb: homepageHeroWeb,
-   homepageFreequotesWeb: homepageFreequotesWeb,
-
-   homepageHeatingWeb: homepageHeatingWeb,
-   homepageVentilationWeb: homepageVentilationWeb,
-   homepageAirConditWeb: homepageAirConditWeb,
-   homepageRefrigerationWeb: homepageRefrigerationWeb,
-
-   homepageFinanceWeb: homepageFinanceWeb,
-
-   homepageHeroWeb: homepageHeroWeb,
-
-   homepageFreequotesWeb: homepageFreequotesWeb,
-
-   homepageHeatingWeb: homepageHeatingWeb,
-   homepageVentilationWeb: homepageVentilationWeb,
-   homepageAirConditWeb: homepageAirConditWeb,
-   homepageRefrigerationWeb: homepageRefrigerationWeb,
-
-   homepageFinanceWeb: homepageFinanceWeb,
-
-   homepageHeroWeb: homepageHeroWeb,
-
-
+   /** */
+   BestExperience: BestExperience,
+   
    homepageFreequotesWeb: homepageFreequotesWeb,
    homepageFreequotesTablet: homepageFreequotesTablet,
    homepageFreequotesMobile: homepageFreequotesMobile,
-
+   
    homepageHeatingWeb: homepageHeatingWeb,
    homepageHeatingTablet: homepageHeatingTablet,
    homepageHeatingMobile: homepageHeatingMobile,
-
+   
    homepageVentilationWeb: homepageVentilationWeb,
    homepageVentilationTablet: homepageVentilationTablet,
    homepageVentilationMobile: homepageVentilationMobile,
-
+   
    homepageAirConditWeb: homepageAirConditWeb,
    homepageAirConditTablet: homepageAirConditTablet,
    homepageAirConditMobile: homepageAirConditMobile,
-
+   
    homepageRefrigerationWeb: homepageRefrigerationWeb,
    homepageRefrigerationTablet: homepageRefrigerationTablet,
    homepageRefrigerationMobile: homepageRefrigerationMobile,
+   
+   homepageFinanceWeb: homepageFinanceWeb,
+   homepageFinanceTablet: homepageFinanceTablet,
+   homepageFinanceMobile: homepageFinanceMobile,
 
-   // Service
+   // Services page images
+   /** header */
+   serviceHeroWeb,
+   serviceHeroTablet,
+   serviceHeroMobile,
+   /** */
 
+   serviceAirConditWeb,
+   serviceAirConditTablet,
+   serviceAirConditMobile,
 
-   Logos: Logos,
-   Icons: Icons,
-   BestExperience: BestExperience,
+   serviceHeatingWeb,
+   serviceHeatingTablet,
+   serviceHeatingMobile,
 
+   serviceRefrigerationWeb,
+   serviceRefrigerationTablet,
+   serviceRefrigerationMobile,
+
+   serviceVentilationWeb,
+   serviceVentilationTablet,
+   serviceVentilationMobile,
+
+   // Logos & Icons
+   Logos,
+   Icons,
+   ServicesIcons,
    // ** contuct us images **
    dropdownArrowBlack,
    dropdownArrow,
