@@ -31,7 +31,7 @@ export const Partners = () => {
          </p>
          <div className="partners__logo-cont">
             <MainCarousel listingsSize={listingsSize}>
-               {Object.entries(Images.Logos.PartnersLogos).map(([title, src]) => (
+               {Object.entries(Images.PartnersLogos).map(([title, src]) => (
                   <div key={title} className="partner-logo-wrapper">
                      <img className="partner-logo" src={src} alt={title} />
                   </div>

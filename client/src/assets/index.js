@@ -1,5 +1,6 @@
 // Logos & Icons
-import { Logos } from "./images/homepage/logos";
+import { FollowLogos } from "./images/homepage/followLogos";
+import { PartnersLogos } from "./images/homepage/partnersLogos";
 import { Icons } from "./images/homepage/icons";
 import { ServicesIcons } from "./images/services/icons";
 
@@ -113,13 +114,7 @@ export const Images = {
    homepageRefrigerationTablet: homepageRefrigerationTablet,
    homepageRefrigerationMobile: homepageRefrigerationMobile,
 
-   // Service
 
-   Logos: Logos,
-   Icons: Icons,
-   BestExperience: BestExperience,
-
-   
    homepageFinanceWeb: homepageFinanceWeb,
    homepageFinanceTablet: homepageFinanceTablet,
    homepageFinanceMobile: homepageFinanceMobile,
@@ -148,7 +143,8 @@ export const Images = {
    serviceVentilationMobile,
 
    // Logos & Icons
-   Logos,
+   FollowLogos,
+   PartnersLogos,
    Icons,
    ServicesIcons,
    // ** contuct us images **
