@@ -15,7 +15,6 @@ export const ContactUs = () => {
                   <h2 className="cont-text">Contact Us</h2>
                </div>
             }
-            height={"420px"}
          />
          <ContactUsFragment />
       </>

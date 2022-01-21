@@ -1,14 +1,16 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { Company, ContactUs, Home, Services } from "@eachbase/pages";
+import { Company, ContactUs, Home, Services, TermsAndConds } from "@eachbase/pages";
 
 export const Routers = () => {
    return (
       <Switch>
          <Route path="/" exact component={Home} />
+         <Route path="/home" exact component={Home} />
          <Route path="/services" exact component={Services} />
-         <Route path="/contact-us" exact component={ContactUs} />
-         <Route path="/about" exact component={Company} />
+         <Route path="/contactUs" exact component={ContactUs} />
+         <Route path="/company" exact component={Company} />
+         <Route path="/termsAndConditions" exact component={TermsAndConds} />
          {/*<Redirect to={"/"} />*/}
       </Switch>
    );

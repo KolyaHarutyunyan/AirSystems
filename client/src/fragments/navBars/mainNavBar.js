@@ -11,9 +11,6 @@ export const MainNavBar = ({ className }) => {
          {Object.values(Routes).map(({ title, path }) => (
             <RouteLink key={path} title={title} where={path}></RouteLink>
          ))}
-         <Button bgColor={Colors.ThemeGreen} color={Colors.BackgroundPrimary}>
-            Request An Appointment
-         </Button>
       </MainNavbarStyled>
    );
 };

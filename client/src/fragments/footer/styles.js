@@ -34,6 +34,10 @@ export const FooterStyled = styled.footer`
          }
       }
       .rules {
+         & > a {
+            text-decoration: none;
+            color: inherit;
+         }
          @media (max-width: 768px) {
             margin-bottom: 15px;
          }
