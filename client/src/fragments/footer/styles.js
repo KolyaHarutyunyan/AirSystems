@@ -6,6 +6,50 @@ import { Colors, TextFonts } from "../../utils/globalUi";
 let { fontSize, fontWeight } = TextFonts.p2;
 
 export const FooterStyled = styled.footer`
+
+   flex-shrink: 0;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   background-color: ${Colors.BackgroundSecondary};
+   .footer-content {
+      max-width: 1440px;
+      width: 100%;
+      justify-content: space-between;
+      padding: 80px 80px 31px;
+      @media (max-width: 1280px) {
+         padding: 48px 32px 23px;
+      }
+      @media (max-width: 768px) {
+         padding: 32px 16px 15px;
+      }
+      & .lower-footer {
+         width: 100%;
+         color: ${Colors.TextTertiary};
+         line-height: 24px;
+         font-size: ${fontSize};
+         font-weight: ${fontWeight};
+         display: flex;
+         justify-content: space-between;
+         margin-top: 16px;
+         @media (max-width: 768px) {
+            flex-direction: column-reverse;
+         }
+      }
+      .rules {
+         & > a {
+            text-decoration: none;
+            color: inherit;
+         }
+         @media (max-width: 768px) {
+            margin-bottom: 15px;
+         }
+         .privacy {
+            margin-left: 32px;
+         }
+      }
+   }
+
 	flex-shrink: 0;
 	width: 100%;
 	display: flex;
@@ -44,7 +88,6 @@ export const FooterStyled = styled.footer`
 			}
 		}
 	}
-`;
 
 export const UpperFooterStyled = styled.div`
 	width: 100%;

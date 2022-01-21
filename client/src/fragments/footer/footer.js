@@ -2,6 +2,7 @@ import { Divider } from "@mui/material";
 import { Colors } from "@eachbase/utils";
 import { UpperFooter } from "./upperFooter";
 import { FooterStyled } from "./styles";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
    return (
@@ -16,8 +17,12 @@ export const Footer = () => {
             <div className="lower-footer">
                <span className="rights">SoCal Air Systems 2021. All rights reserved.</span>
                <div className="rules">
-                  <span className="conditions">{"Terms & Conditions"}</span>
-                  <span className="privacy">Privacy Policy</span>
+                  <Link to="/termsAndConditions" className="conditions">
+                     {"Terms & Conditions"}
+                  </Link>
+                  <Link to="*" className="privacy">
+                     Privacy Policy
+                  </Link>
                </div>
             </div>
          </div>
