@@ -9,7 +9,6 @@ export const ServicesFragment = () => {
             content={
                <>
                   <TopSection />
-                  {/* <section className="cards-container"></section> */}
                   <BigCardsContainer />
                </>
             }
