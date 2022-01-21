@@ -83,15 +83,6 @@ export const Images = {
    /**header */
    homepageHeroWeb: homepageHeroWeb,
 
-   homepageFreequotesWeb: homepageFreequotesWeb,
-
-   homepageHeatingWeb: homepageHeatingWeb,
-   homepageVentilationWeb: homepageVentilationWeb,
-   homepageAirConditWeb: homepageAirConditWeb,
-   homepageRefrigerationWeb: homepageRefrigerationWeb,
-
-   homepageHeroWeb: homepageHeroWeb,
-
    BestExperience: BestExperience,
    
    homepageFreequotesWeb: homepageFreequotesWeb,
