@@ -214,7 +214,7 @@ export const UpperFooterStyled = styled.div`
 `;
 
 export const LogoLinkStyled = styled.a`
-	display: block;
+	display: inline-block;
 	width: 24px;
 	height: 24px;
 	background-image: url(${(props) => props?.logos?.simple});
