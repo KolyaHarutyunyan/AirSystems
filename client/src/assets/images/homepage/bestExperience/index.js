@@ -1,9 +1,9 @@
-import AffordablePricing from './Affordable Pricing.svg'
-import CertifiedTechnicians from './Certified Technicians.svg'
+import AffordablePricing from './AffordablePricing.svg'
+import CertifiedTechnicians from './CertifiedTechnicians.svg'
 import Experience from './Experience.svg'
 
 export const BestExperience = {
-    AffordablePricing: AffordablePricing,
-    CertifiedTechnicians: CertifiedTechnicians,
-    Experience: Experience,
+    AffordablePricing,
+    CertifiedTechnicians,
+    Experience,
 }
