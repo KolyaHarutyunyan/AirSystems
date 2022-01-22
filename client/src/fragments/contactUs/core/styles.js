@@ -1,16 +1,16 @@
 import styled from "styled-components";
-import { Colors } from "@eachbase/utils";
+import { Colors, Devices } from "@eachbase/utils";
 
 export const QuickMessageStyled = styled.section`
    width: 100%;
    padding: 80px 163px;
    background-color: ${Colors.BackgroundSecondary};
    margin-bottom: 128px;
-   @media (max-width: 1280px) {
+   @media ${Devices.tablet} {
       padding: 80px 40px;
       margin-bottom: 96px;
    }
-   @media (max-width: 768px) {
+   @media ${Devices.mobile} {
       padding: 32px 16px;
       margin-bottom: 72px;
    }
@@ -24,10 +24,10 @@ export const QuickMessageStyled = styled.section`
             display: flex;
             align-items: center;
             margin-bottom: 16px;
-            @media (max-width: 1280px) {
+            @media ${Devices.tablet} {
                margin-bottom: 65px;
             }
-            @media (max-width: 768px) {
+            @media ${Devices.mobile} {
                margin-bottom: 45px;
             }
             .quick-message-title {
@@ -45,7 +45,7 @@ export const QuickMessageStyled = styled.section`
             font-weight: 500;
             color: ${Colors.TextSecondary};
             line-height: 24px;
-            @media (max-width: 1280px) {
+            @media ${Devices.tablet} {
                max-width: 100%;
             }
          }
@@ -53,19 +53,19 @@ export const QuickMessageStyled = styled.section`
       .quick-message-inputs-box {
          width: 100%;
          display: flex;
-         @media (max-width: 1280px) {
+         @media ${Devices.tablet} {
             flex-direction: column;
          }
          .name-email-box {
             flex-grow: 1;
-            @media (max-width: 1280px) {
+            @media ${Devices.tablet} {
                display: flex;
                align-items: center;
                & > div:last-child {
                   margin-left: 24px;
                }
             }
-            @media (max-width: 768px) {
+            @media ${Devices.mobile} {
                display: block;
                & > div:last-child {
                   margin-left: 0;
@@ -74,14 +74,14 @@ export const QuickMessageStyled = styled.section`
          }
          .message-box {
             margin-left: 24px;
-            @media (max-width: 1280px) {
+            @media ${Devices.tablet} {
                margin-left: 0;
             }
          }
       }
       .user-action-box {
          width: 100%;
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             text-align: right;
          }
          .btn-load-time {
@@ -95,7 +95,7 @@ export const QuickMessageStyled = styled.section`
 export const EstimateRequestStyled = styled.section`
    width: 100%;
    padding: 0 163px;
-   @media (max-width: 1280px) {
+   @media ${Devices.tablet} {
       padding: 0 0;
    }
    .estimate-request-container {
@@ -103,10 +103,10 @@ export const EstimateRequestStyled = styled.section`
       .estimate-request-box {
          width: 100%;
          margin-bottom: 32px;
-         @media (max-width: 1280px) {
+         @media ${Devices.tablet} {
             margin-bottom: 56px;
          }
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             margin-bottom: 32px;
          }
          .estimate-request-title-box {
@@ -129,7 +129,7 @@ export const EstimateRequestStyled = styled.section`
             font-weight: 500;
             color: ${Colors.TextSecondary};
             line-height: 24px;
-            @media (max-width: 1280px) {
+            @media ${Devices.tablet} {
                max-width: 100%;
             }
          }
@@ -143,7 +143,7 @@ export const EstimateRequestStyled = styled.section`
                & > div:last-child {
                   margin-left: 24px;
                }
-               @media (max-width: 768px) {
+               @media ${Devices.mobile} {
                   display: block;
                   & > div:last-child {
                      margin-left: 0;
@@ -159,7 +159,7 @@ export const EstimateRequestStyled = styled.section`
       }
       .user-action-box {
          width: 100%;
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             text-align: right;
          }
          .btn-load-time {

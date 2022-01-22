@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "@eachbase/utils";
+import { Colors, Devices } from "@eachbase/utils";
 
 export const TermsAndCondsFragmentStyed = styled.section`
    flex-grow: 1;
@@ -12,19 +12,19 @@ export const TermsAndCondsFragmentStyed = styled.section`
       max-width: 1440px;
       width: 100%;
       padding: 99px 80px 0;
-      @media (max-width: 1280px) {
+      @media ${Devices.tablet} {
          padding: 83px 32px 0;
       }
-      @media (max-width: 768px) {
+      @media ${Devices.mobile} {
          padding: 61px 16px 0;
       }
       .terms-and-conds-box {
          width: 100%;
          margin-bottom: 128px;
-         @media (max-width: 1280px) {
+         @media ${Devices.tablet} {
             margin-bottom: 96px;
          }
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             margin-bottom: 72px;
          }
          .terms-and-conds-title-box {
@@ -42,10 +42,10 @@ export const TermsAndCondsFragmentStyed = styled.section`
             padding: 40px;
             background-color: ${Colors.BackgroundSecondary};
             border-radius: 4px;
-            @media (max-width: 1280px) {
+            @media ${Devices.tablet} {
                padding: 32px;
             }
-            @media (max-width: 768px) {
+            @media ${Devices.mobile} {
                padding: 16px;
             }
             .terms-and-conds-description {

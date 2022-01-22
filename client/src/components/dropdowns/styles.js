@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "@eachbase/utils";
+import { Colors, Devices } from "@eachbase/utils";
 
 export const DropdownOverlayStyled = styled.div`
    top: 0;
@@ -14,7 +14,7 @@ export const UserDropStyled = styled.div`
    max-width: 465px;
    width: 100%;
    margin-bottom: 15px;
-   @media (max-width: 1280px) {
+   @media ${Devices.tablet} {
       max-width: 100%;
    }
    .label {

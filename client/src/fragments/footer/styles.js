@@ -16,10 +16,10 @@ export const FooterStyled = styled.footer`
       width: 100%;
       justify-content: space-between;
       padding: 80px 80px 31px;
-      @media (max-width: 1280px) {
+      @media ${Devices.tablet} {
          padding: 48px 32px 23px;
       }
-      @media (max-width: 768px) {
+      @media ${Devices.mobile} {
          padding: 32px 16px 15px;
       }
       & .lower-footer {
@@ -31,7 +31,7 @@ export const FooterStyled = styled.footer`
          display: flex;
          justify-content: space-between;
          margin-top: 16px;
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             flex-direction: column-reverse;
          }
       }
@@ -40,7 +40,7 @@ export const FooterStyled = styled.footer`
             text-decoration: none;
             color: inherit;
          }
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             margin-bottom: 15px;
          }
          .privacy {
