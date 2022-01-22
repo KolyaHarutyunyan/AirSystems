@@ -117,11 +117,12 @@ export const BigCardStyled = styled.div`
    }
 
    .descr-cont {
-      margin: 32px 0;
+      margin: 26px 0 16px;
       @media ${Devices.tablet} {
+         margin: 32px 0;
       }
       @media ${Devices.mobile} {
-         margin: 24px 0;
+         margin: 24px 0 0;
       }
    }
 
@@ -193,7 +194,7 @@ export const ChessImgSectionStyled = styled.div`
       max-width: 100%;
       height: 432px;
 
-      margin: 16px 0 32px;
+      margin: 16px 0 0;
    }
    @media ${Devices.mobile} {
       height: 271px;
