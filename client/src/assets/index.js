@@ -82,15 +82,7 @@ export const Images = {
    //Home page images
    /**header */
    homepageHeroWeb: homepageHeroWeb,
-
-   homepageFreequotesWeb: homepageFreequotesWeb,
-
-   homepageHeatingWeb: homepageHeatingWeb,
-   homepageVentilationWeb: homepageVentilationWeb,
-   homepageAirConditWeb: homepageAirConditWeb,
-   homepageRefrigerationWeb: homepageRefrigerationWeb,
-
-   homepageHeroWeb: homepageHeroWeb,
+   /** end */
 
    BestExperience: BestExperience,
    

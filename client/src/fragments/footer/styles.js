@@ -88,6 +88,7 @@ export const FooterStyled = styled.footer`
 			}
 		}
 	}
+`
 
 export const UpperFooterStyled = styled.div`
 	width: 100%;
@@ -100,6 +101,7 @@ export const UpperFooterStyled = styled.div`
 	}
 	.indigo-heading {
 		color: ${Colors.ThemeIndigo};
+		line-height: 22px;
 	}
 	.socal-media {
 		max-width: 220px;
@@ -220,13 +222,12 @@ export const UpperFooterStyled = styled.div`
 				.subscribe-input-box {
 					position: relative;
 					width: 100%;
-					& > span {
+					&>button {
 						position: absolute;
 						top: 50%;
-						right: -16px;
+						right: 6px;
 						transform: translateY(-50%);
 						width: 144px;
-						height: 44px;
 						@media ${Devices.tablet} {
 							width: 112px;
 						}

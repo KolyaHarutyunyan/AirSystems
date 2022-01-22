@@ -16,4 +16,7 @@ export const MainNavbarStyled = styled.div`
    @media (max-width: 1280px) {
       display: none;
    }
+   &>.navbar-button-cont {
+      margin: 0 20px 0 28px;
+   }
 `;
