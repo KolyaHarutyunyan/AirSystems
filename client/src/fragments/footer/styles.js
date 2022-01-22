@@ -1,4 +1,3 @@
-import { Images } from "@eachbase/assets";
 import { Devices } from "@eachbase/utils";
 import styled from "styled-components";
 import { Colors, TextFonts } from "../../utils/globalUi";
