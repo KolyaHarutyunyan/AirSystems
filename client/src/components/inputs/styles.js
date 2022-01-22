@@ -1,12 +1,12 @@
+import { Colors, Devices } from "@eachbase/utils";
 import styled from "styled-components";
-import { Colors } from "@eachbase/utils";
 
 export const UserInputStyled = styled.div`
    position: relative;
    max-width: 465px;
    width: 100%;
    margin-bottom: 15px;
-   @media (max-width: 1280px) {
+   @media ${Devices.tablet} {
       max-width: 100%;
    }
    .user-input-label {
@@ -75,7 +75,7 @@ export const UserTextAreaStyled = styled.textarea`
    font-size: 16px;
    font-weight: 500;
    color: ${Colors.TextSecondary};
-   @media (max-width: 1280px) {
+   @media ${Devices.tablet} {
       width: 100%;
    }
    &:hover {

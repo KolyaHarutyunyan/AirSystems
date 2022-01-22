@@ -1,6 +1,6 @@
+import styled from "styled-components";
 import { Colors, TextFonts } from "@eachbase/utils";
 import { Devices } from "@eachbase/utils/devices";
-import styled from "styled-components";
 
 export const BenefitCardStyled = styled.div`
     background-color: ${Colors.BackgroundSecondary};

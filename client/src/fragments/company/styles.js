@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "@eachbase/utils";
+import { Colors, Devices } from "@eachbase/utils";
 
 export const CompanyFragmentStyled = styled.section`
    flex-grow: 1;
@@ -10,19 +10,19 @@ export const CompanyFragmentStyled = styled.section`
       max-width: 1440px;
       width: 100%;
       padding: 128px 80px;
-      @media (max-width: 1280px) {
+      @media ${Devices.tablet} {
          padding: 96px 32px;
       }
-      @media (max-width: 768px) {
+      @media ${Devices.mobile} {
          padding: 72px 16px;
       }
       .who-we-are-box {
          width: 100%;
          margin-bottom: 128px;
-         @media (max-width: 1280px) {
+         @media ${Devices.tablet} {
             margin-bottom: 96px;
          }
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             margin-bottom: 72px;
          }
          .who-we-are-title-box {
@@ -41,7 +41,7 @@ export const CompanyFragmentStyled = styled.section`
          .who-we-are-info-box {
             max-width: 738px;
             width: 100%;
-            @media (max-width: 1280px) {
+            @media ${Devices.tablet} {
                max-width: 100%;
             }
             .who-we-are-subtitle {

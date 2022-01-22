@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import { Colors } from "@eachbase/utils";
+import { Colors, Devices } from "@eachbase/utils";
 
 export const MeetOurFounderStyled = styled.section`
    width: 100%;
    margin-bottom: 128px;
-   @media (max-width: 1280px) {
+   @media ${Devices.tablet} {
       margin-bottom: 96px;
    }
-   @media (max-width: 768px) {
+   @media ${Devices.mobile} {
       margin-bottom: 72px;
    }
    .founder-info-title__mobile-view {
@@ -17,7 +17,7 @@ export const MeetOurFounderStyled = styled.section`
          color: ${Colors.ThemeGreen};
       }
       display: none;
-      @media (max-width: 768px) {
+      @media ${Devices.mobile} {
          display: block;
       }
    }
@@ -25,16 +25,16 @@ export const MeetOurFounderStyled = styled.section`
       width: 100%;
       display: flex;
       align-items: center;
-      @media (max-width: 1280px) {
+      @media ${Devices.tablet} {
          flex-direction: column;
       }
-      @media (max-width: 768px) {
+      @media ${Devices.mobile} {
          flex-direction: column-reverse;
       }
       .founder-info-box {
          max-width: 612px;
          width: 100%;
-         @media (max-width: 1280px) {
+         @media ${Devices.tablet} {
             max-width: 100%;
          }
       }
@@ -44,7 +44,7 @@ export const MeetOurFounderStyled = styled.section`
          & > em {
             color: ${Colors.ThemeGreen};
          }
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             display: none;
          }
       }
@@ -54,7 +54,7 @@ export const MeetOurFounderStyled = styled.section`
          color: ${Colors.TextTertiary};
          line-height: 20px;
          margin-top: 16px;
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             &.first-desc {
                margin-top: 32px;
             }
@@ -65,7 +65,7 @@ export const MeetOurFounderStyled = styled.section`
          text-align: right;
          margin-top: 8px;
          display: none;
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             display: block;
          }
       }
@@ -78,13 +78,13 @@ export const MeetOurFounderStyled = styled.section`
          display: flex;
          justify-content: flex-end;
          margin-left: 32px;
-         @media (max-width: 1280px) {
+         @media ${Devices.tablet} {
             max-width: 100%;
             margin-left: 0;
             margin-top: 32px;
             padding: 32px 32px 0 0;
          }
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             height: 247px;
          }
          & > img {
@@ -99,7 +99,7 @@ export const MeetOurFounderStyled = styled.section`
             width: 50%;
             height: 512px;
             background-color: #00000019;
-            @media (max-width: 1280px) {
+            @media ${Devices.tablet} {
                width: 80%;
                height: 75%;
             }
@@ -112,36 +112,36 @@ export const AboutCompanyStyled = styled.section`
    width: 100%;
    padding: 52px 0;
    background-color: ${Colors.BackgroundSecondary};
-   @media (max-width: 1280px) {
+   @media ${Devices.tablet} {
       padding: 52px 32px 60px;
    }
-   @media (max-width: 768px) {
+   @media ${Devices.mobile} {
       padding: 16px 16px 48px;
    }
    .about-company-box {
       max-width: 954px;
       width: 100%;
       margin: 0 auto;
-      @media (max-width: 1280px) {
+      @media ${Devices.tablet} {
          max-width: 100%;
       }
       .about-company-box__first {
          width: 100%;
          display: flex;
          margin-bottom: 24px;
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             flex-direction: column;
             margin-bottom: 16px;
          }
          & > div {
             max-width: 465px;
-            @media (max-width: 1280px) {
+            @media ${Devices.tablet} {
                max-width: 100%;
             }
          }
          & > div:last-child {
             margin-left: 24px;
-            @media (max-width: 768px) {
+            @media ${Devices.mobile} {
                margin-left: 0;
                margin-top: 16px;
             }

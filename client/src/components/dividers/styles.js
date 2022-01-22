@@ -7,6 +7,6 @@ export const HorizontalDividerStyled = styled.div`
     border-bottom: ${(props) => props.bb};
 
     @media ${Devices.tablet} {
-        display: ${(props) => props.onlyWeb && "none"};
+        display: ${(props) => props.onlyWeb ? "none" : "block"};
     }
 `;

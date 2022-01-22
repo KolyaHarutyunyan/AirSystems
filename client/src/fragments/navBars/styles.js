@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "@eachbase/utils";
+import { Colors, Devices } from "@eachbase/utils";
 
 export const MainNavbarStyled = styled.div`
    display: flex;
@@ -13,7 +13,7 @@ export const MainNavbarStyled = styled.div`
    align-items: center;
    min-height: 60px;
    padding: 0 60px 0 4px;
-   @media (max-width: 1280px) {
+   @media ${Devices.tablet} {
       display: none;
    }
    &>.navbar-button-cont {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors, TextFonts } from "@eachbase/utils";
+import { Colors, Devices, TextFonts } from "@eachbase/utils";
 import { Images } from "@eachbase/assets";
 
 let { fontWeight } = TextFonts["p1.2"];
@@ -24,11 +24,11 @@ export const HeaderStyled = styled.header`
       .main-title {
          width: 628px;
          margin: 115px 0 63px;
-         @media (max-width: 1280px) {
+         @media ${Devices.tablet} {
             width: 411px;
             margin: 73px 0 36px;
          }
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             width: 289px;
             margin: 50px 0 36px;
          }
@@ -46,7 +46,7 @@ export const HeaderStyled = styled.header`
          color: ${Colors.TextTertiary};
          display: flex;
          align-items: center;
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             display: none;
          }
          .single-info {
@@ -83,16 +83,16 @@ export const HeaderContentStyled = styled.section`
    justify-content: space-between;
    height: 100%;
    padding: 43px 80px 56px;
-   @media (max-width: 1280px) {
+   @media ${Devices.tablet} {
       padding: 38px 32px;
    }
-   @media (max-width: 768px) {
+   @media ${Devices.mobile} {
       padding: 38px 16px 24px;
    }
    .lower-header {
       & .contact-info__mobile-view {
          display: none;
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             display: flex;
             align-items: center;
             width: 343px;
@@ -129,12 +129,13 @@ export const HeaderContentStyled = styled.section`
 
 export const NavStyled = styled.nav`
    display: none;
-   @media (max-width: 1280px) {
+   @media ${Devices.tablet} {
       display: block;
       .navbar-backdrop {
          position: fixed;
          width: 100%;
          height: 100%;
+         z-index: 7;
          top: 0;
          left: 0;
          background-color: inherit;
@@ -147,11 +148,11 @@ export const NavStyled = styled.nav`
          position: fixed;
          top: 24px;
          right: 32px;
-         z-index: 3;
+         z-index: 9;
          width: 38px;
          height: 22px;
          cursor: pointer;
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             top: 32px;
             right: 20px;
          }
@@ -205,7 +206,7 @@ export const NavStyled = styled.nav`
          position: fixed;
          top: 0;
          right: -100%;
-         z-index: 1;
+         z-index: 8;
          max-width: 372px;
          width: 100%;
          height: 100vh;
@@ -214,7 +215,7 @@ export const NavStyled = styled.nav`
          display: flex;
          flex-direction: column;
          transition: right 0.5s ease-in-out;
-         @media (max-width: 768px) {
+         @media ${Devices.mobile} {
             max-width: 100%;
             padding-top: 160px;
             padding-left: 16px;
