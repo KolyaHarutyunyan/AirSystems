@@ -36,25 +36,25 @@ import homepageFinanceMobile from "./images/homepage/homepageFinanceMobile.jpg";
 
 // services
 /** heeader */
-import serviceHeroWeb from "./images/services/serviceHeroWeb.jpg"
-import serviceHeroTablet from "./images/services/serviceHeroTablet.jpg"
-import serviceHeroMobile from "./images/services/serviceHeroMobile.jpg"
+import serviceHeroWeb from "./images/services/serviceHeroWeb.jpg";
+import serviceHeroTablet from "./images/services/serviceHeroTablet.jpg";
+import serviceHeroMobile from "./images/services/serviceHeroMobile.jpg";
 /** */
-import serviceAirConditWeb from "./images/services/serviceAirConditWeb.jpg"
-import serviceAirConditTablet from "./images/services/serviceAirConditTablet.jpg"
-import serviceAirConditMobile from "./images/services/serviceAirConditMobile.jpg"
+import serviceAirConditWeb from "./images/services/serviceAirConditWeb.jpg";
+import serviceAirConditTablet from "./images/services/serviceAirConditTablet.jpg";
+import serviceAirConditMobile from "./images/services/serviceAirConditMobile.jpg";
 
-import serviceHeatingWeb from "./images/services/serviceHeatingWeb.jpg"
-import serviceHeatingTablet from "./images/services/serviceHeatingTablet.jpg"
-import serviceHeatingMobile from "./images/services/serviceHeatingMobile.jpg"
+import serviceHeatingWeb from "./images/services/serviceHeatingWeb.jpg";
+import serviceHeatingTablet from "./images/services/serviceHeatingTablet.jpg";
+import serviceHeatingMobile from "./images/services/serviceHeatingMobile.jpg";
 
-import serviceRefrigerationWeb from "./images/services/serviceRefrigerationWeb.jpg"
-import serviceRefrigerationTablet from "./images/services/serviceRefrigerationTablet.jpg"
-import serviceRefrigerationMobile from "./images/services/serviceRefrigerationMobile.jpg"
+import serviceRefrigerationWeb from "./images/services/serviceRefrigerationWeb.jpg";
+import serviceRefrigerationTablet from "./images/services/serviceRefrigerationTablet.jpg";
+import serviceRefrigerationMobile from "./images/services/serviceRefrigerationMobile.jpg";
 
-import serviceVentilationWeb from "./images/services/serviceVentilationWeb.jpg"
-import serviceVentilationTablet from "./images/services/serviceVentilationTablet.jpg"
-import serviceVentilationMobile from "./images/services/serviceVentilationMobile.jpg"
+import serviceVentilationWeb from "./images/services/serviceVentilationWeb.jpg";
+import serviceVentilationTablet from "./images/services/serviceVentilationTablet.jpg";
+import serviceVentilationMobile from "./images/services/serviceVentilationMobile.jpg";
 
 /** Icons */
 
@@ -78,33 +78,32 @@ import missionIcon from "@eachbase/images/company/icons/missionIcon.svg";
 // ** end **
 
 export const Images = {
-
    //Home page images
    /**header */
    homepageHeroWeb: homepageHeroWeb,
+   /** end */
 
    BestExperience: BestExperience,
-   
+
    homepageFreequotesWeb: homepageFreequotesWeb,
    homepageFreequotesTablet: homepageFreequotesTablet,
    homepageFreequotesMobile: homepageFreequotesMobile,
-   
+
    homepageHeatingWeb: homepageHeatingWeb,
    homepageHeatingTablet: homepageHeatingTablet,
    homepageHeatingMobile: homepageHeatingMobile,
-   
+
    homepageVentilationWeb: homepageVentilationWeb,
    homepageVentilationTablet: homepageVentilationTablet,
    homepageVentilationMobile: homepageVentilationMobile,
-   
+
    homepageAirConditWeb: homepageAirConditWeb,
    homepageAirConditTablet: homepageAirConditTablet,
    homepageAirConditMobile: homepageAirConditMobile,
-   
+
    homepageRefrigerationWeb: homepageRefrigerationWeb,
    homepageRefrigerationTablet: homepageRefrigerationTablet,
    homepageRefrigerationMobile: homepageRefrigerationMobile,
-
 
    homepageFinanceWeb: homepageFinanceWeb,
    homepageFinanceTablet: homepageFinanceTablet,

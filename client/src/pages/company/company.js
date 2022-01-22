@@ -15,7 +15,6 @@ export const Company = () => {
                   <h1 className="cont-text">Company</h1>
                </div>
             }
-            height={"561px"}
          />
          <CompanyFragment />
       </>

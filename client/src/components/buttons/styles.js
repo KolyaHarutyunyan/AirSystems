@@ -7,6 +7,7 @@ export const SendButtonStyled = styled.button`
    background-color: ${Colors.ThemeGreen};
    border-radius: 4px;
    padding: 10px 16px;
+   
    text-align: center;
    font-size: 16px;
    font-weight: 500;
@@ -16,11 +17,11 @@ export const ButtonStyled = styled.span`
    cursor: pointer;
    user-select: none;
    margin: 0 20px;
-   height: 40px;
+   /* height: 40px; */
    padding: 10px 20px;
    border-radius: 4px;
-   background-color: ${({ bgColor }) => bgColor};
-   color: ${({ color }) => color};
+   background-color: ${({ bgColor }) => bgColor || "inherit"};
+   color: ${({ color }) => color || "inherit"};
    display: flex;
    justify-content: center;
    align-items: center;
