@@ -1,14 +1,9 @@
 import styled from "styled-components";
 import { Colors, Devices } from "@eachbase/utils";
 
-export const ContactUsFragmentStyled = styled.section`
-   flex-grow: 1;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   .contact-us-container {
-      max-width: 1440px;
+export const ContactUsContainerStyled = styled.div`
       width: 100%;
+      max-width: 1440px;
       padding: 128px 80px;
       @media ${Devices.tablet} {
          padding: 96px 32px;
@@ -62,5 +57,4 @@ export const ContactUsFragmentStyled = styled.section`
             margin-bottom: 72px;
          }
       }
-   }
 `;

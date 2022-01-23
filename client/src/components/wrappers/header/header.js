@@ -13,7 +13,6 @@ export const Header = ({ img, titleCont, content }) => {
             <MainNavBar className="web-view" />
             <NavStyled>
                <div
-                  onS
                   className={`hamburger-lines ${menuIsShown ? "active" : ""}`}
                   onClick={() => setMenuIsShown((prevState) => !prevState)}
                >

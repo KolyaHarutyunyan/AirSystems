@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Images } from "@eachbase/assets";
 import { MeetOurFounderStyled } from "./styles";
 import { ViewMoreButton } from "@eachbase/components";
+import { useWidth } from "@eachbase/utils";
 
 export const MeetOurFounder = () => {
    const [moreDesc, setMoreDesc] = useState(false);
+   const width = useWidth();
 
    return (
       <MeetOurFounderStyled>
@@ -54,7 +56,16 @@ export const MeetOurFounder = () => {
             </div>
             <div className="founder-image-box">
                <div className="founder-image-backdrop" />
-               <img src={Images.companyFounderWeb} alt="" />
+               <img
+                  src={
+                     width >= 1280
+                        ? Images.companyFounderWeb
+                        : width >= 768
+                        ? Images.companyFounderTablet
+                        : Images.companyFounderMobile
+                  }
+                  alt=""
+               />
             </div>
          </div>
       </MeetOurFounderStyled>
