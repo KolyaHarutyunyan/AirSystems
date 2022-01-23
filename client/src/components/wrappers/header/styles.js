@@ -5,6 +5,7 @@ import { Images } from "@eachbase/assets";
 let { fontWeight } = TextFonts["p1.2"];
 
 export const HeaderStyled = styled.header`
+   flex-shrink: 0;
    width: 100%;
    background-image: url(${({ img }) => img});
    background-repeat: no-repeat;
@@ -31,6 +32,24 @@ export const HeaderStyled = styled.header`
          @media ${Devices.mobile} {
             width: 289px;
             margin: 50px 0 36px;
+         }
+         & > .title-cont {
+            line-height: 73px;
+            display: flex;
+            align-items: center;
+            @media ${Devices.tablet} {
+               font-size: 60px;
+            }
+            @media ${Devices.mobile} {
+               font-size: 28px;
+               line-height: 34px;
+            }
+            & > span {
+               padding-left: 16px;
+               @media ${Devices.mobile} {
+                  padding-left: 8px;
+               }
+            }
          }
       }
       & .theme-green {
@@ -64,14 +83,6 @@ export const HeaderStyled = styled.header`
             }
          }
       }
-      .title-cont {
-         display: flex;
-         align-items: center;
-         .cont-text {
-            color: ${Colors.BackgroundPrimary};
-            margin-left: 16px;
-         }
-      }
    }
 `;
 
@@ -87,6 +98,12 @@ export const HeaderContentStyled = styled.section`
       padding: 38px 16px 24px;
    }
    .lower-header {
+      width: 100%;
+      min-height: 63px;
+      @media ${Devices.tablet} {
+         min-height: 50px;
+      }
+
       & .contact-info__mobile-view {
          display: none;
          @media ${Devices.mobile} {

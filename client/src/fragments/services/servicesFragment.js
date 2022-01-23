@@ -1,10 +1,32 @@
-import { Header, Main } from "@eachbase/components";
+import { Images } from "@eachbase/assets";
+import { Header, Main, HorizontalDivider } from "@eachbase/components";
+import { Colors, useWidth } from "@eachbase/utils";
 import { BigCardsContainer, TopSection } from "./core";
 
 export const ServicesFragment = () => {
+   const width = useWidth();
    return (
       <>
-         <Header titleCont={"TitleContent"} content={"Content"} />
+         <Header
+            img={
+               width >= 1280
+                  ? Images.serviceHeroWeb
+                  : width >= 768
+                  ? Images.serviceHeroTablet
+                  : Images.serviceHeroMobile
+            }
+            titleCont={
+               <h1 className="main-title">
+                  <div className="title-cont">
+                     <HorizontalDivider
+                        length={width >= 768 ? "80px" : "48px"}
+                        bb={`2px solid ${Colors.ThemeGreen}`}
+                     />
+                     <span className="bg-primary">Services</span>
+                  </div>
+               </h1>
+            }
+         />
          <Main
             content={
                <>

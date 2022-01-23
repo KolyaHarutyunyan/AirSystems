@@ -1,1 +1,1 @@
-export { ContactUsFragment } from "./contactUs";
+export { ContactUsFragment } from "./contactUsFragment";

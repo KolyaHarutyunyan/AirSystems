@@ -1,1 +1,1 @@
-export { CompanyFragment } from "./company";
+export { CompanyFragment } from "./companyFragment";

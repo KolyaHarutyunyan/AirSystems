@@ -63,9 +63,12 @@ import serviceVentilationMobile from "./images/services/serviceVentilationMobile
 /** */
 
 // ** contuct us images **
+import contactusHeroWeb from "@eachbase/images/contactUs/contactusHeroWeb.jpg";
+import contactusHeroTablet from "@eachbase/images/contactUs/contactusHeroTablet.jpg";
+import contactusHeroMobile from "@eachbase/images/contactUs/contactusHeroMobile.jpg";
+
 import dropdownArrowBlack from "@eachbase/images/contactUs/icons/dropdownArrowBlack.svg";
 import dropdownArrow from "@eachbase/images/contactUs/icons/dropdownArrow.svg";
-import contactusHeroWeb from "@eachbase/images/contactUs/contactusHeroWeb.jpg";
 import locationIcon from "@eachbase/images/contactUs/icons/locationIcon.svg";
 import zoomIn from "@eachbase/images/contactUs/icons/zoomIn.svg";
 import zoomOut from "@eachbase/images/contactUs/icons/zoomOut.svg";
@@ -73,7 +76,13 @@ import zoomOut from "@eachbase/images/contactUs/icons/zoomOut.svg";
 
 // ** company images **
 import companyHeroWeb from "@eachbase/images/company/companyHeroWeb.jpg";
+import companyHeroTablet from "@eachbase/images/company/companyHeroTablet.jpg";
+import companyHeroMobile from "@eachbase/images/company/companyHeroMobile.jpg";
+
 import companyFounderWeb from "@eachbase/images/company/companyFounderWeb.jpg";
+import companyFounderTablet from "@eachbase/images/company/companyFounderTablet.jpg";
+import companyFounderMobile from "@eachbase/images/company/companyFounderMobile.jpg";
+
 import visionIcon from "@eachbase/images/company/icons/visionIcon.svg";
 import valueIcon from "@eachbase/images/company/icons/valueIcon.png";
 import missionIcon from "@eachbase/images/company/icons/missionIcon.svg";
@@ -142,9 +151,12 @@ export const Images = {
    Icons,
    ServicesIcons,
    // ** contuct us images **
+   contactusHeroWeb,
+   contactusHeroTablet,
+   contactusHeroMobile,
+
    dropdownArrowBlack,
    dropdownArrow,
-   contactusHeroWeb,
    locationIcon,
    zoomIn,
    zoomOut,
@@ -152,7 +164,14 @@ export const Images = {
 
    // ** company images **
    companyHeroWeb,
+   companyHeroTablet,
+   companyHeroMobile,
+   
    companyFounderWeb,
+   companyFounderTablet,
+   companyFounderMobile,
+
+
    visionIcon,
    valueIcon,
    missionIcon,

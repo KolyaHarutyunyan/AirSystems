@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { Company, ContactUs, Home, Services, TermsAndConds } from "@eachbase/pages";
+import { Company, Home, Services, TermsAndConds } from "@eachbase/pages";
+import { ContactUs } from "../pages/contactUs/contactUs"
 
 export const Routers = () => {
    return (

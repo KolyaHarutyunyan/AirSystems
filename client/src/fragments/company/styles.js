@@ -1,14 +1,9 @@
 import styled from "styled-components";
 import { Colors, Devices } from "@eachbase/utils";
 
-export const CompanyFragmentStyled = styled.section`
-   flex-grow: 1;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   .company-container {
-      max-width: 1440px;
+export const CompanyContainerStyled = styled.div`
       width: 100%;
+      max-width: 1440px;
       padding: 128px 80px;
       @media ${Devices.tablet} {
          padding: 96px 32px;
@@ -56,5 +51,5 @@ export const CompanyFragmentStyled = styled.section`
             }
          }
       }
-   }
+   /* } */
 `;
