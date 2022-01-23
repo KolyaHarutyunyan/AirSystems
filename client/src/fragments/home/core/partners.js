@@ -7,13 +7,17 @@ import { PartnersStyled } from "./styles";
 export const Partners = () => {
    const width = useWidth();
    const listingsSize =
-      width >= 768 && width < 1209
+      width >= 375 && width < 580
          ? 2
-         : width >= 900 && width < 1280
+         : width >= 580 && width < 768
+         ? 3
+         : width >= 768 && width < 890
+         ? 4
+         : width >= 890 && width < 1100
          ? 5
-         : width >= 1280 && width < 1440
+         : width >= 1100 && width < 1280
          ? 6
-         : width >= 1440
+         : width >= 1280
          ? 7
          : 1;
    return (
@@ -29,14 +33,28 @@ export const Partners = () => {
             We keep track of industry trends and make sure you are receiving the highest quality
             products with the latest technologies
          </p>
-         <div className="partners__logo-cont">
-            <MainCarousel listingsSize={listingsSize}>
-               {Object.entries(Images.PartnersLogos).map(([title, src]) => (
-                  <div key={title} className="partner-logo-wrapper">
-                     <img className="partner-logo" src={src} alt={title} />
-                  </div>
-               ))}
-            </MainCarousel>
+         <div className="partners__logos-cont">
+            {width >= 1280 ? (
+               <section className="instead-of-carousel-section">
+                  {Object.entries(Images.PartnersLogos).map(([title, src]) => (
+                     <div key={title} className="partner-logo-wrapper">
+                        <img className="partner-logo" src={src} alt={title} />
+                     </div>
+                  ))}
+               </section>
+            ) : (
+               <MainCarousel
+                  listingsSize={listingsSize}
+                  height="190px"
+                  // showSlider={width >= 1280}
+               >
+                  {Object.entries(Images.PartnersLogos).map(([title, src]) => (
+                     <div key={title} className="partner-logo-wrapper">
+                        <img className="partner-logo" src={src} alt={title} />
+                     </div>
+                  ))}
+               </MainCarousel>
+            )}
          </div>
       </PartnersStyled>
    );

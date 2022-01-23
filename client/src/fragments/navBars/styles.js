@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Colors, Devices } from "@eachbase/utils";
 
-export const MainNavbarStyled = styled.div`
+export const MainNavbarStyled = styled.nav`
    display: flex;
    justify-content: start;
    background-color: ${Colors.BackgroundPrimary};

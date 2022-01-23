@@ -7,11 +7,11 @@ import Trane from "./Trane.png";
 import Yourk from "./Yourk.png";
 
 export const PartnersLogos = {
-   AmericanStandard: AmericanStandard,
-   Carrier: Carrier,
-   Goodman: Goodman,
-   Lennox: Lennox,
-   Rheem: Rheem,
-   Trane: Trane,
-   Yourk: Yourk,
+   AmericanStandard,
+   Carrier,
+   Goodman,
+   Lennox,
+   Rheem,
+   Trane,
+   Yourk,
 };
