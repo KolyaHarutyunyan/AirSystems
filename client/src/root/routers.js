@@ -5,8 +5,7 @@ import { Company, ContactUs, Home, Services, TermsAndConds } from "@eachbase/pag
 export const Routers = () => {
    return (
       <Switch>
-         <Route path="/" exact component={Home} />
-         <Route path="/home" exact component={Home} />
+         <Route path={["/", "/home"]} exact component={Home} />
          <Route path="/services" exact component={Services} />
          <Route path="/contactUs" exact component={ContactUs} />
          <Route path="/company" exact component={Company} />

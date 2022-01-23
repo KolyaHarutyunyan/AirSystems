@@ -95,10 +95,11 @@ export const HeaderContentStyled = styled.section`
          @media ${Devices.mobile} {
             display: flex;
             align-items: center;
-            width: 343px;
+            width: 100%;
             padding: 15px 19px;
             background-color: ${Colors.BackgroundPrimary};
-            & > span {
+            & > span,
+            & > a {
                font-size: 16px;
                font-weight: 600;
                line-height: 20px;
@@ -135,13 +136,14 @@ export const NavStyled = styled.nav`
          position: fixed;
          width: 100%;
          height: 100%;
-         z-index: 7;
+         z-index: 5;
          top: 0;
-         left: 0;
+         right: -100%;
          background-color: inherit;
          transition: background-color 0.5s ease-in-out;
          &.active {
             background-color: #00000098;
+            right: 0;
          }
       }
       & .hamburger-lines {
@@ -206,7 +208,7 @@ export const NavStyled = styled.nav`
          position: fixed;
          top: 0;
          right: -100%;
-         z-index: 8;
+         z-index: 7;
          max-width: 372px;
          width: 100%;
          height: 100vh;

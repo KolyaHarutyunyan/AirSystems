@@ -6,8 +6,9 @@ import { CustomersOpinionStyled } from "./styles";
 
 export const CustomersOpinion = () => {
    const width = useWidth();
+
    const listingsSize =
-      width >= 768 && width < 1209 ? 2 : width >= 1209 && width < 1430 ? 3 : width >= 1430 ? 4 : 1;
+      width >= 645 && width < 980 ? 2 : width >= 980 && width < 1380 ? 3 : width >= 1380 ? 4 : 1;
 
    return (
       <CustomersOpinionStyled>
@@ -23,7 +24,7 @@ export const CustomersOpinion = () => {
             and delivering quality work.
          </p>
          <div className="customers-opinion-carousel-cont">
-            <MainCarousel listingsSize={listingsSize}>
+            <MainCarousel listingsSize={listingsSize} height="240px">
                {CustomersOpinionListings.map((listing) => (
                   <ListingsCardItem
                      key={listing.id}
