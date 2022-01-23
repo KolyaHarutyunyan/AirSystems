@@ -78,9 +78,6 @@ export const HeaderStyled = styled.header`
 export const HeaderContentStyled = styled.section`
    max-width: 1440px;
    width: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
    height: 100%;
    padding: 43px 80px 56px;
    @media ${Devices.tablet} {

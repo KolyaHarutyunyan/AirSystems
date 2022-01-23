@@ -226,17 +226,18 @@ export const UpperFooterStyled = styled.div`
 						top: 50%;
 						right: 6px;
 						transform: translateY(-50%);
-						width: 144px;
+						padding: 12px 36px;
 						@media ${Devices.tablet} {
-							width: 112px;
+							padding: 12px 22px;
 						}
 						@media ${Devices.mobile} {
-							width: 96px;
+							padding: 12px 16px;
 						}
 					}
 				}
 			}
 			.MuiOutlinedInput-input {
+				user-select: none;
 				padding: 15px 0 13px 16px;
 				background-color: ${Colors.BackgroundPrimary};
 				${TextFonts["p1.3"]};

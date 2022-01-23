@@ -8,16 +8,23 @@ import {
    Partners,
 } from "./core";
 import { Images } from "@eachbase/assets";
-import { Info } from "@eachbase/utils";
+import { Info, useWidth } from "@eachbase/utils";
 
 export const HomeFragment = ({}) => {
+   const width = useWidth();
    const telInfo = Info.find(({ keyName }) => keyName === "Tell");
    const daysInfo = Info.find(({ keyName }) => keyName === "Days");
 
    return (
       <>
          <Header
-            img={Images.homepageHeroWeb}
+            img={
+               width >= 1280
+                  ? Images.homepageHeroWeb
+                  : width >= 768
+                  ? Images.homepageHeroTablet
+                  : Images.homepageHeroMobile
+            }
             titleCont={
                <h1 className="main-title">
                   <span className="theme-green">HVAC Experts</span>{" "}
@@ -33,9 +40,13 @@ export const HomeFragment = ({}) => {
                      {Info.slice(0, 3).map(({ keyName, href, value }) => (
                         <div key={keyName} className={"single-info " + "single-info__" + keyName}>
                            <span className="single-info__key">{keyName}:</span>{" "}
-                           <a href={href} className="single-info__value">
-                              {value}
-                           </a>
+                           {href ? (
+                              <a href={href} className="single-info__value">
+                                 {value}
+                              </a>
+                           ) : (
+                              <span className="single-info__value">{value}</span>
+                           )}
                         </div>
                      ))}
                   </div>

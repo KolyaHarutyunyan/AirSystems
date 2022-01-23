@@ -7,6 +7,8 @@ import { ServicesIcons } from "./images/services/icons";
 // homepage
 /** heeader */
 import homepageHeroWeb from "./images/homepage/homepageHeroWeb.jpg";
+import homepageHeroTablet from "./images/homepage/homepageHeroTablet.jpg";
+import homepageHeroMobile from "./images/homepage/homepageHeroMobile.jpg";
 /** */
 import { BestExperience } from "./images/homepage/bestExperience";
 
@@ -80,7 +82,9 @@ import missionIcon from "@eachbase/images/company/icons/missionIcon.svg";
 export const Images = {
    //Home page images
    /**header */
-   homepageHeroWeb: homepageHeroWeb,
+   homepageHeroWeb,
+   homepageHeroTablet,
+   homepageHeroMobile,
    /** end */
 
    BestExperience: BestExperience,

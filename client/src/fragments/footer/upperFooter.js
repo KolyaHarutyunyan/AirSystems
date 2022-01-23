@@ -16,12 +16,7 @@ export const UpperFooter = () => {
                Follow us:
                <div className="logos-container">
                   {Images.FollowLogos.map(({ name, href, logos }) => (
-                     <LogoLinkStyled
-                        target="_blank"
-                        href={href}
-                        key={name}
-                        logos={logos}
-                     />
+                     <LogoLinkStyled target="_blank" href={href} key={name} logos={logos} />
                   ))}
                </div>
             </h6>
@@ -38,9 +33,13 @@ export const UpperFooter = () => {
                               className={"single-info " + "single-info__" + keyName}
                            >
                               <span className="single-info__key">{keyName}:</span>{" "}
-                              <a href={href} className="single-info__value">
-                                 {value}
-                              </a>
+                              {keyName === "Address" ? (
+                                 <span className="single-info__value">{value}</span>
+                              ) : (
+                                 <a href={href} className="single-info__value">
+                                    {value}
+                                 </a>
+                              )}
                            </div>
                         )
                   )}
@@ -91,16 +90,7 @@ export const UpperFooter = () => {
                   Follow us:
                   <div className="logos-container">
                      {Images.FollowLogos.map(({ name, href, logos }) => (
-                        <LogoLinkStyled
-                           target="_blank"
-                           href={href}
-                           key={name}
-                           logos={logos}
-									onClick={(e) => {
-										e.preventDefault();
-										console.log(logos)
-									}}
-                        />
+                        <LogoLinkStyled target="_blank" href={href} key={name} logos={logos} />
                      ))}
                   </div>
                </h6>
