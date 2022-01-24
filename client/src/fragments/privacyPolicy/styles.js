@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Colors, Devices } from "@eachbase/utils";
 
-export const TermsAndCondsContainerStyled = styled.section`
+export const PrivacyPolicyContainerStyled = styled.section`
    max-width: 1440px;
    width: 100%;
    padding: 43px 80px 0;
@@ -24,7 +24,7 @@ export const TermsAndCondsContainerStyled = styled.section`
          color: ${Colors.ThemeGreen};
       }
    }
-   .terms-and-conds-box {
+   .privacy-policy-box {
       width: 100%;
       margin-bottom: 128px;
       @media ${Devices.tablet} {
@@ -33,17 +33,17 @@ export const TermsAndCondsContainerStyled = styled.section`
       @media ${Devices.mobile} {
          margin-bottom: 72px;
       }
-      .terms-and-conds-title-box {
+      .privacy-policy-title-box {
          width: 100%;
          display: flex;
          align-items: center;
          margin-bottom: 32px;
-         .terms-and-conds-title {
+         .privacy-policy-title {
             color: ${Colors.ThemeIndigo};
             margin-right: 16px;
          }
       }
-      .terms-and-conds-info-box {
+      .privacy-policy-info-box {
          width: 100%;
          padding: 40px;
          background-color: ${Colors.BackgroundSecondary};
@@ -54,7 +54,7 @@ export const TermsAndCondsContainerStyled = styled.section`
          @media ${Devices.mobile} {
             padding: 16px;
          }
-         .terms-and-conds-description {
+         .privacy-policy-description {
             font-size: 16px;
             font-weight: 500;
             color: ${Colors.TextSecondary};

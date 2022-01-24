@@ -88,6 +88,10 @@ import valueIcon from "@eachbase/images/company/icons/valueIcon.png";
 import missionIcon from "@eachbase/images/company/icons/missionIcon.svg";
 // ** end **
 
+// ** page not found images **
+import error404 from "@eachbase/images/pageNotFound/error404.svg";
+// ** end **
+
 export const Images = {
    //Home page images
    /**header */
@@ -166,14 +170,17 @@ export const Images = {
    companyHeroWeb,
    companyHeroTablet,
    companyHeroMobile,
-   
+
    companyFounderWeb,
    companyFounderTablet,
    companyFounderMobile,
 
-
    visionIcon,
    valueIcon,
    missionIcon,
+   // ** end **
+
+   // ** page not found images **
+   error404,
    // ** end **
 };

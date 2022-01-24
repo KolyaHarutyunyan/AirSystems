@@ -15,6 +15,8 @@ export const ServicesFragment = () => {
                   ? Images.serviceHeroTablet
                   : Images.serviceHeroMobile
             }
+            minHeight={width >= 1280 ? "500px" : width >= 768 ? "400px" : "276px"}
+            bgPosition={"left"}
             titleCont={
                <h1 className="main-title">
                   <div className="title-cont">

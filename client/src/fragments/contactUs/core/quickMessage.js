@@ -53,12 +53,12 @@ export const QuickMessage = () => {
          setSuccess("");
          axios
             .post("/mailer/contactForm", userMessageData)
-            .then((res) => {
+            .then(() => {
                setIsLoading(false);
                setBackError("");
                setSuccess("Your request has been sent successfully!");
             })
-            .catch((err) => {
+            .catch(() => {
                setIsLoading(false);
                setBackError("Whoops! Something went wrong! Please, try again!");
                setSuccess("");
