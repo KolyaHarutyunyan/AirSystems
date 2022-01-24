@@ -20,7 +20,7 @@ export const Footer = () => {
                   <Link to="/termsAndConditions" className="conditions">
                      {"Terms & Conditions"}
                   </Link>
-                  <Link to="*" className="privacy">
+                  <Link to="/privacyPolicy" className="privacy">
                      Privacy Policy
                   </Link>
                </div>

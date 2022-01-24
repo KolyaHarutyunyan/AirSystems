@@ -5,3 +5,5 @@ export { Footer } from "./footer";
 export { ContactUsFragment } from "./contactUs";
 export { CompanyFragment } from "./company";
 export { TermsAndCondsFragment } from "./termsAndConds";
+export { PrivacyPolicyFragment } from "./privacyPolicy";
+export { PageNotFoundFragment } from "./pageNotFound";

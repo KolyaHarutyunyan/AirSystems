@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110">
+  <g id="Error_404" data-name="Error 404" transform="translate(-351 -274)">
+    <g id="Base" transform="translate(351 274)" fill="#76ca3c" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="110" height="110" stroke="none"/>
+      <rect x="0.5" y="0.5" width="109" height="109" fill="none"/>
+    </g>
+    <g id="computer" transform="translate(356 266)">
+      <path id="Path_3633" data-name="Path 3633" d="M0,86.312H100V16H0ZM59.293,32.365l4.143-4.143,4.143,4.143,4.143-4.143,4.143,4.143-4.143,4.143,4.143,4.143-4.143,4.143-4.143-4.143-4.143,4.143-4.143-4.143,4.143-4.143Zm11.215,39.3v2.93H64.648v-2.93a14.648,14.648,0,1,0-29.3,0v2.93H29.492v-2.93a20.508,20.508,0,1,1,41.016,0Zm-46.371-39.3,4.143-4.143,4.143,4.143,4.143-4.143,4.143,4.143-4.143,4.143,4.143,4.143-4.143,4.143-4.143-4.143-4.143,4.143-4.143-4.143,4.143-4.143Z" fill="#76ca3c"/>
+      <path id="Path_3634" data-name="Path 3634" d="M173.734,423.578v-5.859h-12.36L158.445,406H136.289l-2.93,11.719H121v5.859Z" transform="translate(-97.367 -313.828)" fill="#76ca3c"/>
+    </g>
+  </g>
+</svg>

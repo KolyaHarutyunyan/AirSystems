@@ -4,7 +4,9 @@ export const RouteLink = ({ where, title }) => {
    return (
       <>
          <RouteLinkStyled>
-            <NavLinkStyled to={where}>{title}</NavLinkStyled>
+            <NavLinkStyled exact to={where} activeClassName={"active"}>
+               {title}
+            </NavLinkStyled>
          </RouteLinkStyled>
       </>
    );

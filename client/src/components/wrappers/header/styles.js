@@ -5,11 +5,12 @@ import { Images } from "@eachbase/assets";
 let { fontWeight } = TextFonts["p1.2"];
 
 export const HeaderStyled = styled.header`
-   flex-shrink: 0;
+   /* flex-shrink: 0; */
    width: 100%;
    background-image: url(${({ img }) => img});
    background-repeat: no-repeat;
    background-size: cover;
+   background-position: ${({ bgPosition }) => bgPosition};
    .header-backdrop {
       position: relative;
       max-width: 100%;
@@ -91,6 +92,7 @@ export const HeaderContentStyled = styled.section`
    width: 100%;
    height: 100%;
    padding: 43px 80px 56px;
+   min-height: ${({ minHeight }) => minHeight};
    @media ${Devices.tablet} {
       padding: 38px 32px;
    }
@@ -137,128 +139,6 @@ export const HeaderContentStyled = styled.section`
                   background-image: url(${Images.dropdownArrow});
                }
             }
-         }
-      }
-   }
-`;
-
-export const NavStyled = styled.nav`
-   display: none;
-   @media ${Devices.tablet} {
-      display: block;
-      .navbar-backdrop {
-         position: fixed;
-         width: 100%;
-         height: 100%;
-         z-index: 5;
-         top: 0;
-         right: -100%;
-         background-color: inherit;
-         transition: background-color 0.5s ease-in-out;
-         &.active {
-            background-color: #00000098;
-            right: 0;
-         }
-      }
-      & .hamburger-lines {
-         position: fixed;
-         top: 24px;
-         right: 32px;
-         z-index: 9;
-         width: 38px;
-         height: 22px;
-         cursor: pointer;
-         @media ${Devices.mobile} {
-            top: 32px;
-            right: 20px;
-         }
-         &.active {
-            height: 32px;
-            & .line {
-               background-color: ${Colors.ThemeGreen};
-            }
-         }
-         & .line {
-            position: absolute;
-            display: block;
-            height: 4px;
-            width: 100%;
-            background-color: ${Colors.ThemeGreen};
-            transition: transform 0.5s ease-in-out;
-         }
-         & .line1 {
-            top: 0;
-            transform-origin: 0% 0%;
-            transition: background-color 0.5s ease-in-out;
-            &.active {
-               transform: rotate(45deg);
-            }
-         }
-         & .line2 {
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            margin: auto;
-            transition: transform 0.5s ease-in-out;
-            &.active {
-               transform: scale(0);
-            }
-         }
-         & .line3 {
-            bottom: 0;
-            transform-origin: 0% 100%;
-            transition: transform 0.5s ease-in-out;
-            &.active {
-               transform: rotate(-45deg);
-               bottom: unset;
-               top: 80%;
-            }
-         }
-      }
-      .menu-items-box {
-         background-color: ${Colors.BackgroundPrimary};
-         box-shadow: 0px 2px 4px #00000014;
-         position: fixed;
-         top: 0;
-         right: -100%;
-         z-index: 7;
-         max-width: 372px;
-         width: 100%;
-         height: 100vh;
-         padding-top: 151px;
-         padding-left: 48px;
-         display: flex;
-         flex-direction: column;
-         transition: right 0.5s ease-in-out;
-         @media ${Devices.mobile} {
-            max-width: 100%;
-            padding-top: 160px;
-            padding-left: 16px;
-         }
-         &.active {
-            right: 0;
-         }
-         .menu-items-list {
-            width: 100%;
-            & li {
-               margin-bottom: 72px;
-               & a {
-                  display: inline-block;
-                  cursor: pointer;
-                  text-decoration: none;
-                  color: inherit;
-                  padding-bottom: 2px;
-                  border-bottom: 2px solid transparent;
-                  transition: border-bottom 0.3s ease-in-out;
-                  &:hover {
-                     border-bottom: 2px solid ${Colors.ThemeGreen};
-                  }
-               }
-            }
-         }
-         & > button {
-            max-width: 229px;
          }
       }
    }

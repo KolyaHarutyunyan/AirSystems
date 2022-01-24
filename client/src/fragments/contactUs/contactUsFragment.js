@@ -4,6 +4,7 @@ import { EstimateRequest, QuickMessage } from "./core";
 import { ContactUsContainerStyled } from "./styles";
 import { Images } from "@eachbase/assets";
 import { Colors, useWidth } from "@eachbase/utils";
+import GoogleMapsReact from "./core/maps";
 
 export const ContactUsFragment = () => {
    const width = useWidth();
@@ -18,6 +19,8 @@ export const ContactUsFragment = () => {
                   ? Images.contactusHeroTablet
                   : Images.contactusHeroMobile
             }
+            minHeight={width >= 1280 ? "420px" : width >= 768 ? "400px" : "276px"}
+            bgPosition={"right"}
             titleCont={
                <h1 className="main-title">
                   <div className="title-cont">
@@ -47,7 +50,9 @@ export const ContactUsFragment = () => {
                         count on our team of professionals to get the job done!
                      </p>
                   </section>
-                  <section className="connect-map">Map here</section>
+                  <section className="connect-map">
+                     <GoogleMapsReact />
+                  </section>
                   <QuickMessage />
                   <EstimateRequest />
                </ContactUsContainerStyled>

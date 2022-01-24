@@ -1,10 +1,54 @@
+import React, { useState } from "react";
 import { Divider, TextField } from "@mui/material";
 import { SendButton } from "@eachbase/components";
-import { Info } from "@eachbase/utils";
+import { Colors, EmailValidator, Info, isNotEmpty } from "@eachbase/utils";
 import { Images } from "@eachbase/assets";
 import { UpperFooterStyled, LogoLinkStyled } from "./styles";
+import axios from "axios";
 
 export const UpperFooter = () => {
+   const [isLoading, setIsLoading] = useState(false);
+   const [backError, setBackError] = useState("");
+   const [success, setSuccess] = useState("");
+   const [enteredEmail, setEnteredEmail] = useState("");
+   const [error, setError] = useState("");
+
+   const errorMsg = "This field must be not empty!";
+   const emailErrorMsg = !EmailValidator.test(enteredEmail) ? "Email must be an email!" : "";
+   const emailErrorText =
+      error === "email" ? errorMsg : error === emailErrorMsg ? emailErrorMsg : "";
+
+   const handleSubscribtion = () => {
+      const emailIsValid = isNotEmpty(enteredEmail) && EmailValidator.test(enteredEmail);
+
+      const errorText = !enteredEmail
+         ? "email"
+         : !emailIsValid
+         ? emailErrorMsg
+         : "Input is not field";
+
+      if (emailIsValid) {
+         setIsLoading(true);
+         setBackError("");
+         setSuccess("");
+         axios
+            .post(`/mailer/newsletter/${enteredEmail}`)
+            .then(() => {
+               setIsLoading(false);
+               setBackError("");
+               setSuccess("Your request has been sent successfully!");
+               setEnteredEmail("");
+            })
+            .catch(() => {
+               setIsLoading(false);
+               setBackError("Whoops! Something went wrong! Please, try again!");
+               setSuccess("");
+            });
+      } else {
+         setError(errorText);
+      }
+   };
+
    return (
       <UpperFooterStyled>
          <div className="socal-media">
@@ -77,15 +121,34 @@ export const UpperFooter = () => {
                         fullWidth
                         name="user-email"
                         placeholder="Enter your email address"
+                        value={enteredEmail}
+                        onChange={(evt) => {
+                           setEnteredEmail(evt.target.value);
+                           setError("");
+                           setBackError("");
+                           setSuccess("");
+                        }}
                      />
                      <SendButton
-                        butnClassName="subscribe-button"
+                        butnClassName={`${isLoading && "btn-load-time"}`}
                         butnType={"button"}
                         butnSendingText={"Subscribe"}
-                        onClickButn={() => alert("ok")}
+                        onClickButn={handleSubscribtion}
+                        loader={isLoading}
                      />
                   </div>
                </div>
+
+               {/* ** temporary feedback ** */}
+               <p style={{ color: Colors.ThemeRed, minHeight: "10px" }}>{emailErrorText}</p>
+               <h6 style={{ textAlign: "center", color: Colors.ThemeRed, minHeight: "20px" }}>
+                  {!!backError && backError}
+               </h6>
+               <h6 style={{ textAlign: "center", color: Colors.ThemeGreen, minHeight: "20px" }}>
+                  {!!success && success}
+               </h6>
+               {/* ** end ** */}
+
                <h6 className="follow-container__subscribe-comp indigo-heading">
                   Follow us:
                   <div className="logos-container">
