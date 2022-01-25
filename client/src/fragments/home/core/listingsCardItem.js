@@ -2,7 +2,7 @@ import { useState } from "react";
 import { StarsContainer } from "./starsContainer";
 import { ListingsCardItemStyled } from "./styles";
 
-export const ListingsCardItem = ({ id, rate, comment, author }) => {
+export const ListingsCardItem = ({ rate, comment, author }) => {
 
    const isReadMoreNeeded = comment.length > 81;
    const [commentOpen, setCommentOpen] = useState(false);
@@ -14,7 +14,7 @@ export const ListingsCardItem = ({ id, rate, comment, author }) => {
 	return (
 		<ListingsCardItemStyled open={commentOpen} needed={isReadMoreNeeded}>
 			<StarsContainer rate={rate} />
-			<p id={`opinion-${id}`} className="comment-cont text-tertiary">
+			<p className="comment-cont text-tertiary">
 				<span className="comment">{comment}</span>
 			</p>
 			{
