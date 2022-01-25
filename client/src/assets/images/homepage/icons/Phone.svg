@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Phone" transform="translate(-33 -224)">
+    <rect id="Base" width="24" height="24" transform="translate(33 224)" fill="#fff" opacity="0"/>
+    <g id="Group_1018" data-name="Group 1018" transform="translate(36 227)">
+      <path id="Path_3632" data-name="Path 3632" d="M18.067,13.944,15.55,11.293a1.64,1.64,0,0,0-2.787.663,1.7,1.7,0,0,1-1.978,1.136A7.98,7.98,0,0,1,6.11,8.168,1.733,1.733,0,0,1,7.189,6.084a1.8,1.8,0,0,0,.629-2.936L5.3.5A1.729,1.729,0,0,0,2.874.5L1.166,2.3C-.542,4.19,1.345,9.209,5.571,13.66s8.99,6.534,10.788,4.64l1.708-1.8A1.966,1.966,0,0,0,18.067,13.944Z" transform="translate(-0.539 0)" fill="#76ca3c"/>
+    </g>
+  </g>
+</svg>
