@@ -21,7 +21,7 @@ export const HeaderStyled = styled.header`
 			padding-box;
 		& a {
 			user-select: none;
-			color: ${Colors.BackgroundPrimary}
+			color: ${Colors.BackgroundPrimary};
 		}
 		.background-primary {
 			color: ${Colors.BackgroundPrimary};
@@ -57,10 +57,10 @@ export const HeaderStyled = styled.header`
 			}
 		}
 		.main-title-abs {
-         margin: 0;
+			margin: 0;
 			position: absolute;
 			top: 50%;
-         transform: translateY(-50%);
+			transform: translateY(-50%);
 		}
 		& .theme-green {
 			color: ${Colors.ThemeGreen};
@@ -69,27 +69,38 @@ export const HeaderStyled = styled.header`
 			color: ${Colors.BackgroundPrimary};
 		}
 		.contact-info {
-			width: 608px;
+			width: fit-content;
+			white-space: nowrap;
 			padding: 18px 24px;
 			background-color: ${Colors.BackgroundPrimary};
 			color: ${Colors.TextTertiary};
 			display: flex;
 			align-items: center;
+			@media ${Devices.tablet} {
+				max-width: fit-content;
+				padding: 14px 16px;
+			}
 			@media ${Devices.mobile} {
 				display: none;
 			}
-			.single-info {
-				line-height: 20px;
-				&:not(:first-child) {
-					margin: 0 24px;
+			& .info-logo-container {
+				margin-right: 24px;
+				@media ${Devices.tablet} {
+					margin-right: 16px;
 				}
-				.single-info__key {
+			}
+			& .single-info {
+				line-height: 20px;
+				& > .single-info__key {
 					font-weight: bold;
 					color: ${Colors.TextPrimary};
 				}
-				.single-info__value {
+				& > .single-info__value {
 					font-weight: ${fontWeight};
 					color: ${Colors.TextTertiary};
+				}
+				&:not(:last-child) {
+					margin-right: 40px;
 				}
 			}
 		}
@@ -97,7 +108,6 @@ export const HeaderStyled = styled.header`
 `;
 
 export const HeaderContentStyled = styled.section`
-	position: relative;
 	max-width: 1440px;
 	width: 100%;
 	height: 100%;
@@ -111,14 +121,13 @@ export const HeaderContentStyled = styled.section`
 	}
 	.lower-header {
 		width: 100%;
-
 		& .contact-info__mobile-view {
 			display: none;
 			@media ${Devices.mobile} {
 				display: flex;
 				align-items: center;
 				width: 100%;
-				padding: 15px 19px;
+				padding: 15px 16px;
 				background-color: ${Colors.BackgroundPrimary};
 				& > span,
 				& > a {
@@ -126,28 +135,27 @@ export const HeaderContentStyled = styled.section`
 					font-weight: 600;
 					line-height: 20px;
 					color: ${Colors.TextTertiary};
-					margin-right: 26px;
+					margin-right: 32px;
 					display: inline-flex;
 					align-items: center;
 					&::before {
 						content: "";
-						width: 18px;
-						height: 19px;
+						width: 24px;
+						height: 24px;
 						background-position: center;
 						background-repeat: no-repeat;
 						background-size: contain;
-						margin-right: 11px;
+						margin-right: 8px;
 					}
 					&:first-child::before {
 						background-image: url(${Images.Icons.Phone});
-						width: 24px;
-						height: 24px;
 					}
 					&:last-child::before {
 						background-image: url(${Images.Icons.Calendar});
-						width: 24px;
-						height: 24px;
 					}
+				}
+				& > span {
+					margin-right: 0;
 				}
 			}
 		}
