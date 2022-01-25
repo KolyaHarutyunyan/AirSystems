@@ -21,7 +21,7 @@ export const CompanyFragment = () => {
             minHeight={width >= 1280 ? "561px" : width >= 768 ? "400px" : "276px"}
             bgPosition={"center"}
             titleCont={
-               <h1 className="main-title">
+               <h1 className="main-title main-title-abs">
                   <div className="title-cont">
                      <HorizontalDivider
                         length={width >= 768 ? "80px" : "48px"}
