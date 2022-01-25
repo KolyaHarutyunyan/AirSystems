@@ -125,9 +125,11 @@ export const NavStyled = styled.nav`
          height: 100vh;
          padding-top: 151px;
          padding-left: 48px;
+         padding-bottom: 160px;
          display: flex;
          flex-direction: column;
          transition: right 0.5s ease-in-out;
+         overflow-y: auto;
          @media ${Devices.mobile} {
             max-width: 100%;
             padding-top: 160px;
