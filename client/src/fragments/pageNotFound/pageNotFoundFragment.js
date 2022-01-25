@@ -28,7 +28,7 @@ export const PageNotFoundFragment = () => {
                         <SendButton
                            butnType={"button"}
                            butnSendingText={"Go to Home"}
-                           onClickButn={() => history.push("/home")}
+                           onClickButn={() => history.push("/")}
                         />
                      </div>
                   </div>
