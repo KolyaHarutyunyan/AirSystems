@@ -1,14 +1,19 @@
 import React from "react";
 import { Header, HorizontalDivider, Main, TitleDivider } from "@eachbase/components";
 import { EstimateRequest, QuickMessage } from "./core";
-import { ContactUsContainerStyled } from "./styles";
+import { ContactUsContainerStyled, mapUi } from "./styles";
 import { Images } from "@eachbase/assets";
 import { Colors, useWidth } from "@eachbase/utils";
-import GoogleMapsReact from "./core/maps";
+import GoogleMapReact from "google-map-react";
+
+const GOOGLE_MAP_REACT_API_KEY = { key: "AIzaSyCWYz3vb8vWqc4-NllBUJKYIUOWmRMQ9W0" };
+const INITIAL_LOCATION = { lat: 9.761927, lng: 79.95244 };
+const CUSTOM_MAP_OPTIONS = { styles: mapUi };
+
+const CustomMarker = ({ children }) => <>{children}</>;
 
 export const ContactUsFragment = () => {
    const width = useWidth();
-
    return (
       <>
          <Header
@@ -51,7 +56,18 @@ export const ContactUsFragment = () => {
                      </p>
                   </section>
                   <section className="connect-map">
-                     <GoogleMapsReact />
+                     <GoogleMapReact
+                        bootstrapURLKeys={GOOGLE_MAP_REACT_API_KEY}
+                        defaultZoom={14}
+                        defaultCenter={INITIAL_LOCATION}
+                        options={CUSTOM_MAP_OPTIONS}
+                     >
+                        <CustomMarker>
+                           <div className="marker-pin">
+                              <img src={Images.locationIcon} alt="" />
+                           </div>
+                        </CustomMarker>
+                     </GoogleMapReact>
                   </section>
                   <QuickMessage />
                   <EstimateRequest />
