@@ -62,7 +62,7 @@ export const ContactUsFragment = () => {
                         defaultCenter={INITIAL_LOCATION}
                         options={CUSTOM_MAP_OPTIONS}
                      >
-                        <CustomMarker>
+                        <CustomMarker  lat={9.761927} lng={ 79.95244} >
                            <div className="marker-pin">
                               <img src={Images.locationIcon} alt="" />
                            </div>
