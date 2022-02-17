@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useHistory } from "react-router";
 import { Routes } from "@eachbase/utils/routes";
@@ -10,11 +10,20 @@ export const MainNavBar = ({ className }) => {
    const [colorChanged, setColorChanged] = useState(false);
    const [menuIsShown, setMenuIsShown] = useState(false);
 
+   const manageDocumentScroll = () =>
+      menuIsShown
+         ? (document.body.style.overflow = "hidden")
+         : (document.body.style.overflow = "auto");
+   useEffect(manageDocumentScroll, [menuIsShown]);
+
    const changeNavbarColor = () => setColorChanged(window.scrollY >= 80);
    window.addEventListener("scroll", changeNavbarColor);
 
    const path = window.location.pathname;
-   const greenBG = path === "/termsAndConditions" || path === "/privacyPolicy" || path === "/404";
+   const greenBG =
+      path === "/termsAndConditions" ||
+      path === "/privacyPolicy" ||
+      path === "/404";
 
    const greenBGClassName = colorChanged || greenBG ? "colorChange" : "";
    const activeClassName = menuIsShown ? "active" : "";
@@ -58,7 +67,7 @@ export const MainNavBar = ({ className }) => {
                            activeClassName="active"
                            onClick={() => setMenuIsShown(false)}
                         >
-                           <h3>{title}</h3>
+                           <h5>{title}</h5>
                         </NavLink>
                      </li>
                   ))}

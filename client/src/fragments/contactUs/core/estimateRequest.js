@@ -1,11 +1,27 @@
-import React, { useState } from "react";
-import { SendButton, UserInput, UserInputsDropdown, TitleDivider } from "@eachbase/components";
+import React, { forwardRef, useState } from "react";
+import {
+   SendButton,
+   UserInput,
+   UserInputsDropdown,
+   TitleDivider,
+} from "@eachbase/components";
 import { EstimateRequestStyled } from "./styles";
-import { Colors, EmailValidator, enumValues, getPhoneErrorText } from "@eachbase/utils";
+import {
+   Colors,
+   EmailValidator,
+   enumValues,
+   getPhoneErrorText,
+} from "@eachbase/utils";
 import axios from "axios";
 
-export const EstimateRequest = () => {
-   const [inputs, setInputs] = useState({});
+export const EstimateRequest = forwardRef((props, ref) => {
+   const [inputs, setInputs] = useState({
+      firstName: "",
+      lastName: "",
+      phoneNumber: "",
+      email: "",
+      address: "",
+   });
    const [error, setError] = useState("");
    const [isLoading, setIsLoading] = useState(false);
    const [backError, setBackError] = useState("");
@@ -19,19 +35,34 @@ export const EstimateRequest = () => {
    const errorMsg = "This field must be not empty!";
    const dropdownErrorMsg = "One of the options must be chosen!";
    const phoneErrorMsg = getPhoneErrorText(inputs.phone);
-   const emailErrorMsg = !EmailValidator.test(inputs.email) ? "Email must be an email!" : "";
+   const emailErrorMsg = !EmailValidator.test(inputs.email)
+      ? "Email must be an email!"
+      : "";
 
    const phoneErrorText =
-      error === "phone" ? errorMsg : error === phoneErrorMsg ? phoneErrorMsg : "";
+      error === "phone"
+         ? errorMsg
+         : error === phoneErrorMsg
+         ? phoneErrorMsg
+         : "";
+
    const emailErrorText =
-      error === "email" ? errorMsg : error === emailErrorMsg ? emailErrorMsg : "";
+      error === "email"
+         ? errorMsg
+         : error === emailErrorMsg
+         ? emailErrorMsg
+         : "";
 
    const handleChange = (evt) => {
       setInputs((prevState) => ({
          ...prevState,
          [evt.target.name]: evt.target.value,
       }));
-      if (error === evt.target.name || error === emailErrorMsg || error === phoneErrorMsg) {
+      if (
+         error === evt.target.name ||
+         error === emailErrorMsg ||
+         error === phoneErrorMsg
+      ) {
          setError("");
       }
    };
@@ -50,7 +81,9 @@ export const EstimateRequest = () => {
       };
 
       const phoneIsValid =
-         !!inputs.phone && inputs.phone.trim().length >= 10 && !/[a-zA-Z]/g.test(inputs.phone);
+         !!inputs.phone &&
+         inputs.phone.trim().length >= 10 &&
+         !/[a-zA-Z]/g.test(inputs.phone);
       const emailIsValid = !!inputs.email && EmailValidator.test(inputs.email);
       const userRequestDataIsValid =
          !!inputs.firstName &&
@@ -109,7 +142,7 @@ export const EstimateRequest = () => {
    };
 
    return (
-      <EstimateRequestStyled>
+      <EstimateRequestStyled ref={ref}>
          <div className="estimate-request-container">
             <div className="estimate-request-box">
                <div className="estimate-request-title-box">
@@ -119,9 +152,10 @@ export const EstimateRequest = () => {
                   <TitleDivider />
                </div>
                <p className="estimate-request-description">
-                  All estimate requests will be reviewed by one of our expert technicians and
-                  response will be sent within 24 hours. For larger projects or custom solutions we
-                  may ask for more information or schedule a site visit in order to better
+                  All estimate requests will be reviewed by one of our expert
+                  technicians and response will be sent within 24 hours. For
+                  larger projects or custom solutions we may ask for more
+                  information or schedule a site visit in order to better
                   understand the project requirements.
                </p>
             </div>
@@ -238,10 +272,22 @@ export const EstimateRequest = () => {
                   </div>
                </div>
             </div>
-            <h6 style={{ textAlign: "center", color: Colors.ThemeRed, minHeight: "20px" }}>
+            <h6
+               style={{
+                  textAlign: "center",
+                  color: Colors.ThemeRed,
+                  minHeight: "20px",
+               }}
+            >
                {!!backError && backError}
             </h6>
-            <h6 style={{ textAlign: "center", color: Colors.ThemeGreen, minHeight: "20px" }}>
+            <h6
+               style={{
+                  textAlign: "center",
+                  color: Colors.ThemeGreen,
+                  minHeight: "20px",
+               }}
+            >
                {!!success && success}
             </h6>
             <div className="user-action-box">
@@ -256,4 +302,4 @@ export const EstimateRequest = () => {
          </div>
       </EstimateRequestStyled>
    );
-};
+});

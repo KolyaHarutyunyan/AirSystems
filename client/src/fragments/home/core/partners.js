@@ -6,11 +6,14 @@ import { PartnersStyled } from "./styles";
 
 export const Partners = () => {
    const width = useWidth();
-   const listingsSize =
-      width >= 375 && width < 580
+
+   const partnersToShow =
+      width >= 370 && width < 470
          ? 2
-         : width >= 580 && width < 768
-         ? 3
+         : width >= 470 && width < 660
+         ? 2.5
+         : width >= 660 && width < 768
+         ? 3.5
          : width >= 768 && width < 890
          ? 4
          : width >= 890 && width < 1100
@@ -18,8 +21,9 @@ export const Partners = () => {
          : width >= 1100 && width < 1280
          ? 6
          : width >= 1280
-         ? 7
+         ? 6
          : 1;
+
    return (
       <PartnersStyled>
          <h2 className="partners__title-cont">
@@ -30,31 +34,17 @@ export const Partners = () => {
             <TitleDivider />
          </h2>
          <p className="partners__descr text-secondary">
-            We keep track of industry trends and make sure you are receiving the highest quality
-            products with the latest technologies
+            We keep track of industry trends and make sure you are receiving the
+            highest quality products with the latest technologies
          </p>
          <div className="partners__logos-cont">
-            {width >= 1280 ? (
-               <section className="instead-of-carousel-section">
-                  {Object.entries(Images.PartnersLogos).map(([title, src]) => (
-                     <div key={title} className="partner-logo-wrapper">
-                        <img className="partner-logo" src={src} alt={title} />
-                     </div>
-                  ))}
-               </section>
-            ) : (
-               <MainCarousel
-                  listingsSize={listingsSize}
-                  height="190px"
-                  // showSlider={width >= 1280}
-               >
-                  {Object.entries(Images.PartnersLogos).map(([title, src]) => (
-                     <div key={title} className="partner-logo-wrapper">
-                        <img className="partner-logo" src={src} alt={title} />
-                     </div>
-                  ))}
-               </MainCarousel>
-            )}
+            <MainCarousel itemsToShow={partnersToShow} height="190px">
+               {Object.entries(Images.PartnersLogos).map(([title, src]) => (
+                  <div key={title} className="partner-logo-wrapper">
+                     <img className="partner-logo" src={src} alt={title} />
+                  </div>
+               ))}
+            </MainCarousel>
          </div>
       </PartnersStyled>
    );
