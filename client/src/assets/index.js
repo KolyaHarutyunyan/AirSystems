@@ -4,6 +4,9 @@ import { PartnersLogos } from "./images/homepage/partnersLogos";
 import { Icons } from "./images/homepage/icons";
 import { ServicesIcons } from "./images/services/icons";
 
+import logoWhite from "./images/icons/logoWhite.svg";
+import logoGreen from "./images/icons/logoGreen.svg";
+
 // homepage
 /** heeader */
 import homepageHeroWeb from "./images/homepage/homepageHeroWeb.jpg";
@@ -93,6 +96,9 @@ import error404 from "@eachbase/images/pageNotFound/error404.svg";
 // ** end **
 
 export const Images = {
+   logoWhite,
+   logoGreen,
+
    //Home page images
    /**header */
    homepageHeroWeb,

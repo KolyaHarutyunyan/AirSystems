@@ -99,6 +99,7 @@ export const HeaderStyled = styled.header`
             & > .single-info__value {
                font-weight: ${fontWeight};
                color: ${Colors.TextTertiary};
+               margin-left: 6px;
             }
             &:not(:last-child) {
                margin-right: 40px;
@@ -119,6 +120,14 @@ export const HeaderContentStyled = styled.section`
    }
    @media ${Devices.mobile} {
       padding: 38px 16px 0;
+   }
+   .upper-header {
+      width: 152px;
+      height: 22px;
+      & a img {
+         width: 100%;
+         object-fit: contain;
+      }
    }
    .split-animation {
       margin: 115px 0 63px;

@@ -2,7 +2,7 @@ import { Divider } from "@mui/material";
 import { Colors } from "@eachbase/utils";
 import { UpperFooter } from "./upperFooter";
 import { FooterStyled } from "./styles";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
    return (
@@ -21,14 +21,14 @@ export const Footer = () => {
 
                {/* Temporarily Commented */}
 
-               {/* <div className="rules">
+               <div className="rules">
                   <Link to="/termsAndConditions" className="conditions">
                      {"Terms & Conditions"}
                   </Link>
                   <Link to="/privacyPolicy" className="privacy">
                      {"Privacy Policy"}
                   </Link>
-               </div> */}
+               </div>
 
                {/* end */}
             </div>

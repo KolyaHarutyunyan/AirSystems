@@ -170,7 +170,6 @@ export const UpperFooterStyled = styled.div`
             .single-info__value {
                font-weight: ${TextFonts["p1.2"].fontWeight};
                color: ${Colors.TextTertiary};
-               margin: 0 6px;
             }
          }
          .availability-info {

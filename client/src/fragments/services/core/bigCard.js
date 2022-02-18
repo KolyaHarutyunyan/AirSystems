@@ -4,7 +4,7 @@ import { BigCardStyled } from "./styles";
 
 export const BigCard = ({ service, reverse }) => {
    const width = useWidth();
-   const { title, list, serviceImage, bgColor, icon } = service;
+   const { title, subtitle, text, list, serviceImage, bgColor, icon } = service;
    const mobile = parseInt(AppSizes.mobile);
    return (
       <BigCardStyled bg={bgColor} reverse={reverse}>
@@ -14,16 +14,15 @@ export const BigCard = ({ service, reverse }) => {
                <img className="card-icon" src={icon} alt={`Heating`} />
             </h2>
             <div className="descr-cont">
-               <h6 className="descr-title text-primary">NPAA Certified Technicians</h6>
-               <p className="descr-p text-tertiary">
-                  We only hire trained professionals that can handle the job at hand and deliver a
-                  successful outcome. We only hire trained professionals that can handle the job at
-                  hand and deliver a successful outcome. We only hire trained professionals that can
-                  handle the job at hand and deliver a successful outcome.
-               </p>
+               <h6 className="descr-title text-primary">{subtitle}</h6>
+               <p className="descr-p text-tertiary">{text}</p>
             </div>
             {width <= mobile && (
-               <ChessImgSection bg={bgColor} img={serviceImage} reverse={reverse} />
+               <ChessImgSection
+                  bg={bgColor}
+                  img={serviceImage}
+                  reverse={reverse}
+               />
             )}
             <ul className="card-list">
                {list.map((text) => (
@@ -33,7 +32,13 @@ export const BigCard = ({ service, reverse }) => {
                ))}
             </ul>
          </div>
-         {width > mobile && <ChessImgSection bg={bgColor} img={serviceImage} reverse={reverse} />}
+         {width > mobile && (
+            <ChessImgSection
+               bg={bgColor}
+               img={serviceImage}
+               reverse={reverse}
+            />
+         )}
       </BigCardStyled>
    );
 };
