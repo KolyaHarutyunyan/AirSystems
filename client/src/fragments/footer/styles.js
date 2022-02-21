@@ -170,7 +170,6 @@ export const UpperFooterStyled = styled.div`
             .single-info__value {
                font-weight: ${TextFonts["p1.2"].fontWeight};
                color: ${Colors.TextTertiary};
-               margin: 0 6px;
             }
          }
          .availability-info {
@@ -223,23 +222,15 @@ export const UpperFooterStyled = styled.div`
                & > button {
                   position: absolute;
                   top: 50%;
-                  right: 6px;
                   transform: translateY(-50%);
-                  padding: 12px 36px;
+                  right: 4px;
+                  width: 144px;
+                  height: 44px;
                   @media ${Devices.tablet} {
-                     padding: 12px 22px;
+                     width: 112px;
                   }
                   @media ${Devices.mobile} {
-                     padding: 12px 16px;
-                  }
-                  &.btn-load-time {
-                     width: 144px;
-                     @media ${Devices.tablet} {
-                        width: 112px;
-                     }
-                     @media ${Devices.mobile} {
-                        width: 96px;
-                     }
+                     width: 96px;
                   }
                }
             }

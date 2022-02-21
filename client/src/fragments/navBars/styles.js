@@ -47,7 +47,8 @@ export const NavStyled = styled.nav`
          padding: 19px 11px;
          cursor: pointer;
          background-color: transparent;
-         transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+         transition: background-color 0.5s ease-in-out,
+            box-shadow 0.5s ease-in-out;
          &.colorChange {
             background-color: ${Colors.ThemeGreen};
             box-shadow: 0px 2px 4px #00000014;
@@ -124,8 +125,8 @@ export const NavStyled = styled.nav`
          width: 100%;
          height: 100vh;
          padding-top: 151px;
-         padding-left: 48px;
-         padding-bottom: 160px;
+         padding: 48px;
+         padding-bottom: 48px;
          display: flex;
          flex-direction: column;
          transition: right 0.5s ease-in-out;
@@ -141,7 +142,7 @@ export const NavStyled = styled.nav`
          .menu-items-list {
             width: 100%;
             & li {
-               margin-bottom: 72px;
+               margin-bottom: 36px;
                & a {
                   display: inline-block;
                   cursor: pointer;

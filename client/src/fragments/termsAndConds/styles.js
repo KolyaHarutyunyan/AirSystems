@@ -12,16 +12,18 @@ export const TermsAndCondsContainerStyled = styled.section`
       padding: 32px 16px 0;
    }
    .logo-box {
-      width: 100%;
+      width: 152px;
+      height: 22px;
+      & a img {
+         width: 100%;
+         object-fit: contain;
+      }
       margin-bottom: 99px;
       @media ${Devices.tablet} {
          margin-bottom: 83px;
       }
       @media ${Devices.mobile} {
          margin-bottom: 61px;
-      }
-      .logo {
-         color: ${Colors.ThemeGreen};
       }
    }
    .terms-and-conds-box {

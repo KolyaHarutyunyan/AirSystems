@@ -15,15 +15,22 @@ export const Footer = () => {
                }}
             />
             <div className="lower-footer">
-               <span className="rights">SoCal Air Systems 2021. All rights reserved.</span>
+               <span className="rights">
+                  SoCal Air Systems 2021. All rights reserved.
+               </span>
+
+               {/* Temporarily Commented */}
+
                <div className="rules">
                   <Link to="/termsAndConditions" className="conditions">
                      {"Terms & Conditions"}
                   </Link>
                   <Link to="/privacyPolicy" className="privacy">
-                     Privacy Policy
+                     {"Privacy Policy"}
                   </Link>
                </div>
+
+               {/* end */}
             </div>
          </div>
       </FooterStyled>

@@ -7,12 +7,12 @@ export const Routes = {
       title: "Services",
       path: "/services",
    },
-   contactUs: {
-      title: "Contact Us",
-      path: "/contactUs",
-   },
    company: {
       title: "Company",
       path: "/company",
+   },
+   contactUs: {
+      title: "Contact Us",
+      path: "/contactUs",
    },
 };

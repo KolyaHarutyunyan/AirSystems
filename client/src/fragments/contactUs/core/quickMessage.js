@@ -5,17 +5,27 @@ import { Colors, EmailValidator } from "@eachbase/utils";
 import axios from "axios";
 
 export const QuickMessage = () => {
-   const [inputs, setInputs] = useState({});
+   const [inputs, setInputs] = useState({
+      name: "",
+      email: "",
+      message: "",
+   });
    const [error, setError] = useState("");
    const [isLoading, setIsLoading] = useState(false);
    const [backError, setBackError] = useState("");
    const [success, setSuccess] = useState("");
 
    const errorMsg = "This field must be not empty!";
-   const emailErrorMsg = !EmailValidator.test(inputs.email) ? "Email must be an email!" : "";
+   const emailErrorMsg = !EmailValidator.test(inputs.email)
+      ? "Email must be an email!"
+      : "";
 
    const emailErrorText =
-      error === "email" ? errorMsg : error === emailErrorMsg ? emailErrorMsg : "";
+      error === "email"
+         ? errorMsg
+         : error === emailErrorMsg
+         ? emailErrorMsg
+         : "";
 
    const handleChange = (evt) => {
       setInputs((prevState) => ({
@@ -35,7 +45,8 @@ export const QuickMessage = () => {
       };
 
       const emailIsValid = !!inputs.email && EmailValidator.test(inputs.email);
-      const userMessageDataIsValid = !!inputs.name && emailIsValid && !!inputs.message;
+      const userMessageDataIsValid =
+         !!inputs.name && emailIsValid && !!inputs.message;
 
       const errorText = !inputs.name
          ? "name"
@@ -116,10 +127,22 @@ export const QuickMessage = () => {
                   />
                </div>
             </div>
-            <h6 style={{ textAlign: "center", color: Colors.ThemeRed, minHeight: "20px" }}>
+            <h6
+               style={{
+                  textAlign: "center",
+                  color: Colors.ThemeRed,
+                  minHeight: "20px",
+               }}
+            >
                {!!backError && backError}
             </h6>
-            <h6 style={{ textAlign: "center", color: Colors.ThemeGreen, minHeight: "20px" }}>
+            <h6
+               style={{
+                  textAlign: "center",
+                  color: Colors.ThemeGreen,
+                  minHeight: "20px",
+               }}
+            >
                {!!success && success}
             </h6>
             <div className="user-action-box">
