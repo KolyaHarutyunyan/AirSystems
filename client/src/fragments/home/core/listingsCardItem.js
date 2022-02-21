@@ -1,29 +1,31 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import {
+   AppSizes,
+   getLimitedVal,
+   useAnimation,
+   useWidth,
+} from "@eachbase/utils";
 import { StarsContainer } from "./starsContainer";
 import { ListingsCardItemStyled } from "./styles";
 
-export const ListingsCardItem = ({ rate, comment, author }) => {
+export const ListingsCardItem = ({ rate, review, author, cardClassName }) => {
+   const [readMore, setReadMore] = useState(false);
+   const reviewDisplay = readMore ? review : getLimitedVal(review, 80);
 
-   const isReadMoreNeeded = comment.length > 81;
-   const [commentOpen, setCommentOpen] = useState(false);
+   return (
+      <ListingsCardItemStyled>
+         <StarsContainer className={`${cardClassName}`} rate={rate} />
+         <p className="comment-cont text-tertiary">
+            <span className={`comment ${cardClassName}`}>{reviewDisplay}</span>
+         </p>
+         <div
+            onClick={() => setReadMore((prevState) => !prevState)}
+            className={`read-more theme-light-blue ${cardClassName}`}
+         >
+            {readMore ? "Read Less" : "Read More"}
+         </div>
 
-   const handleReadMoreClick = () => {
-      setCommentOpen((prev) => !prev)
-   } 
-
-	return (
-		<ListingsCardItemStyled open={commentOpen} needed={isReadMoreNeeded}>
-			<StarsContainer rate={rate} />
-			<p className="comment-cont text-tertiary">
-				<span className="comment">{comment}</span>
-			</p>
-			{
-				isReadMoreNeeded && !commentOpen && (
-					<div onClick={handleReadMoreClick} className="read-more theme-light-blue">Read More</div>
-				)
-			}
-
-			<p className="author-cont text-primary">{author}</p>
-		</ListingsCardItemStyled>
-	);
+         <p className={`author-cont text-primary ${cardClassName}`}>{author}</p>
+      </ListingsCardItemStyled>
+   );
 };

@@ -1,4 +1,10 @@
-import { useWidth, CustomersOpinionListings } from "@eachbase/utils";
+import React from "react";
+import {
+   useWidth,
+   CustomersOpinionListings,
+   AppSizes,
+   useAnimation,
+} from "@eachbase/utils";
 import { TitleDivider } from "@eachbase/components";
 import { MainCarousel } from "./mainCarousel";
 import { ListingsCardItem } from "./listingsCardItem";
@@ -6,6 +12,14 @@ import { CustomersOpinionStyled } from "./styles";
 
 export const CustomersOpinion = () => {
    const width = useWidth();
+
+   const tablet = parseInt(AppSizes.tablet);
+   const mobile = parseInt(AppSizes.mobile);
+   const scrollHeight =
+      width > mobile && width <= tablet ? 3800 : width <= mobile ? 4700 : 3000;
+
+   const animation = useAnimation(scrollHeight);
+   const animationStyle = animation ? "fadeInUp" : "";
 
    const reviewsToShow =
       width >= 370 && width < 440
@@ -36,7 +50,7 @@ export const CustomersOpinion = () => {
             <div className="customers-opinion-title">
                What <span className="theme-green">customers say</span> about us
             </div>
-            <TitleDivider />
+            <TitleDivider lineAnimation={animation} />
          </h2>
          <p className="customers-opinion-descr text-secondary">
             Every job we do is seen as an opportunity to develop a long term
@@ -45,13 +59,14 @@ export const CustomersOpinion = () => {
             work.
          </p>
          <div className="customers-opinion-carousel-cont">
-            <MainCarousel itemsToShow={reviewsToShow} height="240px">
+            <MainCarousel itemsToShow={reviewsToShow}>
                {CustomersOpinionListings.map((listing) => (
                   <ListingsCardItem
                      key={listing.id}
                      rate={listing.rate}
-                     comment={listing.comment}
+                     review={listing.comment}
                      author={listing.author}
+                     cardClassName={animationStyle}
                   />
                ))}
             </MainCarousel>

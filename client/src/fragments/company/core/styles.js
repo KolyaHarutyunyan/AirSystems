@@ -10,6 +10,15 @@ export const MeetOurFounderStyled = styled.section`
    @media ${Devices.mobile} {
       margin-bottom: 72px;
    }
+
+   transform: translateY(100%);
+   opacity: 0;
+   transition: all 1s linear;
+   &.fadeInUp {
+      transform: translateY(0px);
+      opacity: 1;
+   }
+
    .founder-info-title__mobile-view {
       color: ${Colors.ThemeIndigo};
       margin-right: 32px;

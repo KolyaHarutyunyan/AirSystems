@@ -1,9 +1,14 @@
+import React from "react";
+import { getCardClassName } from "@eachbase/utils";
 import { BenefitCardStyled } from "./styles";
 
-export const BenefitCard = ({ ben }) => {
-   let { logo, title, description } = ben;
+export const BenefitCard = ({ ben, cardClassName, index }) => {
+   const { logo, title, description } = ben;
+
    return (
-      <BenefitCardStyled>
+      <BenefitCardStyled
+         className={`${getCardClassName(index)} ${cardClassName}`}
+      >
          <div className="logo-container">
             <img className="logo" src={logo} alt="logo white" />
          </div>

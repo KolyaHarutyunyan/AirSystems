@@ -3,17 +3,21 @@ import { Images } from "@eachbase/assets";
 import { AboutCompanyItem } from "./common";
 import { AboutCompanyStyled } from "./styles";
 import { TitleDivider } from "@eachbase/components";
-import { useWidth, AppSizes } from "@eachbase/utils";
+import { useWidth, AppSizes, useAnimation } from "@eachbase/utils";
 
 export const AboutCompany = () => {
    const width = useWidth();
    const mobileView = parseInt(AppSizes.mobile);
+
+   const animation = useAnimation(1200);
+   const animationStyle = animation ? "fadeInUp" : "";
 
    return (
       <AboutCompanyStyled>
          <div className="about-company-box">
             <div className="about-company-box__first">
                <AboutCompanyItem
+                  itemClassName={`${animationStyle} first`}
                   aboutCompanyIcon={Images.visionIcon}
                   aboutCompanyTitle={"Our Vision"}
                   aboutCompanyTitleDivider={
@@ -28,6 +32,7 @@ export const AboutCompany = () => {
                   }
                />
                <AboutCompanyItem
+                  itemClassName={`${animationStyle} second`}
                   aboutCompanyIcon={Images.valueIcon}
                   aboutCompanyTitle={"Our Values"}
                   aboutCompanyTitleDivider={
@@ -37,10 +42,13 @@ export const AboutCompany = () => {
                      />
                   }
                   aboutCompanySubtitle={"What we believe in"}
-                  aboutCompanyDescription={"Trust | Quality | Innovation | Accountability"}
+                  aboutCompanyDescription={
+                     "Trust | Quality | Innovation | Accountability"
+                  }
                />
             </div>
             <AboutCompanyItem
+               itemClassName={`${animationStyle} third`}
                aboutCompanyIcon={Images.missionIcon}
                aboutCompanyTitle={"Our Mission"}
                aboutCompanyTitleDivider={

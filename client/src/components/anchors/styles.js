@@ -16,6 +16,10 @@ export const NavLinkStyled = styled(NavLink)`
    line-height: 20px;
    color: ${Colors.TextSecondary};
    border-bottom: 2px solid transparent;
+   transition: border-bottom 0.2s linear;
+   &:hover {
+      border-bottom: 2px solid ${Colors.ThemeGreen};
+   }
    &.active {
       font-weight: bold;
       color: ${Colors.TextPrimary};

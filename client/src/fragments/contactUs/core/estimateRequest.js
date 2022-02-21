@@ -11,10 +11,13 @@ import {
    EmailValidator,
    enumValues,
    getPhoneErrorText,
+   useAnimation,
 } from "@eachbase/utils";
 import axios from "axios";
 
 export const EstimateRequest = forwardRef((props, ref) => {
+   const animation = useAnimation(2000);
+
    const [inputs, setInputs] = useState({
       firstName: "",
       lastName: "",
@@ -149,7 +152,7 @@ export const EstimateRequest = forwardRef((props, ref) => {
                   <h2 className="estimate-request-title">
                      Request an <em>estimate</em>
                   </h2>
-                  <TitleDivider />
+                  <TitleDivider lineAnimation={animation} />
                </div>
                <p className="estimate-request-description">
                   All estimate requests will be reviewed by one of our expert

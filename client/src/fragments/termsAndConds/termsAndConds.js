@@ -1,11 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Main, TitleDivider } from "@eachbase/components";
-import { Routes } from "@eachbase/utils";
+import { Routes, useAnimation } from "@eachbase/utils";
 import { TermsAndCondsContainerStyled } from "./styles";
 import { Images } from "@eachbase/assets";
 
 export const TermsAndCondsFragment = () => {
+   const animation = useAnimation();
+
    return (
       <Main
          content={
@@ -20,7 +22,7 @@ export const TermsAndCondsFragment = () => {
                      <h2 className="terms-and-conds-title">
                         {"Terms & Conditions"}
                      </h2>
-                     <TitleDivider />
+                     <TitleDivider lineAnimation={animation} />
                   </div>
                   <div className="terms-and-conds-info-box">
                      <p className="terms-and-conds-description">

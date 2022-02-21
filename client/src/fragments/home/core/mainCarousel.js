@@ -1,9 +1,8 @@
 import { MainCarouselStyled } from "./styles";
 
-export const MainCarousel = ({ children, itemsToShow, height }) => {
+export const MainCarousel = ({ children, itemsToShow }) => {
    return (
       <MainCarouselStyled
-         height={height}
          slidesToShow={itemsToShow}
          slidesToScroll={1}
          style={{ outline: "none" }}
