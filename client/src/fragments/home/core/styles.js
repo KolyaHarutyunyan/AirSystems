@@ -55,6 +55,15 @@ export const FreeQuotesStyled = styled.section`
    margin-top: 128px;
    display: flex;
    justify-content: space-between;
+
+   transform: translateY(50%);
+   opacity: 0;
+   transition: all 1s cubic-bezier(0.4, 0, 0, 1);
+   &.fadeInUp {
+      transform: translateY(0px);
+      opacity: 1;
+   }
+
    @media ${Devices.tablet} {
       flex-direction: column;
       align-items: flex-start;
@@ -332,6 +341,22 @@ export const WisetackFinancingStyled = styled.section`
          line-height: 20px;
          ${TextFonts["p1.2"]}
       }
+      transform: translateY(50%);
+      opacity: 0;
+      transition: all 1s cubic-bezier(0.4, 0, 0, 1);
+      &.fadeInUp {
+         transform: translateY(0px);
+         opacity: 1;
+      }
+      &.second {
+         transition-delay: 0.2s;
+      }
+      &.third {
+         transition-delay: 0.3s;
+      }
+      &.fourth {
+         transition-delay: 0.4s;
+      }
       @media ${Devices.tablet} {
          width: 340px;
       }
@@ -345,8 +370,6 @@ export const WisetackFinancingStyled = styled.section`
       @media ${Devices.mobile} {
          padding-top: 20px;
       }
-   }
-   .wisetack-financing-features-list-item ::marker {
    }
 
    .wisetack-financing-end {
@@ -432,6 +455,7 @@ export const PartnersStyled = styled.section`
       padding-left: 16px;
       margin: 72px 0;
    }
+
    .instead-of-carousel-section {
       display: flex;
       justify-content: space-between;
@@ -489,6 +513,24 @@ export const ProvidingServiceCardStyled = styled.div`
    display: flex;
    flex-direction: column;
    margin: 0 12px;
+
+   transform: translateY(50%);
+   opacity: 0;
+   transition: all 1s cubic-bezier(0.4, 0, 0, 1);
+   &.fadeInUp {
+      transform: translateY(0px);
+      opacity: 1;
+   }
+   &.second {
+      transition-delay: 0.2s;
+   }
+   &.third {
+      transition-delay: 0.4s;
+   }
+   &.fourth {
+      transition-delay: 0.6s;
+   }
+
    @media ${Devices.tablet} {
       width: 340px;
       height: 528px;
@@ -536,12 +578,7 @@ export const ProvidingServiceCardStyled = styled.div`
 export const ListingsCardItemStyled = styled.div`
    background-color: ${Colors.BackgroundSecondary};
    width: 302px;
-   height: 188px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
    padding: 24px 24px 22px;
-
    .text-primary {
       color: ${Colors.TextPrimary};
    }
@@ -555,33 +592,56 @@ export const ListingsCardItemStyled = styled.div`
    & > .comment-cont {
       ${TextFonts["p1.3"]}
       line-height: 24px;
-      max-height: ${({ open, needed }) => (needed ^ open ? "48px" : "72px")};
-      overflow-y: ${({ open }) => (open ? "auto" : "hidden")};
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      &::-webkit-scrollbar {
-         display: none;
+      & > .comment {
+         transform: translateY(50%);
+         opacity: 0;
+         transition: all 1s cubic-bezier(0.4, 0, 0, 1);
+         &.fadeInUp {
+            transform: translateY(0px);
+            opacity: 1;
+         }
       }
-
-      /* Hide scrollbar for IE, Edge and Firefox */
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
    }
    & > .author-cont {
       line-height: 20px;
       ${TextFonts["p1.2"]}
+      transform: translateY(50%);
+      opacity: 0;
+      transition: all 1s cubic-bezier(0.4, 0, 0, 1);
+      &.fadeInUp {
+         transform: translateY(0px);
+         opacity: 1;
+      }
    }
    & > .read-more {
       ${TextFonts.p2}
       width: fit-content;
       cursor: pointer;
+      margin: 6px 0 17px;
+      transform: translateY(50%);
+      opacity: 0;
+      transition: all 1s cubic-bezier(0.4, 0, 0, 1);
+      &.fadeInUp {
+         transform: translateY(0px);
+         opacity: 1;
+      }
+   }
+   .stars-container {
+      transform: translateY(50%) !important;
+      opacity: 0 !important;
+      transition: all 1s cubic-bezier(0.4, 0, 0, 1) !important;
+      &.fadeInUp {
+         transform: translateY(0px) !important;
+         opacity: 1 !important;
+      }
    }
 `;
 
 export const MainCarouselStyled = styled(Carousel)`
-   height: ${({ height }) => height || "200px"}!important;
-
+   height: 100% !important;
+   padding-bottom: 48px !important;
    & .slider-list {
-      cursor: unset !important;
+      cursor: default !important;
    }
 
    & > .slider-control-bottomcenter {
@@ -598,6 +658,36 @@ export const MainCarouselStyled = styled(Carousel)`
       & > ul > li.active > button > svg {
          width: 24px !important;
          border-radius: 4px !important;
+      }
+   }
+
+   .partner-logo-wrapper {
+      transform: translateY(50%);
+      opacity: 0;
+      transition: all 1s cubic-bezier(0.4, 0, 0, 1);
+      &.fadeInUp {
+         transform: translateY(0px);
+         opacity: 1;
+      }
+   }
+   .partner-logo-wrapper {
+      &.second {
+         transition-delay: 0.2s;
+      }
+      &.third {
+         transition-delay: 0.4s;
+      }
+      &.fourth {
+         transition-delay: 0.6s;
+      }
+      &.fifth {
+         transition-delay: 0.8s;
+      }
+      &.sixth {
+         transition-delay: 1s;
+      }
+      &.seventh {
+         transition-delay: 1.2s;
       }
    }
 `;

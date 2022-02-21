@@ -14,6 +14,21 @@ export const AboutCompanyItemStyled = styled.div`
    @media ${Devices.mobile} {
       padding: 36px 24px;
    }
+
+   transform: translateY(50%);
+   opacity: 0;
+   transition: all 1s cubic-bezier(0.4, 0, 0, 1);
+   &.fadeInUp {
+      transform: translateY(0px);
+      opacity: 1;
+   }
+   &.second {
+      transition-delay: 0.2s;
+   }
+   &.third {
+      transition-delay: 0.4s;
+   }
+
    .about-company-item-box {
       width: 100%;
       background-color: inherit;

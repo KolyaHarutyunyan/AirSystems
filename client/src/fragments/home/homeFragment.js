@@ -9,7 +9,7 @@ import {
    Partners,
 } from "./core";
 import { Images } from "@eachbase/assets";
-import { Info, useWidth } from "@eachbase/utils";
+import { Info, useAnimation, useWidth } from "@eachbase/utils";
 
 export const HomeFragment = ({}) => {
    const width = useWidth();

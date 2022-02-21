@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { SendButton, TitleDivider, UserInput } from "@eachbase/components";
 import { QuickMessageStyled } from "./styles";
-import { Colors, EmailValidator } from "@eachbase/utils";
+import { Colors, EmailValidator, useAnimation } from "@eachbase/utils";
 import axios from "axios";
 
 export const QuickMessage = () => {
+   const animation = useAnimation(500);
+
    const [inputs, setInputs] = useState({
       name: "",
       email: "",
@@ -87,7 +89,7 @@ export const QuickMessage = () => {
                   <h2 className="quick-message-title">
                      Send us a quick <em>message</em>
                   </h2>
-                  <TitleDivider />
+                  <TitleDivider lineAnimation={animation} />
                </div>
                <p className="quick-message-description">
                   Please allow up to 24 hours for responses.

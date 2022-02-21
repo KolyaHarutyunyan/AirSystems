@@ -1,11 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Routes } from "@eachbase/utils";
+import { Routes, useAnimation } from "@eachbase/utils";
 import { Main, TitleDivider } from "@eachbase/components";
 import { PrivacyPolicyContainerStyled } from "./styles";
 import { Images } from "@eachbase/assets";
 
 export const PrivacyPolicyFragment = () => {
+   const animation = useAnimation();
+
    return (
       <Main
          content={
@@ -20,7 +22,7 @@ export const PrivacyPolicyFragment = () => {
                      <h2 className="privacy-policy-title">
                         {"Privacy Policy"}
                      </h2>
-                     <TitleDivider />
+                     <TitleDivider lineAnimation={animation} />
                   </div>
                   <div className="privacy-policy-info-box">
                      <p className="privacy-policy-description">

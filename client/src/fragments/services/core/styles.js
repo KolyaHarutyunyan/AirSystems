@@ -47,7 +47,6 @@ export const TopSectionStyled = styled.section`
    }
 `;
 
-
 export const BigCardStyled = styled.div`
    width: 100%;
    display: flex;
@@ -63,6 +62,14 @@ export const BigCardStyled = styled.div`
    }
    @media ${Devices.mobile} {
       margin-bottom: 72px;
+   }
+
+   transform: translateY(100%);
+   opacity: 0;
+   transition: all 0.8s linear;
+   &.fadeInUp {
+      transform: translateY(0px);
+      opacity: 1;
    }
 
    .info-section {
@@ -198,7 +205,8 @@ export const ChessImgSectionStyled = styled.div`
    }
    @media ${Devices.mobile} {
       height: 271px;
-      padding: ${({ reverse }) => (reverse ? "24px 0 0 24px" : "0 24px 24px 0")};
+      padding: ${({ reverse }) =>
+         reverse ? "24px 0 0 24px" : "0 24px 24px 0"};
       margin: 24px 0;
    }
    & > img {

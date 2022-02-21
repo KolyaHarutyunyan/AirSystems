@@ -9,7 +9,7 @@ import {
 import { EstimateRequest, QuickMessage } from "./core";
 import { ContactUsContainerStyled, mapUi } from "./styles";
 import { Images } from "@eachbase/assets";
-import { Colors, useWidth } from "@eachbase/utils";
+import { Colors, useAnimation, useWidth } from "@eachbase/utils";
 
 const _GOOGLE_MAP_REACT_API_KEY = {
    key: "AIzaSyCWYz3vb8vWqc4-NllBUJKYIUOWmRMQ9W0",
@@ -21,6 +21,7 @@ const CustomMarker = ({ children }) => <>{children}</>;
 
 export const ContactUsFragment = () => {
    const width = useWidth();
+   const animation = useAnimation();
 
    const estimateRequestRef = useRef(null);
    const scrollToEstimateRequest = () =>
@@ -61,7 +62,7 @@ export const ContactUsFragment = () => {
                         <h2 className="connect-title">
                            Let's <em>connect</em>
                         </h2>
-                        <TitleDivider />
+                        <TitleDivider lineAnimation={animation} />
                      </div>
                      <p className="connect-description">
                         Feel free to reach out with any questions regarding your

@@ -1,8 +1,13 @@
+import React from "react";
+import { useAnimation } from "@eachbase/utils";
 import { FreeQuotesStyled } from "./styles";
 
 export const FreeQuotes = () => {
+   const animation = useAnimation(600);
+   const animationStyle = animation ? "fadeInUp" : "";
+
    return (
-      <FreeQuotesStyled>
+      <FreeQuotesStyled className={animationStyle}>
          <div className="free-quotes__title-cont">
             <h4 className="free-quotes__title theme-indigo">
                SoCal Air provides{" "}
