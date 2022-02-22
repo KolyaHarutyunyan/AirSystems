@@ -64,9 +64,9 @@ export const BigCardStyled = styled.div`
       margin-bottom: 72px;
    }
 
-   transform: translateY(100%);
+   transform: translateY(50%);
    opacity: 0;
-   transition: all 0.8s linear;
+   transition: all 1s cubic-bezier(0.4, 0, 0, 1);
    &.fadeInUp {
       transform: translateY(0px);
       opacity: 1;

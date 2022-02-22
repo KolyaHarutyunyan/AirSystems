@@ -8,7 +8,7 @@ export const MeetOurFounder = () => {
    const [moreDesc, setMoreDesc] = useState(false);
    const width = useWidth();
 
-   const animation = useAnimation(160);
+   const animation = useAnimation(300);
    const animationStyle = animation ? "fadeInUp" : "";
 
    return (

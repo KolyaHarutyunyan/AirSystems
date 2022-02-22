@@ -4,14 +4,14 @@ import { useAnimation } from "@eachbase/utils";
 import { TopSectionStyled } from "./styles";
 
 export const TopSection = () => {
-   const animation = useAnimation();
+   const animation = useAnimation(50);
 
    return (
       <TopSectionStyled>
          <h2 className="title-cont">
             <div className="title">
                <span className="theme-green">Services</span>
-               <span className="theme-indigo">we provide</span>
+               <span className="theme-indigo"> we provide</span>
             </div>
             <TitleDivider lineAnimation={animation} />
          </h2>

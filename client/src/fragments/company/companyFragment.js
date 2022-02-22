@@ -12,7 +12,7 @@ import { Images } from "@eachbase/assets";
 
 export const CompanyFragment = () => {
    const width = useWidth();
-   const animation = useAnimation();
+   const animation = useAnimation(300);
 
    return (
       <>

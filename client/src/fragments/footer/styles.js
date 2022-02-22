@@ -261,6 +261,7 @@ export const LogoLinkStyled = styled.a`
    width: 24px;
    height: 24px;
    background-image: url(${(props) => props?.logos?.simple});
+   transition: background-image 0.3s linear;
    &:hover {
       background-image: url(${(props) => props?.logos?.hovered});
    }

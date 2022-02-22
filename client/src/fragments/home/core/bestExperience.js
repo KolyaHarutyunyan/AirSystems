@@ -1,10 +1,12 @@
 import React from "react";
-import { Benefits, useAnimation } from "@eachbase/utils";
+import { AppSizes, Benefits, useAnimation, useWidth } from "@eachbase/utils";
 import { BenefitCard } from "@eachbase/components";
 import { BestExperienceStyled } from "./styles";
 
 export const BestExperience = () => {
-   const animation = useAnimation(40);
+   const width = useWidth();
+   const mobile = parseInt(AppSizes.mobile);
+   const animation = useAnimation(width <= mobile ? 0 : 40);
    const animationStyle = animation ? "fadeInUp" : "";
 
    return (
