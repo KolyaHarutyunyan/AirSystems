@@ -89,7 +89,7 @@ export const UserDropStyled = styled.div`
                background-color: ${Colors.BackgroundSecondary};
             }
             .dropdown-option-title {
-               font-size: 14px;
+               font-size: 16px;
                font-weight: 500;
                color: ${Colors.TextTertiary};
                &.selected-title {

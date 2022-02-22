@@ -40,6 +40,18 @@ export const UserInputStyled = styled.div`
          &.error {
             border: 2px solid ${Colors.ThemeRed};
          }
+         &.subscribe {
+            height: 48px;
+         }
+         &.subscribe:hover {
+            border: 1px solid ${Colors.ThemeGreen};
+         }
+         &.subscribe:focus {
+            border: 1px solid ${Colors.ThemeGreen};
+         }
+         &.subscribe.error {
+            border: 1px solid ${Colors.ThemeRed};
+         }
       }
    }
    .user-input-error-box {

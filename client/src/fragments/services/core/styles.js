@@ -66,7 +66,7 @@ export const BigCardStyled = styled.div`
 
    transform: translateY(50%);
    opacity: 0;
-   transition: all 1s cubic-bezier(0.4, 0, 0, 1);
+   transition: all 2s cubic-bezier(0.4, 0, 0, 1);
    &.fadeInUp {
       transform: translateY(0px);
       opacity: 1;

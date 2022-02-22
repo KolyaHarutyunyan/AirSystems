@@ -7,17 +7,19 @@ export const SendButtonStyled = styled.button`
    background-color: ${Colors.ThemeGreen};
    border-radius: 4px;
    padding: 10px 16px;
-   
    text-align: center;
    font-size: 16px;
    font-weight: 500;
    color: ${Colors.BackgroundPrimary};
+   transition: background-color 0.2s linear;
+   &:hover {
+      background-color: #76ca3cc4;
+   }
 `;
 export const ButtonStyled = styled.span`
    cursor: pointer;
    user-select: none;
    margin: 0 20px;
-   /* height: 40px; */
    padding: 10px 20px;
    border-radius: 4px;
    background-color: ${({ bgColor }) => bgColor || "inherit"};

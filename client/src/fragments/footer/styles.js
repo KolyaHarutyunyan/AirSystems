@@ -221,9 +221,8 @@ export const UpperFooterStyled = styled.div`
                width: 100%;
                & > button {
                   position: absolute;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  right: 4px;
+                  top: 10px;
+                  right: 2px;
                   width: 144px;
                   height: 44px;
                   @media ${Devices.tablet} {

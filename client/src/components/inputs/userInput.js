@@ -3,6 +3,7 @@ import { UserTextArea } from "./userTextArea";
 import { UserInputStyled } from "./styles";
 
 export const UserInput = ({
+   inputClassName,
    required,
    inputLabel,
    inputType,
@@ -30,7 +31,7 @@ export const UserInput = ({
             ) : (
                <input
                   type={inputType ? inputType : "text"}
-                  className={`${inputError ? "error" : ""}`}
+                  className={`${inputError ? "error" : ""} ${inputClassName}`}
                   name={inputName}
                   value={inputValue}
                   onChange={onInputChange}

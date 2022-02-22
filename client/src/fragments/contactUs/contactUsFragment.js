@@ -15,7 +15,10 @@ const _GOOGLE_MAP_REACT_API_KEY = {
    key: "AIzaSyCWYz3vb8vWqc4-NllBUJKYIUOWmRMQ9W0",
 };
 const _COMPANY_LOCATION = { lat: 34.05313, lng: -118.404765 };
-const _CUSTOM_MAP_OPTIONS = { styles: mapUi };
+const _CUSTOM_MAP_OPTIONS = {
+   fullscreenControl: false,
+   styles: mapUi,
+};
 
 const CustomMarker = ({ children }) => <>{children}</>;
 

@@ -295,7 +295,6 @@ export const EstimateRequest = forwardRef((props, ref) => {
             </h6>
             <div className="user-action-box">
                <SendButton
-                  butnClassName={`${isLoading && "btn-load-time"}`}
                   butnType={"button"}
                   butnSendingText={"Request an Estimate"}
                   onClickButn={handleUserRequestDataSend}
