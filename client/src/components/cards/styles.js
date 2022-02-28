@@ -5,6 +5,7 @@ import { Devices } from "@eachbase/utils/devices";
 export const BenefitCardStyled = styled.div`
    background-color: ${Colors.BackgroundSecondary};
    width: 302px;
+   height: 100%;
    padding: 24px;
    border-radius: 4px;
 
@@ -61,11 +62,22 @@ export const BenefitCardStyled = styled.div`
       color: ${Colors.TextTertiary};
       line-height: 24px;
       ${TextFonts["p1.3"]}
+      &.display {
+         display: block;
+      }
       @media ${Devices.tablet} {
          max-width: 498px;
       }
 
       @media ${Devices.mobile} {
+      }
+   }
+   & .read-butn {
+      color: ${Colors.ThemeLightBlue};
+      font-size: 16px;
+      font-weight: 500;
+      &.padding {
+         padding: 0px;
       }
    }
 `;

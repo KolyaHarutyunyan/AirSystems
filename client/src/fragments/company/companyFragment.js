@@ -63,10 +63,10 @@ export const CompanyFragment = () => {
                            short timeframe.{" "}
                         </p>
                         <p className="who-we-are-description">
-                           SoCal Air is still family owned and operated so you
-                           can expect a personal touch to every project as well
-                           as customer service that cannot be matched by large
-                           corporations.
+                           SoCal Air Systems is still family owned and operated
+                           so you can expect a personal touch to every project
+                           as well as customer service that cannot be matched by
+                           large corporations.
                         </p>
                      </div>
                   </section>

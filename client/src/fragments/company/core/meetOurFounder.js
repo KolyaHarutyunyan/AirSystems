@@ -28,19 +28,19 @@ export const MeetOurFounder = () => {
                </p>
                <p className="founder-info-description">
                   Sebo began installing and repairing air conditioning units in
-                  the Los Angeles area and quickly acquired a client base that
-                  would grow quickly through word of mouth. Delivering
-                  exceptional quality work and having stringent quality
-                  standards for his team, he made SoCal Air the go-to choice for
-                  local households in the area.
+                  the Los Angeles area and acquired a client base that would
+                  grow quickly through word of mouth. Delivering exceptional
+                  quality work and having stringent quality standards for his
+                  team, he made SoCal Air Systems the go-to choice for local
+                  households in the area.
                </p>
                <p className="founder-info-description">
                   Demand for other services such as ventilation and
                   refrigeration quickly grew which further expanded his service
-                  range, team and client base. Today SoCal Air has completed
-                  hundreds of projects and is a leading HVAC service provider
-                  for residential and commercial solutions in the Los Angeles
-                  area.
+                  range, team and client base. Today SoCal Air Systems has
+                  completed hundreds of projects and is a leading HVAC service
+                  provider for residential and commercial solutions in the Los
+                  Angeles area.
                </p>
                {moreDesc && (
                   <p className="founder-info-description">

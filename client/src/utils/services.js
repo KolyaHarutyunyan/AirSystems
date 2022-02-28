@@ -83,7 +83,7 @@ export const Services = [
       icon: Images.ServicesIcons.RefrigerationIcon,
       title: "Refrigeration",
       subtitle: "Keeping food and drinks cool around the clock",
-      text: "We understand how important refrigeration is for homes and businesses, especially in Southern California. Small part failures can cause refrigeration units to fail and ruin food products. Prior to summer months approaching we advise our customers to call us about preventative maintenance on refrigeration units which may be malfunctioning or close to failing.",
+      text: "We understand how important refrigeration is for businesses, especially in Southern California. Small part failures can cause refrigeration units to fail and ruin food products. Prior to summer months approaching we advise our customers to call us about preventative maintenance on refrigeration units which may be malfunctioning or close to failing.",
       list: ["Refrigeration Cycle", "Free Cooling", "Mechanical", "Passive"],
    },
 ];

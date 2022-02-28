@@ -10,15 +10,15 @@ export const FreeQuotes = () => {
       <FreeQuotesStyled className={animationStyle}>
          <div className="free-quotes__title-cont">
             <h4 className="free-quotes__title theme-indigo">
-               SoCal Air provides{" "}
-               <span className="theme-green">free quotes and estimates</span> on
-               commercial, residential and industrial projects
+               SoCal Air Systems provides
+               <span className="theme-green"> free quotes and estimates </span>
+               on commercial, residential and industrial projects
             </h4>
          </div>
          <div className="free-quotes__background-img" />
          <div className="free-quotes__absolute-cont background-primary">
             <h6 className="free-quotes__absolute-cont__title text-primary">
-               Certified Technicians
+               Our Customer Are Our Priority
             </h6>
             <p className="free-quotes__absolute-cont__descr text-tertiary">
                We value every relationship we have created and continue to

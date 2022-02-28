@@ -148,13 +148,9 @@ export const UpperFooterStyled = styled.div`
          margin-bottom: 52px;
       }
       .contact-us {
-         max-width: 347px;
          width: 100%;
          display: flex;
          flex-direction: column;
-         @media ${Devices.tablet} {
-            max-width: 100%;
-         }
          .contact-us-title {
             color: ${Colors.ThemeIndigo};
             line-height: 22px;
