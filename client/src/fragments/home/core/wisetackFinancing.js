@@ -14,8 +14,8 @@ const tablet = parseInt(AppSizes.tablet);
 
 const WisetackFinancingEnd = () => (
    <h4 className="wisetack-financing-end">
-      <span className="theme-indigo">FLEXIBLE FINANCING THROUGH</span>
-      <span className="theme-light-blue">WISETACK</span>
+      <span className="theme-indigo"> FLEXIBLE FINANCING THROUGH </span>
+      <span className="theme-light-blue"> WISETACK </span>
    </h4>
 );
 
