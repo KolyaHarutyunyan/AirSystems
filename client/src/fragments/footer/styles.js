@@ -110,9 +110,16 @@ export const UpperFooterStyled = styled.div`
       line-height: 22px;
    }
    .socal-la {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+      & > h5 {
+         font-weight: 500 !important;
+         margin-bottom: 16px;
+      }
+      @media ${Devices.tablet} {
+         width: 334px;
+         & > h5 {
+            font-weight: 800 !important;
+         }
+      }
    }
    .theme-green {
       color: ${Colors.ThemeGreen};

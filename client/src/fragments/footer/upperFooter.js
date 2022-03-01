@@ -67,7 +67,7 @@ export const UpperFooter = () => {
       <UpperFooterStyled>
          <div className="socal-media">
             <div className="socal-la">
-               <h6 className="theme-green">SoCal Air Systems</h6>
+               <h5 className="theme-green">SoCal Air Systems Group, Inc.</h5>
                <span className="quality">{"LA's best pricing & quality"}</span>
             </div>
             <h6 className="follow-container__socal-comp indigo-heading">
