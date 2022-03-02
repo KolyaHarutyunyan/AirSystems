@@ -1,0 +1,1 @@
+export { termsAndCondsParagraphs } from "./termsAndCondsParagraphs";
