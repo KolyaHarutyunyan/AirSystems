@@ -4,13 +4,18 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./assets/styles/allStyles.scss";
 import { BrowserRouter } from "react-router-dom";
-import { initAxiosInterceptors } from "@eachbase/utils";
+import {
+   initAxiosInterceptors,
+   ScrollToContextProvider,
+} from "@eachbase/utils";
 
 initAxiosInterceptors();
 ReactDOM.render(
    <React.StrictMode>
       <BrowserRouter>
-         <App />
+         <ScrollToContextProvider>
+            <App />
+         </ScrollToContextProvider>
       </BrowserRouter>
    </React.StrictMode>,
    document.getElementById("root")

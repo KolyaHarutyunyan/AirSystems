@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import GoogleMapReact from "google-map-react";
 import {
    Header,
@@ -9,7 +9,12 @@ import {
 import { EstimateRequest, QuickMessage } from "./core";
 import { ContactUsContainerStyled, mapUi } from "./styles";
 import { Images } from "@eachbase/assets";
-import { Colors, useAnimation, useWidth } from "@eachbase/utils";
+import {
+   Colors,
+   useAnimation,
+   useWidth,
+   ScrollToContext,
+} from "@eachbase/utils";
 
 const _GOOGLE_MAP_REACT_API_KEY = {
    key: "AIzaSyCWYz3vb8vWqc4-NllBUJKYIUOWmRMQ9W0",
@@ -26,10 +31,16 @@ export const ContactUsFragment = () => {
    const width = useWidth();
    const animation = useAnimation();
 
+   const { scrollTo, handleScrollTo } = useContext(ScrollToContext);
    const estimateRequestRef = useRef(null);
-   const scrollToEstimateRequest = () =>
-      estimateRequestRef.current.scrollIntoView({ behavior: "smooth" });
-   useEffect(scrollToEstimateRequest, []);
+
+   useEffect(() => {
+      if (scrollTo === "REQUEST_AN_ESTIMATE") {
+         estimateRequestRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+
+      return () => handleScrollTo("");
+   }, [scrollTo]);
 
    return (
       <>

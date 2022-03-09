@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { useHistory } from "react-router";
 import { Routes } from "@eachbase/utils/routes";
 import { RouteLink, SendButton } from "@eachbase/components";
 import { MainNavbarStyled, NavStyled } from "./styles";
+import { ScrollToContext } from "@eachbase/utils";
 
 export const MainNavBar = ({ className }) => {
    const history = useHistory();
@@ -28,6 +29,17 @@ export const MainNavBar = ({ className }) => {
    const greenBGClassName = colorChanged || greenBG ? "colorChange" : "";
    const activeClassName = menuIsShown ? "active" : "";
 
+   const { handleScrollTo } = useContext(ScrollToContext);
+
+   const handleRequestAnEstimateButn = () => {
+      history.push("/contactUs");
+      handleScrollTo("REQUEST_AN_ESTIMATE");
+
+      if (menuIsShown) {
+         setMenuIsShown(false);
+      }
+   };
+
    return (
       <>
          <MainNavbarStyled className={className}>
@@ -38,7 +50,7 @@ export const MainNavBar = ({ className }) => {
                <SendButton
                   butnType={"button"}
                   butnSendingText={"Request an Estimate"}
-                  onClickButn={() => history.push("/contactUs")}
+                  onClickButn={handleRequestAnEstimateButn}
                />
             </div>
          </MainNavbarStyled>
@@ -75,10 +87,7 @@ export const MainNavBar = ({ className }) => {
                <SendButton
                   butnType={"button"}
                   butnSendingText={"Request an Estimate"}
-                  onClickButn={() => {
-                     history.push("/contactUs");
-                     setMenuIsShown(false);
-                  }}
+                  onClickButn={handleRequestAnEstimateButn}
                />
             </div>
          </NavStyled>
