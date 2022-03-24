@@ -159,7 +159,7 @@ export const FreeQuotesStyled = styled.section`
 `;
 
 export const ProvidingServicesStyled = styled.section`
-   background-color: ${Colors.BackgroundSecondary};
+   background-color: #fff;
    width: 100%;
    height: 751px;
    padding: 0;
@@ -182,65 +182,68 @@ export const ProvidingServicesStyled = styled.section`
       color: ${Colors.TextSecondary};
    }
 
-   .providing-services-layer {
-      position: relative;
-      width: 100%;
-      max-width: 1440px;
-      height: 460px;
-      padding: 80px;
-      margin: 0 auto;
-      @media ${Devices.tablet} {
-         height: 100%;
-         padding: 80px 32px 20px;
-      }
-      @media ${Devices.mobile} {
-         padding: 24px 16px 10px;
-      }
-   }
-   .providing-services-title-cont {
-      line-height: 49px;
-      display: flex;
-      align-items: center;
-      margin-bottom: 16px;
-      @media ${Devices.tablet} {
-      }
-      @media ${Devices.mobile} {
-         justify-content: center;
-         line-height: 29px;
-         font-size: 24px;
-         font-weight: 800;
-         margin-bottom: 16px;
-      }
-   }
-   .providing-services-title {
-      padding-right: 16px;
-      @media ${Devices.tablet} {
-         padding: 0;
-      }
-   }
-   .providing-services-descr {
-      line-height: 24px;
-      font-weight: ${TextFonts["p1.2"].fontWeight};
-      max-width: 465px;
-      @media ${Devices.mobile} {
-         max-width: 80%;
+   .providing-services-layer-container {
+      background-color: ${Colors.BackgroundSecondary};
+      .providing-services-layer {
+         position: relative;
+         width: 100%;
+         max-width: 1440px;
+         height: 460px;
+         padding: 80px;
          margin: 0 auto;
+         @media ${Devices.tablet} {
+            height: 100%;
+            padding: 80px 32px 20px;
+         }
+         @media ${Devices.mobile} {
+            padding: 24px 16px 10px;
+         }
       }
-   }
-   .providing-services-cards-cont {
-      position: absolute;
-      top: 235px;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      @media ${Devices.tablet} {
-         position: static;
-         flex-wrap: wrap;
-         margin-top: 18px;
+      .providing-services-title-cont {
+         line-height: 49px;
+         display: flex;
+         align-items: center;
+         margin-bottom: 16px;
+         @media ${Devices.tablet} {
+         }
+         @media ${Devices.mobile} {
+            justify-content: center;
+            line-height: 29px;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 16px;
+         }
       }
-      @media ${Devices.mobile} {
-         margin-top: 10px;
+      .providing-services-title {
+         padding-right: 16px;
+         @media ${Devices.tablet} {
+            padding: 0;
+         }
+      }
+      .providing-services-descr {
+         line-height: 24px;
+         font-weight: ${TextFonts["p1.2"].fontWeight};
+         max-width: 465px;
+         @media ${Devices.mobile} {
+            max-width: 80%;
+            margin: 0 auto;
+         }
+      }
+      .providing-services-cards-cont {
+         position: absolute;
+         top: 235px;
+         left: 0;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         @media ${Devices.tablet} {
+            position: static;
+            flex-wrap: wrap;
+            margin-top: 18px;
+         }
+         @media ${Devices.mobile} {
+            margin-top: 10px;
+         }
       }
    }
 `;
@@ -249,7 +252,7 @@ export const WisetackFinancingStyled = styled.section`
    width: 100%;
    max-width: 1440px;
    padding: 0 80px;
-   margin-top: 128px;
+   margin-top: 188px;
 
    @media ${Devices.tablet} {
       width: 100%;
